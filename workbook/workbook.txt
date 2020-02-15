@@ -15,7 +15,7 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 															 Eric Lease Morgan <emorgan@nd.edu>
 															 Notre Dame (Indiana)
 
-															 February 9, 2020
+															 February 15, 2020
 
 
 Table of contents
@@ -841,11 +841,20 @@ Topic modeling is an effective process for "reading" a corpus "from a distance".
 Using command-line tools dig even deeper
 ----------------------------------------
 
-Reader Extras - a set of tools for collections of carrels
-
-Reader Lite - a tool for one-off items
-
-
+  * Harvest (./bin/harvest.sh)
+  * Add metadata (./bin/add-metadata.pl)
+  * Create network diagram (./bin/carrel2diagram.sh)
+  * Create semantic index (./bin/carrel2vec.sh)
+  * Search semantic index (./bin/search-vec.py)
+  * Topic model (./bin/topic-model.py)
+  * List broader concepts (./bin/word2hypernym.py)
+  * List questions (./bin/list-questions.sh)
+  * List sentences containing keyword (./bin/keyword2sentences.pl)
+  * Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
+  * Compare topics to metadata (./bin/pivot.py)
+  * List n-grams (./bin/ngrams.pl)
+  * Concordance (./bin/concordance.pl)
+  
 Summary/conclusion
 ------------------
 

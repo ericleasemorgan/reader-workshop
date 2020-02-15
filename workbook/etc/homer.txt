@@ -1,0 +1,5 @@
+LONGNAME	The Iliad and the Odessy by Homer
+SCOPENOTE	This carrel contains each chapter from Homer's Iliad and Odessy. The content of this carrel was derived from files originating from Project Gutenberg, and the parse into individual chapters so a flow could be imagined. 
+CREATOR	Eric Lease Morgan
+EMAIL	emorgan@nd.edu
+CREATIONDATE	February 14, 2020
