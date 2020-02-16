@@ -1,7 +1,7 @@
 
 
-Hands-on with the Distant Reader: A Workbook
-============================================
+                        Hands-on with the Distant Reader: A Workbook
+                        ============================================
 
 This workbook outlines sets of hands-on exercises surrounding a computer system called the Distant Reader -- https://distantreader.org.
 
@@ -42,11 +42,37 @@ Table of contents
        B. Text editors
        C. Spreadsheet/database applications - Excel and Excel recipes
        D. Analysis applications
-           i. Wordle and Wordle recipes
-          ii. AntConc and AntConc recipes
-         iii. OpenRefine and OpenRefine recipes
-          iv. Topic Modeling Tool and Tool recipes
+            i. Wordle and Wordle recipes
+           ii. AntConc and AntConc recipes
+          iii. OpenRefine and OpenRefine recipes
+           iv. Topic Modeling Tool and Tool recipes
   VII. Using command-line tools to dig even deeper
+       A. Building a library
+            i. Harvest (./bin/harvest.sh)
+           ii. Add scope notes (./bin/add-metadata.pl)
+       B. Feature extraction
+            i. N-grams (./bin/ngrams.pl)
+           ii. Broader concepts (./bin/word2hypernym.py)
+          iii. Questions (./bin/list-questions.sh)
+           iv. Sentences containing keyword (./bin/keyword2sentences.pl)
+       C. Classification and clustering
+            i. Cosine similarities (./bin/compare.pl)
+           ii. Classifying/tagging documents (./bin/classify.pl)
+          iii. Visualize clusters (./bin/cluster.py)
+           iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
+       D. Topic modeling
+            i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
+           ii. Visualize comparison of topics to metadata (./bin/pivot.py)
+          iii. Visualize topic model (./bin/topic-model.py)
+       E. Measuring big ideas, name dropping, and colorfulness 
+       F. Searching
+            i. Concordancing (./bin/concordance.pl)
+           ii. Semantic indexing
+               a. Create semantic index (./bin/carrel2vec.sh)
+               b. Search semantic index (./bin/search-vec.py)
+          iii. Free-text indexing with facets
+               a. Create free-text index (./bin/db2solr.pl)
+               b. Search free-text index (./bin/search-solr.pl)
  VIII. Summary/conclusion
    IX. About the author
 
@@ -841,20 +867,34 @@ Topic modeling is an effective process for "reading" a corpus "from a distance".
 Using command-line tools dig even deeper
 ----------------------------------------
 
-  * Harvest (./bin/harvest.sh)
-  * Add metadata (./bin/add-metadata.pl)
-  * Create network diagram (./bin/carrel2diagram.sh)
-  * Create semantic index (./bin/carrel2vec.sh)
-  * Search semantic index (./bin/search-vec.py)
-  * Topic model (./bin/topic-model.py)
-  * List broader concepts (./bin/word2hypernym.py)
-  * List questions (./bin/list-questions.sh)
-  * List sentences containing keyword (./bin/keyword2sentences.pl)
-  * Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
-  * Compare topics to metadata (./bin/pivot.py)
-  * List n-grams (./bin/ngrams.pl)
-  * Concordance (./bin/concordance.pl)
-  
+	A. Building a library
+		i. Harvest (./bin/harvest.sh)
+	   ii. Add scope notes (./bin/add-metadata.pl)
+	B. Feature extraction
+		i. N-grams (./bin/ngrams.pl)
+	   ii. Broader concepts (./bin/word2hypernym.py)
+	  iii. Questions (./bin/list-questions.sh)
+	   iv. Sentences containing keyword (./bin/keyword2sentences.pl)
+	C. Classification and clustering
+		i. Cosine similarities (./bin/compare.pl)
+	   ii. Classifying/tagging documents (./bin/classify.pl)
+	  iii. Visualize clusters (./bin/cluster.py)
+	   iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
+	D. Topic modeling
+		i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
+	   ii. Visualize comparison of topics to metadata (./bin/pivot.py)
+	  iii. Visualize topic model (./bin/topic-model.py)
+	E. Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
+	F. Searching
+		i. Concordancing (./bin/concordance.pl)
+	   ii. Semantic indexing
+		   a. Create semantic index (./bin/carrel2vec.sh)
+		   b. Search semantic index (./bin/search-vec.py)
+	  iii. Free-text indexing with facets
+		   a. Create free-text index (./bin/db2solr.pl)
+		   b. Search free-text index (./bin/search-solr.pl)
+
+
 Summary/conclusion
 ------------------
 
