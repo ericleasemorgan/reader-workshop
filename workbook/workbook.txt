@@ -46,33 +46,33 @@ Table of contents
            ii. AntConc and AntConc recipes
           iii. OpenRefine and OpenRefine recipes
            iv. Topic Modeling Tool and Tool recipes
-  VII. Using command-line tools to dig even deeper
+  VII. Using command-line tools to "read" a study carrel
        A. Building a library
-            i. Harvest (./bin/harvest.sh)
-           ii. Add scope notes (./bin/add-metadata.pl)
+            i. Harvest 
+           ii. Add scope notes 
        B. Feature extraction
-            i. N-grams (./bin/ngrams.pl)
-           ii. Broader concepts (./bin/word2hypernym.py)
-          iii. Questions (./bin/list-questions.sh)
-           iv. Sentences containing keyword (./bin/keyword2sentences.pl)
+            i. N-grams 
+           ii. Broader concepts 
+          iii. Questions 
+           iv. Sentences containing keyword 
        C. Classification and clustering
-            i. Cosine similarities (./bin/compare.pl)
-           ii. Classifying/tagging documents (./bin/classify.pl)
-          iii. Visualize clusters (./bin/cluster.py)
-           iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
+            i. Cosine similarities 
+           ii. Classifying/tagging documents 
+          iii. Visualize clusters 
+           iv. Visualize network diagram of nouns 
        D. Topic modeling
-            i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
-           ii. Visualize comparison of topics to metadata (./bin/pivot.py)
-          iii. Visualize topic model (./bin/topic-model.py)
+            i. Visualize topic model
+           ii. Create Modeling Tool metadata file 
+          iii. Visualize comparison of topics to metadata 
        E. Measuring big ideas, name dropping, and colorfulness 
        F. Searching
-            i. Concordancing (./bin/concordance.pl)
+            i. Concordancing
            ii. Semantic indexing
-               a. Create semantic index (./bin/carrel2vec.sh)
-               b. Search semantic index (./bin/search-vec.py)
+               a. Create semantic index 
+               b. Search semantic index 
           iii. Free-text indexing with facets
-               a. Create free-text index (./bin/db2solr.pl)
-               b. Search free-text index (./bin/search-solr.pl)
+               a. Create free-text index 
+               b. Search free-text index 
  VIII. Summary/conclusion
    IX. About the author
 
@@ -864,35 +864,80 @@ Topic modeling is an effective process for "reading" a corpus "from a distance".
   
 
 
-Using command-line tools dig even deeper
-----------------------------------------
+Using command-line tools to read a study carrel
+-----------------------------------------------
 
-	A. Building a library
-		i. Harvest (./bin/harvest.sh)
-	   ii. Add scope notes (./bin/add-metadata.pl)
+
+Building a library
+
+This set of recipes outline how to create a collection of study carrels, and then how to describe them. The first one is simple:
+
+  1. create a study carrel and download it to your computer
+  2. give your carrel a meaningful, one-word name
+  3. copy it to the directory named "library", inside the workbook directory
+
+Congratulations, your Distant Reader library now contains two items: homer and your newly created study carrel; your library has doubled in size.
+
+This next recipe, which only requires vanilla Perl, gives a study carrel a more meaningful name and scope:
+
+  1. Open your command-line interface, and navigate to the workbook's root directory
+  2. Run ./bin/add-metadata.pl sans any input to get an idea of the input required
+  3. Run ./bin/add-metadata.pl homer; the result ought to be a stream of HTML
+  4. Scroll backwards in your terminal, and you may notice how the HTML is a study carrel's home page
+  5. Run ./bin/add-metadata.pl homer > ./library/homer/index.html; the result will be the creation of a new file -- index.html
+  6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in the study carrel named homer
+  7. Use your text editor to open ./etc/homer.txt
+  8. Change the existing email address to your email address, and save the file
+  9. Go to Step #3 two or three times, but change something different each time
+
+By editing ./etc/homer.txt, you were able to give the study carrel a title, scope, and provenance. Here's how to do the same for your study carrel:
+
+  1. Duplicate ./etc/homer.txt, and rename it to the one-word name of your study carrel
+  2. open the file from Step #1, and edit as per the previous recipe
+  3. Run ./bin/add-metadata.pl NAME where NAME is the name of your carrel
+  4. Scroll backwards in your terminal, and you ought to see your edits
+  5. Run ./bin/add-metadata.pl NAME > ./library/NAME/index.html where NAME is the name of your carrel
+  6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in your study carrel
+  7. Go to Step #2 until satisfied
+
+If a student, researcher, or scholar finds Distant Reader study carrels both interesting and useful, then this librarian bets subsequently created study carrels will be of a similar theme or ilk. Each carrel won't be exactly the same but similar. Moreover, this librarian bets the student, researcher, or scholar will eventually want to compare & contrast the study carrels. By giving study carrels meaningful titles, scope notes, and provenance the collection of carrels becomes even more useful. The carrels also become more shareable. ("Hint, hint.")
+
+A library of previously created study carrels is available from the Distant Reader website. This recipe outlines how to copy any number of those study carrels to your computer. First you will need a few ingredient: Bash, wget, and a program called untar, but that is probably already a part of the Bash environment. Next, you:
+  
+  1. peruse the previously created study carrels at https://carrels.distantreader.org
+  2. identify a carrel, any carrel, of interest, and note its short, one-word name
+  3. open your command-line interface, and navigate to the root of the workbook directory
+  4. run ./bin/harvest.sh sans any input to get an idea of what type of input it expected
+  5. run ./bin/harvest.sh NAME, where NAME is the short name of the study carrel identified in Step #2
+  6. go to Step #1 until you get tired
+
+In the end, you ought to have a collection of at least two or three study carrels. Consider the repeated use of ./bin/add-metadata.pl to give each item more context.
+
+
+
 	B. Feature extraction
-		i. N-grams (./bin/ngrams.pl)
-	   ii. Broader concepts (./bin/word2hypernym.py)
-	  iii. Questions (./bin/list-questions.sh)
-	   iv. Sentences containing keyword (./bin/keyword2sentences.pl)
+		 i. N-grams (./bin/ngrams.pl)
+	    ii. Broader concepts (./bin/word2hypernym.py)
+	   iii. Questions (./bin/list-questions.sh)
+	    iv. Sentences containing keyword (./bin/keyword2sentences.pl)
 	C. Classification and clustering
-		i. Cosine similarities (./bin/compare.pl)
-	   ii. Classifying/tagging documents (./bin/classify.pl)
-	  iii. Visualize clusters (./bin/cluster.py)
-	   iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
+		 i. Cosine similarities (./bin/compare.pl)
+	    ii. Classifying/tagging documents (./bin/classify.pl)
+	   iii. Visualize clusters (./bin/cluster.py)
+	    iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
 	D. Topic modeling
-		i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
-	   ii. Visualize comparison of topics to metadata (./bin/pivot.py)
-	  iii. Visualize topic model (./bin/topic-model.py)
+		 i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
+	    ii. Visualize comparison of topics to metadata (./bin/pivot.py)
+	   iii. Visualize topic model (./bin/topic-model.py)
 	E. Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
 	F. Searching
-		i. Concordancing (./bin/concordance.pl)
-	   ii. Semantic indexing
-		   a. Create semantic index (./bin/carrel2vec.sh)
-		   b. Search semantic index (./bin/search-vec.py)
-	  iii. Free-text indexing with facets
-		   a. Create free-text index (./bin/db2solr.pl)
-		   b. Search free-text index (./bin/search-solr.pl)
+		 i. Concordancing (./bin/concordance.pl)
+	    ii. Semantic indexing
+		    a. Create semantic index (./bin/carrel2vec.sh)
+		    b. Search semantic index (./bin/search-vec.py)
+	   iii. Free-text indexing with facets
+		    a. Create free-text index (./bin/db2solr.pl)
+		    b. Search free-text index (./bin/search-solr.pl)
 
 
 Summary/conclusion
