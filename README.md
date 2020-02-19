@@ -14,7 +14,7 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 17, 2020
+February 18, 2020
 
 
 ## Table of contents
@@ -211,12 +211,9 @@ This is where the CSV file comes in; by including a CSV file named “metadata.c
 The zip file with a companion CSV file has all the strengths & weakness of the plain o’ zip file, but it adds some more. On the weakness side, creating a CSV file can be both tedious and daunting. On the other hand, many search engines & index export lists with author, title, and data metadata. One can use these lists as the starting point for the CSV file.♱ On the strength side, the addition of the CSV metadata file makes the Distant Reader’s output immeasurably more useful, and it leads the way to additional compare & contrast opportunities.
 
 
-## Project Gutenberg and the Distant Reader
+### Project Gutenberg and the Distant Reader
 
 The venerable Project Gutenberg is perfect fodder for the Distant Reader, and this section outlines how & why.
-
-
-### Project Gutenberg
 
 A long time ago, in a galaxy far far away, there was a man named Micheal Hart. Story has it he went to college at the University of Illinois, Urbana-Champagne. He was there during a summer, and the weather was seasonably warm. On the other hand, the computer lab was cool. After all, computers run hot, and air conditioning is a must. To cool off, Micheal went into the computer lab to be in a cool space.†  While he was there he decided to transcribe the United States Declaration of Independence, ultimately, in the hopes of enabling people to use a computers to "read" this and additional transcriptions. That was in 1971. One thing led to another, and Project Gutenberg was born. I learned this story while attending a presentation by the now late Mr. Hart on Saturday, February 27, 2010 in Roanoke (Indiana). As it happened it was also Mr. Hart's birthday. [1]
 
@@ -225,9 +222,6 @@ To date, Project Gutenberg is a corpus of more than 60,000 freely available tran
 Unfortunately, the interface to Project Gutenberg is less than desirable; the index to Project Gutenberg is limited to author, title, and "category" values. The interface does not support free text searching, and there is limited support for fielded searching and Boolean logic. Similarly, the search results are not very interactive nor faceted. Nor is there any application programmer interface to the index. With so much "clean" data, so much more could be implemented. In order to de\monstrate the power of distant reading, I endeavored to create a mirror of Project Gutenberg while enhancing the user interface.
 
 To create a mirror of Project Gutenberg, I first downloaded a set of RDF files describing the collection. [2] I then wrote a suite of software which parses the RDF, updates a database of desired content, loops through the database, caches the content locally, indexes it, and provides a search interface to the index. [3, 4] The resulting interface is ill-documented but 100% functional. It supports free text searching, phrase searching, fielded searching (author, title, subject, classification code, language) and Boolean logic (using AND, OR, or NOT). Search results are faceted enabling the reader to refine their query sans a complicated query syntax. Because the cached content includes only English language materials, the index is only 33,000 items in size.
-
-
-### Project Gutenberg & the Distant Reader
 
 The Distant Reader is a tool for reading. It takes an arbitrary amount of unstructured data (text) as input, and it outputs sets of structured data for analysis — reading. Given a corpus of any size, the Distant Reader will analyze the corpus, and it will output a myriad of reports enabling you to use & understand the corpus. The Distant Reader is intended to supplement the traditional reading process. Project Gutenberg and the Distant Reader can be used hand-in-hand. 
 
@@ -245,13 +239,10 @@ This list of URLs can then be saved as file, and any number of things can be don
   
 This same file of URLs can be used as input against the Distant Reader, and the result will be a "study carrel" where the whole corpus could be analyzed -- read. For example, the Reader will extract all the nouns, verbs, and adjectives from the corpus. Thus you will be able to answer what and how questions. It will pull out named entities and enable you to answer who and where questions. The Reader will extract keywords and themes from the corpus, thus outlining the aboutness of your corpus. From the results of the Reader you will be set up for concordancing and machine learning (such as topic modeling or classification) thus enabling you to search for more narrow topics or "find more like this one". The search for love, etc returned more than 8000 items. Just less than 500 of them were returned in the search result, and the Reader empowers you to read all 500 of them at one go.
 
-
-## Summary
-
 Project Gutenberg is very useful resource because the content is: 1) free, and 2) transcribed. Mirroring Project Gutenberg is not difficult, and by doing so an interface to it can be enhanced. Project Gutenberg items are perfect items for reading & analysis by the Distant Reader. Search Project Gutenberg, save the results as a file, feed the file to the Reader and... read the results at scale.
 
 
-## Notes and links
+#### Notes and links
 
 † All puns are intended.
 
@@ -291,15 +282,15 @@ The Distant Reader takes an arbitrary amount of unstructured data (text) as inpu
 
 The results of downloading and uncompressing the Distant Reader study carrel is a directory/folder containing a standard set of files and subdirectories. Each of these files and subdirectories are listed & described below:
 
-  * A1426341535 – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
-  * adr – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
-  * bib – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
-  * cache – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
-  * css – This subdirectory contains a set of cascading stylesheets used by the HTML files in the carrel. If you really desired, one could edit these files in order to change the appearance of the carrel.
-  * input.zip – This file, or something named very similarly, is the file originally used to create your study carrel. It has already served its intended purpose, but it is retained for reasons of provenance.
-  * ent – This subdirectory contains a set of tab-delimited files, and each file contains a set of named entities from a given document in your corpus. While the files’ names end in .ent, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have five columns: 1) id, 2) sid, 3) eid, 4) entity, and 5) type. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding who, what, when, where, how, and how many.
-  * etc – This subdirectory contains a set of ancillary files, and each are described below
-	o model-data.txt – the data file used by topic-model.htm, and it is essentially an enhanced version of reader.txt
+   * A1426341535 – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
+   * adr – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
+   * bib – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
+   * cache – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
+   * css – This subdirectory contains a set of cascading stylesheets used by the HTML files in the carrel. If you really desired, one could edit these files in order to change the appearance of the carrel.
+   * input.zip – This file, or something named very similarly, is the file originally used to create your study carrel. It has already served its intended purpose, but it is retained for reasons of provenance.
+   * ent – This subdirectory contains a set of tab-delimited files, and each file contains a set of named entities from a given document in your corpus. While the files’ names end in .ent, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have five columns: 1) id, 2) sid, 3) eid, 4) entity, and 5) type. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding who, what, when, where, how, and how many.
+   * etc – This subdirectory contains a set of ancillary files, and each are described below
+      o model-data.txt – the data file used by topic-model.htm, and it is essentially an enhanced version of reader.txt
 
 	o queries.sql – a set of SQL queries used to generate report.txt, and this file is an excellent introduction to the use of reader.db
 
@@ -313,7 +304,7 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
 
 	o stopwords.txt – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
 
-  * figures – This subdirectory contains a set of image files used by the carrel’s HTML files:
+   * figures – This subdirectory contains a set of image files used by the carrel’s HTML files:
 
 	o adjectives.png – a word cloud illustrating the most frequent adjectives in the corpus
 
@@ -343,7 +334,7 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
 
 	o verbs.png – a word cloud illustrating the most frequent verbs in the corpus
 
-  * htm – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
+   * htm – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
 
 	o adjective-noun.htm – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
 
@@ -389,37 +380,21 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
   * standard-error.txt – As each study carrel is being created, error and status messages are output to this file. It is a log file. If the creation of your study carrel fails, then this is a good place to look for clues on what went wrong. Send me this file if you are stymied.
   * standard-output.txt – After your study carrel as been created and distilled into a database, sets of queries are applied against the database. This file is the second best place to begin once you have downloaded and unzipped a carrel.
   * tsv – Except for one (questions.tsv), this subdirectory contains a set of frequency tables in the form of tab-delimited text files. The exception is a tab-delimited text file too, but it is just not a frequency file. All of these files can be imported into for favorite spreadsheet, database, or analysis application. Possible uses for these files are destined to be outlined in future postings, but in short, perusal of these files will help you answer questions regarding your corpus’s “aboutness” as well as who, what, when, where, how, how many, and why questions. The structure of each file is listed below:
-
 	o adjective-noun.tsv – three columns: 1) adjective, 2) noun, and 3) frequency where frequency denotes the number of times the given adjective appears immediately before the given noun in the corpus
-
 	o adjectives.tsv – two columns: 1) adjective, and 2) frequency
-
 	o adverbs.tsv – two columns: 1) adverb, and 2) frequency
-
 	o bigrams.tsv – two columns: 1) bigram (two-word phrase), and 2) frequency
-
 	o entities.tsv – three columns: 1) entity, 2) type, and 3) frequency
-
 	o keywords.tsv – two columns: 1) keyword (statistically significant unigram), and 2) frequency
-
 	o noun-verb.tsv – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
-
 	o nouns.tsv – two columns: 1) noun, and 2) frequency
-
 	o pronouns.tsv – two columns: 1) pronoun, and 2) frequency
-
 	o proper-nouns.tsv – two columns: 1) proper, and 2) frequency
-
 	o quadgrams.tsv – two columns: 1) quadgram (four-word phrase), and 2) frequency
-
 	o questions.tsv – two columns: 1) identifier, and 2) question where each question is a “sentence” ending in a question mark
-
 	o trigrams.tsv – two columns: 1) trigram (three-word phrase), and 2) frequency
-
 	o unigrams.tsv – two columns: 1) unigram (individual word), and 2) frequency
-
 	o verbs.tsv – two columns: 1) verb, and 2) frequency
-
   * txt – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
   * urls – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
   * wrd – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
@@ -475,40 +450,27 @@ Visualized word frequencies, while often considered sophomoric, can be quite use
 
 Here is a generic Wordle recipe where World will calculate frequencies:
 
-  1. Download and install Wordle. It is a Java application, so you may need to download and install Java along the way, but Java is probably already installed on your computer.
-  
-  2. Use your text editor to open reader.txt which is located in the etc directory/folder. Once opened, copy all of the text.
-  
-  3. Open Wordle, select the "Your Text" tab, and paste the whole of the text file into the window.
-  
-  4. Click the "Wordle" tab and your word cloud will be generated. Use the Wordle's menu options to customize the output.
+   1. Download and install Wordle. It is a Java application, so you may need to download and install Java along the way, but Java is probably already installed on your computer.
+   2. Use your text editor to open reader.txt which is located in the etc directory/folder. Once opened, copy all of the text.
+   3. Open Wordle, select the "Your Text" tab, and paste the whole of the text file into the window.
+   4. Click the "Wordle" tab and your word cloud will be generated. Use the Wordle's menu options to customize the output.
 
 Congratulations, you have just visualized the whole of your study carrel.
 
   
 Here is another recipe, a recipe where you supply the frequencies (or any other score):
 
-  1. Download and install AntConc.
-  
-  2. Use the "Open Files(s)..." menu option to open any file in the txt directory.
-  
-  3. Click the "Word list" tab, and then click the "Start" button. The result will be a list of words and their frequencies.
-  
-  4. Use the "Save Output to Text File..." menu option, and save the frequencies accordingly.
-  
-  5. Open the resulting file in your spreadsheet.
-  
-  6. Remove any blank rows, and remove the columns that are not the words and their frequencies
-  
-  7. Invert the order of the remaining two columns; make the words the first column and the frequencies the second column. 
-
-  8. Copy the whole of the spreadsheet and paste it into your text editor. 
-  
-  9. Use the text editor's find/replace function to find all occurrences of the tab character and replace them with the colon (:) character. Copy the whole of the text editor's contents.
-  
- 10. Open Wordle, click the "Your text" tab, paste the frequencies into the resulting window.
-  
- 11. Finally, click the "Wordle" tab to generate the word cloud.
+   1. Download and install AntConc.
+   2. Use the "Open Files(s)..." menu option to open any file in the txt directory.
+   3. Click the "Word list" tab, and then click the "Start" button. The result will be a list of words and their frequencies.
+   4. Use the "Save Output to Text File..." menu option, and save the frequencies accordingly.
+   5. Open the resulting file in your spreadsheet.
+   6. Remove any blank rows, and remove the columns that are not the words and their frequencies
+   7. Invert the order of the remaining two columns; make the words the first column and the frequencies the second column. 
+   8. Copy the whole of the spreadsheet and paste it into your text editor. 
+   9. Use the text editor's find/replace function to find all occurrences of the tab character and replace them with the colon (:) character. Copy the whole of the text editor's contents.
+   10. Open Wordle, click the "Your text" tab, paste the frequencies into the resulting window.
+   11. Finally, click the "Wordle" tab to generate the word cloud.
 
 Notice how you used a variety of generic applications to achieve the desired result. The word/value pairs given to Wordle do not have be frequencies. Instead they can be any number of different scores or weights. Keep your eyes open for word/value combinations. They are everywhere. Word clouds have been given a bad rap. Wordle is a very useful tool.
 
@@ -527,13 +489,9 @@ Concordancing is really a process about find, and AntConc is a very useful progr
 This recipe simply implements search:
 
   1. Download and install AntConc
-  
   2. Use the "Open Files(s)..." menu option to open all files in the txt directory
-
   3. Select the Concordance tab
-  
   4. Enter a word of interest into the search box
-  
   5. Click the Start button
 
 The result ought to be a list of phrases where the word of interest is displayed in the middle of the screen. In modern-day terms, such a list is called a "key word in context" (KWIC) index. 
@@ -541,69 +499,47 @@ The result ought to be a list of phrases where the word of interest is displayed
 This recipe combines search with "control-F":
 
   1. Select the Concordance tab
-  
   2. Enter a word of interest into the search box
-  
   3. Click the Start button
-  
   4. Peruse the resulting phrases and click on one of interest; the result ought to a display of a text and the search term(s) is highlighted in the larger context
-  
   5. Go to Step #1 until tired
   
 This recipe produces a dispersion plot, an illustration of where a search term appears in a document:
 
   1. Select the Concordance tab
-  
   2. Enter a word of interest into the search box
-
   3. Select the "Concordance Plot" tab
   
 The result will be a list of illustrations. Each illustration will include zero or more vertical lines denoting the location of your search term in a given file. The more lines in each illustrations, the more times the search terms appear in the document.
 
 This recipe counts & tabulates the frequency of words:
 
-  1. Select the "Word List" tab
-  
-  2. Click the Start button; the result will be a list of all the words and their frequencies
-  
-  3. Scroll up and down the list to get a feel for what is common
-  
-  4. Select a word of interest; the result will be the same as if you entered the word in Recipe #1
+   1. Select the "Word List" tab
+   2. Click the Start button; the result will be a list of all the words and their frequencies
+   3. Scroll up and down the list to get a feel for what is common
+   4. Select a word of interest; the result will be the same as if you entered the word in Recipe #1
 
 It is quite probable the most frequent words will be "stop words" like the, a, an, etc. AntConc supports the elimination of stop words, and the Reader supplies a stop word list. Describing how to implement this functionality is too difficult to put into words. (No puns intended.) But here is an outline:
 
-  5. Select the "Tool Preferences" menu option
-  
-  6. Select the "Word List" category
-  
-  7. Use the resulting dialog box to select a stop words list, and such a list is called stopwords.txt found in the etc directory
-  
-  8. Click the Apply button
-  
-  9. Go to Step #1; and the result will be a frequency list sans any stop words, and the result will be much more meaningful
+   5. Select the "Tool Preferences" menu option
+   6. Select the "Word List" category
+   7. Use the resulting dialog box to select a stop words list, and such a list is called stopwords.txt found in the etc directory
+   8. Click the Apply button
+   9. Go to Step #1; and the result will be a frequency list sans any stop words, and the result will be much more meaningful
   
 Ideas are rarely articulated through the use of individual words; ideas are usually articulated through the use of sets of words (ngrams, sentences, paragraphs, etc.). Thus, as John Rupert Firth once said, "You shall know a word by the company it keeps." This recipe outlines how to list word co-occurrences and collocations:
 
-  1. Select the "Cluster/N-grams" tab
-  
-  2. Enter a word of interest in the search box
-  
-  3. Click the Start button; the result ought to be a list of two-word phrases (bigrams) sort in frequency order
-  
-  4. Select a phrase of interest, and the result will just as if you had search for the phrase in Recipe #1
-  
-  5. Go to Step #1 until tired
-  
-  6. Select the Collocates tab
-  
-  7. Enter a word of interest in the search box
-  
-  8. Click the Start button; the result ought to be a list of words and associated scores, and the scores compare the frequencies of the search word and the given word; words with higher scores can be considered "more interesting"
-  
-  9. Select "Sort by Freq" from the "Sort by" pop-up menu
-  
- 10. Click the Sort button; the result will be the same list of words and associated scores, but this time the list will be sorted by the frequency of the search term/given word combination
- 
+   1. Select the "Cluster/N-grams" tab
+   2. Enter a word of interest in the search box
+   3. Click the Start button; the result ought to be a list of two-word phrases (bigrams) sort in frequency order
+   4. Select a phrase of interest, and the result will just as if you had search for the phrase in Recipe #1
+   5. Go to Step #1 until tired
+   6. Select the Collocates tab
+   7. Enter a word of interest in the search box
+   8. Click the Start button; the result ought to be a list of words and associated scores, and the scores compare the frequencies of the search word and the given word; words with higher scores can be considered "more interesting"
+   9. Select "Sort by Freq" from the "Sort by" pop-up menu
+   10. Click the Sort button; the result will be the same list of words and associated scores, but this time the list will be sorted by the frequency of the search term/given word combination
+
 Again, a word is known by the company it keeps. Use the co-occurrences and collocations features to learn how a given word (or phrase) is associated with other words.
 
 There is much more to AntConc than outlined in the recipes outlined above. Learning more is left up to you, the studen, research, and scholar.
@@ -628,69 +564,46 @@ Many (actually, most) of the files in a study carrel are tab-delimited files, an
 
 Like everything else, using OpenRefine requires practice. The problem to solve is not so much learning how to use OpenRefine. Instead, the problem to solve is to ask and answer interesting questions. That said, the student, researcher, or scholar will want to sort the data, search/filter the data, and compare pieces of the data to other pieces to articulate possible relationships. The following recipes endeavor to demonstrate some such tasks. The first is to simply facet (count & tabulate) on parts-of-speech files:
 
-  1. Download, install, and run OpenRefine
-  
-  2. Create a new project and as input, randomly chose any file from a study carrel's part-of-speech (pos) directory
-  
-  3. Continue to accept the defaults, and continue with "Create Project »"; the result ought to be a spreadsheet-like interface
-  
-  4. Click the arrow next to the POS column and select Facet/Text facet from the resulting menu; the result ought to be a new window containing a column of words and a column of frequencies -- counts & tabulations of each type of part-of-speech in the file
-  
-  5. Go to Step #4, until you get tired, but this time facet by other values
+   1. Download, install, and run OpenRefine
+   2. Create a new project and as input, randomly chose any file from a study carrel's part-of-speech (pos) directory
+   3. Continue to accept the defaults, and continue with "Create Project »"; the result ought to be a spreadsheet-like interface
+   4. Click the arrow next to the POS column and select Facet/Text facet from the resulting menu; the result ought to be a new window containing a column of words and a column of frequencies -- counts & tabulations of each type of part-of-speech in the file
+   5. Go to Step #4, until you get tired, but this time facet by other values
 
 Faceting is a whole like like "grouping" in the world of relational databases. Faceting alphabetically sorts a list and then counts the  number of times each item appears in the list. Different types of works have different parts-of-speech ratios. For example, it is not uncommon for there to be a preponderance of past-tense verbs stories. Counts & tabulations of personal pronouns as well as proper nouns give senses of genders. A more in-depth faceting against adjectives allude to sentiment.
 
 This recipe outlines how to filter ("search"):
 
-  1. Click the "Remove All" button, if it exists; this ought to reset your view of the data
-  
-  2. Click the arrow next to the "token" column and select "Text filter" from the resulting menu
-  
-  3. In your mind, think of a word of interest, and enter it into the resulting search box
-
-  4. Take notice of how the content in the spreadsheet view changes
-  
-  5. Go to Step #3 until you get tired
-  
-  6. Click the "Remove All" button to reset the view
-  
-  7. Text filter on the "token" column but search for "^N" (which is code for any noun) and make sure the "regular expression" check box is... checked
-  
-  8. Text facet on the "lemma" column; the result ought to be a count & tabulation of all the nouns
-  
-  9. Go to Step #6, but this time search for "^V" or "^J", which are the codes for any verb or any adjective, respectively
+   1. Click the "Remove All" button, if it exists; this ought to reset your view of the data
+   2. Click the arrow next to the "token" column and select "Text filter" from the resulting menu
+   3. In your mind, think of a word of interest, and enter it into the resulting search box
+   4. Take notice of how the content in the spreadsheet view changes
+   5. Go to Step #3 until you get tired
+   6. Click the "Remove All" button to reset the view
+   7. Text filter on the "token" column but search for "^N" (which is code for any noun) and make sure the "regular expression" check box is... checked
+   8. Text facet on the "lemma" column; the result ought to be a count & tabulation of all the nouns
+   9. Go to Step #6, but this time search for "^V" or "^J", which are the codes for any verb or any adjective, respectively
   
 By combining the functionalities of faceting and filtering the student, researcher, or scholar can investigate the original content more deeply or at least in different ways. The use of OpenRefine in this way is akin to leafing through book or a back-of-the-book index. As patterns & anomalies present themselves, they can be followed up more thoroughly through the use of a concordance and literally see the patterns & anomalies in context. 
 
 This recipe answers the question, "Who is mentioned in a corpus, and how often?":
 
-  1. Download, install, and run OpenRefine
-  
-  2. Create a new project and as input, select all of the files in the named-entity (ent) directory
-  
-  3. Continue to accept the defaults, but remember, all the almost all of the files in a study carrel are tab-delimited files, so remember to import them as "CSV / TSV / separator-based files", not Excel files
-  
-  3. Continue to accept the defaults, and continue with "Create Project »"; the result ought to be a spreadsheet-like interface
-
-  4. Click the arrow next to "type" column and select Facet/Text facet from the resulting menu; the result ought to be a new window containing a column of words and a column of frequencies -- counts & tabulations of each type of named-entity in the whole of the study carrel
-  
-  5. Select "PERSON" from the list of named entities; the result ought to be a count & tabulation of the names of the people mentioned in the whole of the study carrel
-  
-  6. Go to Step #5 until tired, but each time select a different named-entity value
+   1. Download, install, and run OpenRefine
+   2. Create a new project and as input, select all of the files in the named-entity (ent) directory
+   3. Continue to accept the defaults, but remember, all the almost all of the files in a study carrel are tab-delimited files, so remember to import them as "CSV / TSV / separator-based files", not Excel files
+   4. Continue to accept the defaults, and continue with "Create Project »"; the result ought to be a spreadsheet-like interface
+   5. Click the arrow next to "type" column and select Facet/Text facet from the resulting menu; the result ought to be a new window containing a column of words and a column of frequencies -- counts & tabulations of each type of named-entity in the whole of the study carrel
+   6. Select "PERSON" from the list of named entities; the result ought to be a count & tabulation of the names of the people mentioned in the whole of the study carrel
+   7. Go to Step #5 until tired, but each time select a different named-entity value
 
 This final recipe is a visualization:
 
-  1. Create a new parts-of-speech or named-entity project
-  
-  2. Create any sort of meaningful set of faceted results
-  
-  3. Select the "choices" link; the result ought to be a text area containing the counts & tabulation
-  
-  4. Copy the whole of the resulting text area
-  
-  5. Paste the result into your text editor, find all tab characters and change them to colons (:), copy the whole of the resulting text
-  
-  6. Open Wordle and create a word cloud with the contents of your clipboard; word counts may only illustrate frequencies, but sometimes the frequencies are preponderance. 
+   1. Create a new parts-of-speech or named-entity project
+   2. Create any sort of meaningful set of faceted results
+   3. Select the "choices" link; the result ought to be a text area containing the counts & tabulation
+   4. Copy the whole of the resulting text area
+   5. Paste the result into your text editor, find all tab characters and change them to colons (:), copy the whole of the resulting text
+   6. Open Wordle and create a word cloud with the contents of your clipboard; word counts may only illustrate frequencies, but sometimes the frequencies are preponderance. 
   
 A study carrel's parts-of-speech (pos) and named-entities (ent) files enumerate each and every word or named-entity in each and every sentence of each and every item in the study carrel. Given a question relatively quantitative in nature and pertaining to parts-of-speech or named-entities, the pos and ent files are likely to be able to address the question. The pos and ent files are tab-delimited files, and OpenRefine is a very good tool for reading and analyzing such files. It does much more than was outlined here, but enumerating them here is beyond scope. Such is left up to the... reader.
   
@@ -711,97 +624,65 @@ Topic Modeling Tool is a GUI/desktop topic modeler based on the venerable MALLET
 
 These few recipes are intended to get you up and running when it comes to Topic Modeling Tool. They are not intended to be a full-blown tutorial. This first recipe merely divides a corpus into the default number of topics and dimensions:
 
-  1. Download and install Topic Modeling Tool
-  
-  2. Copy (not move) the whole of the txt directory to your computer's desktop
-  
-  3. Create a folder/directory named "model" on your computer's desktop
-  
-  4. Open Topic Modeling Tool
-  
-  5. Specify the "Input Dir..." to be the txt folder/directory on your desktop
-  
-  6. Specify the "Output Dir..." to be the folder/directory named "model" on your desktop
-  
-  7. Click "Learn Topics"; the result ought to be a a list of ten topics (numbered 0 to 9), and each topic is denoted with a set of scores and twenty words ("dimensions"), and while functional, such a result is often confusing
+   1. Download and install Topic Modeling Tool
+   2. Copy (not move) the whole of the txt directory to your computer's desktop
+   3. Create a folder/directory named "model" on your computer's desktop
+   4. Open Topic Modeling Tool
+   5. Specify the "Input Dir..." to be the txt folder/directory on your desktop
+   6. Specify the "Output Dir..." to be the folder/directory named "model" on your desktop
+   7. Click "Learn Topics"; the result ought to be a a list of ten topics (numbered 0 to 9), and each topic is denoted with a set of scores and twenty words ("dimensions"), and while functional, such a result is often confusing
 
 This recipe will make things less confusing:
 
-  1. Change the number of topics from the default (10) to five (5)
-  
-  2. Click the "Optional Settings..." button
-  
-  3. Change the "The number of topic words to print" to something smaller, say five (5)
-  
-  4. Click the "Ok" button
-  
-  5. Click "Learn Topics"; the result will include fewer topics and fewer dimensions, and the result will probably be more meaningful, if not less confusing
+   1. Change the number of topics from the default (10) to five (5)
+   2. Click the "Optional Settings..." button
+   3. Change the "The number of topic words to print" to something smaller, say five (5)
+   4. Click the "Ok" button
+   5. Click "Learn Topics"; the result will include fewer topics and fewer dimensions, and the result will probably be more meaningful, if not less confusing
 
 There is no correct number of topics to extract with the process of topic modeling. "When considering the whole of Shakespeare's writings, what is the number of topics it is about?" This being the case, repeat and re-repeat the previous recipe until you: 1) get tired, or 2) feel like the results are at least somewhat meaningful.
 
 This recipe will help you make the results even cleaner by removing nonsense from the output:
 
-  1. Copy the file named "stopwords.txt" from the etc directory to your desktop
-  
-  2. Click "Optional Settings..."; specify "Stopword File..." to be stopwords.txt; click "Ok"
-  
-  3. Click "Learn Topics"
-  
-  4. If the results contain nonsense words of any kind (or words that you just don't care about), edit stopwords.txt to specify additional words to remove from the analysis
-  
-  5. Go to Step #3 until you get tired; the result ought to be topics with more meaningful words
+   1. Copy the file named "stopwords.txt" from the etc directory to your desktop
+   2. Click "Optional Settings..."; specify "Stopword File..." to be stopwords.txt; click "Ok"
+   3. Click "Learn Topics"
+   4. If the results contain nonsense words of any kind (or words that you just don't care about), edit stopwords.txt to specify additional words to remove from the analysis
+   5. Go to Step #3 until you get tired; the result ought to be topics with more meaningful words
 
 Adding individual words to the stopword list can be tedious, and consequently, here is a power-user's recipe to accomplish the same goal:
 
-  1. Identify words or regular expressions to be excluded from analysis, and good examples include all numbers (\d+), all single-letter words (\b\w\b), or all two-letter words (\b\w\w\b)
-  
-  2. Use your text editor's find/replace function to remove all occurrences of the identified words/patterns from the files in the txt folder/directory; remember, you were asked to copy (not move) the whole of the txt directory, so editing the files in the txt directory will not effect your study carrel
-  
-  3. Run the topic modeling process
-  
-  4. Go to Step #1 until you: 1) get tired, or 2) are satisfied with the results
+   1. Identify words or regular expressions to be excluded from analysis, and good examples include all numbers (\d+), all single-letter words (\b\w\b), or all two-letter words (\b\w\w\b)
+   2. Use your text editor's find/replace function to remove all occurrences of the identified words/patterns from the files in the txt folder/directory; remember, you were asked to copy (not move) the whole of the txt directory, so editing the files in the txt directory will not effect your study carrel
+   3. Run the topic modeling process
+   4. Go to Step #1 until you: 1) get tired, or 2) are satisfied with the results
 
 Now that you have somewhat meaningful topics, you will probably want to visualize the results, and one way to do that is to illustrate how the topics are dispersed over the whole of the corpus. Luckily, the list of topics displayed in the Tool's console is tab-delimited, making it easy to visualize. Here's how:
 
-  1. Topic model until you get a set of topics which you think is meaningful
-  
-  2. Copy the resulting topics, and this will include the labels (numbers 0 through n), the scores, and the topic words
-  
-  3. Open your spreadsheet application, and paste the topics into a new sheet; the result ought to be three columns of information (labels, scores, and words)
-  
-  4. Sort the whole sheet by the second column (scores) in descending numeric order
-
-  5. Optionally replace the generic labels (numbers 0 through n) with a single meaningful word, thus denoting a topic
-  
-  6. Create a pie chart based on the contents of the first two columns (labels and scores); the result will appear similar to an illustration above and it will give you an idea of how large each topic is in relation to the others
+   1. Topic model until you get a set of topics which you think is meaningful
+   2. Copy the resulting topics, and this will include the labels (numbers 0 through n), the scores, and the topic words
+   3. Open your spreadsheet application, and paste the topics into a new sheet; the result ought to be three columns of information (labels, scores, and words)
+   4. Sort the whole sheet by the second column (scores) in descending numeric order
+   5. Optionally replace the generic labels (numbers 0 through n) with a single meaningful word, thus denoting a topic
+   6. Create a pie chart based on the contents of the first two columns (labels and scores); the result will appear similar to an illustration above and it will give you an idea of how large each topic is in relation to the others
 
 Because of a great feature in Topic Modeling Tool it is relatively easy to compare topics against metadata values such as authors, dates, formats, genres, etc. To accomplish this goal the raw numeric information output by the Tool (the actual model) needs to be supplemented with metadata, the data then needs to be pivoted, and subsequently visualized. This is a power-user's recipe because it requires: 1) a specifically shaped comma-separated values (CSV) file, 2) Python and a few accompanying modules, and 3) the ability to work from the command line. That said, here's a recipe to compare & contrast the two books of Homer:
 
-  1. Copy the file named homer-books.csv to your computer's desktop
-  
-  2. Click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
-
-  3. Click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
-
-  4. Copy the file named pivot.py to your computer's desktop
-  
-  5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-  
-  6. Run the pivot program (python pivot.py); the result ought to an error message outlining the input pivot.py expects
-  
-  7. Run the pivot program again, but this time give it input; more specifically, specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "barh" for the second argument, and "title" as the third argument; the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and ask yourself, "To what degree are the books similar?"
+   1. Copy the file named homer-books.csv to your computer's desktop
+   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
+   3. Click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
+   4. Copy the file named pivot.py to your computer's desktop
+   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
+   6. Run the pivot program (python pivot.py); the result ought to an error message outlining the input pivot.py expects
+   7. Run the pivot program again, but this time give it input; more specifically, specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "barh" for the second argument, and "title" as the third argument; the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and ask yourself, "To what degree are the books similar?"
   
 The following recipe is very similar to the previous recipe, but it illustrates the ebb & flow of topics throughout the whole of the two books:
 
-  1. Copy the file named homer-chapters.csv to your computer's desktop
-  
-  2. Click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.csv; click "Ok" 
-
-  3. Click "Learn Topics"
-  
-  5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-    
-  7. Run the pivot program and specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "line" for the second argument, and "title" as the third argument; the result ought to be a line chart illustrating the increase & decrease of topics from the beginning of the saga to the end, and ask yourself "What topics are discussed concurrently, and what topics are discussed when others are not?"
+   1. Copy the file named homer-chapters.csv to your computer's desktop
+   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.csv; click "Ok" 
+   3. Click "Learn Topics"
+   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
+   7. Run the pivot program and specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "line" for the second argument, and "title" as the third argument; the result ought to be a line chart illustrating the increase & decrease of topics from the beginning of the saga to the end, and ask yourself "What topics are discussed concurrently, and what topics are discussed when others are not?"
 
 Topic modeling is an effective process for "reading" a corpus "from a distance". Topic Modeling Tool makes the process easier, but the process requires practice. Next steps are for the student to play with the additional options behind the "Optional Settings..." dialog box, read the Tool's documentation, take a look at the structure of the CSV/metadata file, and take a look under the hood at pivot.py. 
   
@@ -860,7 +741,7 @@ In the end, you ought to have a collection of at least two or three study carrel
 
 Text mining and natural language processing often requires the enumeration of "features" -- rather numeric characteristics of a text. These characteristics are also called "features". These recipes outline how to text a few sets of features. For example, everybody want to count & tabulate the frequency of ngrams. This first recipe requires Perl and a module called Lingua::EN::Ngram:
 
-  1. Open your terminal application and navigate to the root of the workshop directory
+  1. open your terminal application and navigate to the root of the workshop directory
   2. run ./bin/ngrams.pl sans any input to learn what sort of input it expects
   3. run ./bin/ngrams.pl ./library/homer/etc/reader.txt 1 to output all the words and their frequency in Homer
   4. go to Step #2 a couple more times but change the value of the number of ngram
@@ -873,7 +754,7 @@ The Distant Reader uses an algorithm called XYZZY to generate lists of keywords 
 
 This recipe takes a type of word found in a study carrel and returns a list of broader terms as well as their frequency, thus giving the reader an additional sense of aboutness. The ingredients for this recipe include Python and a couple of modules: 1) the whole of the nltk.corpus module, and 2) sqlite3. The first comes along for the ride when you install the whole of the ntlk, and the later almost surely comes along for the ride with any Python distribution. Here is how to output broader terms from many different types of words (nouns, verbs, adjectives, lemmas, and keywords) found in a study carrel:
 
-  1. Open your terminal application and navigate to the root of the workshop directory
+  1. open your terminal application and navigate to the root of the workshop directory
   2. run ./bin/word2hypernym.py sans any input to get an idea of what the script requires
   3. run ./bin/word2hypernym.py homer noun; the result ought to be a list of broader concepts of all nouns in the carrel
   4. go to Step #3 but change the type of frequency desired
@@ -881,25 +762,25 @@ This recipe takes a type of word found in a study carrel and returns a list of b
 These sorts of frequencies are rather meaningless in-and-of-themselves, but they begin to take on additional meaning when they are compared with other collections (study carrels). For extra credit, add a different study carrel to your library, and then repeat this exercise against it. Then ask yourself, "How are the carrels similar or different?"
 
 
-### Questions
+#### Questions
 
 In the English language, sentences ending in question marks are... questions, more or less. The Reader enumerates each and every punctuation mark in each and every sentence of each and every document in a study carrel. Thus, it possible to find each question mark which is at the end of every sentence, rebuild the sentences, and output the result. Why would you want to output every question in a study carrel? Well, what do yo think you will find near questions in a document? Answers. And everybody seems to be looking for answers.
 
 This recipe's ingredience include Bash, a program called "parallel", Perl, and the Perl module named "DBI" is also required. Here's how to list the questions in a study carrel:
 
-  1. Open your terminal application and navigate to the root of the workshop directory
-  2. run ./bin/list-questions.sh sans any input to get an idea of what the input is
-  3. run ./bin/list-questions.sh homer; the result ought to be a list of questions homer study carrel
-  4. identify a question of interest, and use a concordance to find the question in the study carrel
-  5. read the text around the location of the question; is there an answer nearby?
-  6. go to Step #3 until you get tired
-  7. go to Step #3 but this time output the questions from a different study carrel in your library
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/list-questions.sh sans any input to get an idea of what the input is
+   3. run ./bin/list-questions.sh homer; the result ought to be a list of questions homer study carrel
+   4. identify a question of interest, and use a concordance to find the question in the study carrel
+   5. read the text around the location of the question; is there an answer nearby?
+   6. go to Step #3 until you get tired
+   7. go to Step #3 but this time output the questions from a different study carrel in your library
 
-### Sentences with given keywords
+#### Sentences with given keywords
 
 If a word has been denoted as a keyword, then the student, researcher, or scholar will want to read the sentences with the keyword. Such sentences and their surroundings will usually allude to the aboutness of a document. The ingredients for this recipe include Perl and the Perl module named "DBI". This recipe is simple:
 
-   1. Open your terminal application and navigate to the root of the workshop directory
+   1. open your terminal application and navigate to the root of the workshop directory
    2. run ./bin/keyword2sentences.pl sans any input to get an idea of what the input is
    3. run ./bin/keyword2sentences.pl homer; the result ought to a stream of Sentence
    4. identify a sentence of interest, and use a concordance to find the sentence in the study carrel
@@ -919,14 +800,83 @@ If a word has been denoted as a keyword, then the student, researcher, or schola
 	    ii. Visualize comparison of topics to metadata (./bin/pivot.py)
 	   iii. Visualize topic model (./bin/topic-model.py)
 	E. Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
-	F. Searching
-		 i. Concordancing (./bin/concordance.pl)
-	    ii. Semantic indexing
-		    a. Create semantic index (./bin/carrel2vec.sh)
-		    b. Search semantic index (./bin/search-vec.py)
-	   iii. Free-text indexing with facets
-		    a. Create free-text index (./bin/db2solr.pl)
-		    b. Search free-text index (./bin/search-solr.pl)
+
+
+## Searching
+
+Everybody likes to search.
+
+Now-a-days concordancing goes by the name of keyword-in-context indexing. This recipe's ingredients include Perl and two of its library modules: 1) Lingua::Concordance which does the actual work, and 2) Text::BarGraph used to create a sort of dispersion chart/plot. Here goes:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/concordance.pl sans any input to get an idea of what input is expected
+   3. run ./bin/concordance.pl ./library/homer/etc/reader.txt peace; the result will be two fold: 1) a list of phrases centered on the given word (or regular expression), and a bar graph illustrating where the given word occurs in the text
+   4. go to Step #3 until you get tired, and if you do go to Step #3, then change your query
+
+The concordance script demonstrated here is no match for the functionality of AntConc, but the script is relatively quick and easy.
+
+
+### Semantic indexing
+
+A semantic index is essentially a matrix of vectors where each vector denotes a word in a corpus. Query words are first looked up in the matrix and then linear algebra is used to compare the associated vector with the other vectors in the matrix. When vectors "point" in the same direction, then they are considered similar. When vectors point in opposite directions, then they may be akin to antonyms. Searches against semantic indexes return relationships. Given three words of input, some semantic queries may solve an analogy. [Eric waves his arms around in an attempt to point to a few places in a three-dimensional space in order to illustrate the definition of an analogy in a semantic index.]
+
+Semantic indexes require "a lot" of data in order to truly be effective; the following recipes do not do semantic indexing justice because of the size of the corpus is too small. That said, the first recipe creates a semantic index, and the process is heavy. The ingredients include: Bash, Python, and a few few modules. One Python module is called "gensim" and it supports many natural languaging functions. Gensim does all the hard work of this recipe. The NLTK is needed, merely for its stop words. Lastly, a large module called "spacy" is required. Like Gensim, it supports a wide variety of natural language processing functions, but it used here mainly to parse the corpus into sentences. After installing the necessary modules:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/carrel2vec.sh to get an idea of what is required
+   3. run ./bin/carrel2vec.sh homer; the result will be a set of diagnostic messages outlining the indexing process, and after at least a couple of minutes the process ought to complete
+   
+In the end a new file will have been created -- ./library/homer/etc/reader.vec. The resulting file is an index, and the index is not really readable with your text editor.
+
+Once the index is created, you will want to search it. This recipe only requires Python, and more specifically the Gensim module. While the index supports many functions, the following recipe only returns words which have similar vectors to the search word:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/search-vec.py san any input... to get an idea of what is required
+   3. run ./bin/search-vec.py homer war; the result ought to be a list of "similar" words and a similarity score where scores closer to 100 are exact matches
+   4. identiy a word of interest from the result
+   5. got to Step #3 until you get tired but this time use the word of interest
+
+Your search results will most likely be disappointing, especially since the similarity scores will almost always be near 100. This is because the corpus is not large enough to be effective. For extra credit, harvest an additional study carrel or two and repeat the previous two recipes accordingly, but keep in mind, the indexing process is not fast. The size and scope of the study carrel named "knowledge" begins to demonstrate the ideas behind semantic indexing.
+   
+   
+### Free-text indexing with facets
+
+Free-text indexing with faceted results is the type of searching we have all come to love. Enter a word, get back (faceted) results, select an item, and get the associated document. Unfortunately, preparing this recipe is by far the most complicated in the workbook, thus, only an outline will be presented here.
+
+The ingredients are many. First you need a free-text indexer and search engine called "Solr", which is pretty much the gold-standard these days. Installing Solr is as easy a downloading the distribution, uncompressing it, and saving it in a location where you can find it again. Solr requires Java, and you probably already have Java installed. Second, you need Perl, and more specifically, you need two Perl modules: 1) DBI which will interact with the Distant Reader's underlying SQLite database, and 2) WebService::Solr which takes the database output and feeds it to Solr. WebService::Solr is not a small installation.
+
+The first few steps of the following recipe are the most complicated:
+
+   1. create a Solr instance/core and the core must be named "carrels-reader" (see the Solr documentation)
+   2. copy ./library/homer/etc/schema.xml to the newly created core's conf directory; each core is required to include a file denoting the shape of the index, and ./library/homer/etc/schema.xml is just such a file
+   3. open your terminal application and navigate to the root of the solr directory
+   4. run ./bin/solr start
+   5. examine the output
+   6. if the output looks like a failure, then ask a friend to help you, and go to Step #1 until you get tired
+   7. open your Web browser and go to http://localhost:8983/solr/; the result ought to be graphical interface to your Solr index(es)
+   8. if the result looks like a failure, then ask a friend to help you, and go to Step #1 until you get tired
+
+Whew, if you got all the way through, then the hardest part is over. You now need to index a carrel. Here's how:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/db2solr.pl sans any input... to get an idea of what is required
+   3. run ./bin/db2solr.pl homer
+   4. examine the output
+   5. if the output looks like garbage, then find a friend and repeat the first recipe
+
+If you have gotten this far, then the output probably looked like the contents of your study carrel, and it is all down hill from here.
+   
+Solr is now running. An index has now been created. It is time to search. The following recipe supports free-text and fielded queries with Boolean logic. The results are faceted on the names of people and keywords. The search results are relevancy ranked, and each item in the list includes basic bibliographics as well as a pointer to the associated document:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/search-solr.pl sans any input... to get an idea of what is required
+   3. run ./bin/search-solr.pl homer war; the result ought to be a narrative text
+   4. scroll up and down the text and identify an item of interest
+   5. use your text editor to open the item of interest
+   6. use your Web browser to open to the same item of interest but located in the study carrel's directory named "cache"; the item in the cache may be more amenable to traditional reading
+   7. go to Step #3 until you get tired, but each time enter different queries with an understanding that each field is searchable
+
+Everybody likes to search, but even more, everybody loves to get. Remember, the Distant Reader caches the content it reads, and in this way the study carrels are independent of the Web. Search for items in your index and open them from the cache.
 
 
 ## Summary/conclusion

@@ -7,7 +7,7 @@
 # August 29, 2010 - added cool bar chart
 
 # include
-use lib './lib';
+#use lib './lib';
 use Lingua::Concordance;
 use Text::BarGraph;
 use strict;
@@ -26,6 +26,8 @@ if ( ! $file or ! $query ) {
 open INPUT, "$file" or die "Can't open input: $!\n";
 my $text = do { local $/; <INPUT> };
 close INPUT;
+
+print $text;
 
 # configure
 my $concordance = Lingua::Concordance->new;
