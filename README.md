@@ -839,8 +839,8 @@ If you have gotten this far, then the output probably looked like the contents o
 Solr is now running. An index has now been created. It is time to search. The following recipe supports free-text and fielded queries with Boolean logic. The results are faceted on the names of people and keywords. The search results are relevancy ranked, and each item in the list includes basic bibliographics as well as a pointer to the associated document:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/search-solr.pl` sans any input... to get an idea of what is required
-   3. run ``./bin/search-solr.pl homer war`; the result ought to be a narrative text
+   2. run `./bin/search-solr.pl` sans any input... to get an idea of what is required
+   3. run `./bin/search-solr.pl homer war`; the result ought to be a narrative text
    4. scroll up and down the text and identify an item of interest
    5. use your text editor to open the item of interest
    6. use your Web browser to open to the same item of interest but located in the study carrel's directory named "cache"; the item in the cache may be more amenable to traditional reading
