@@ -97,19 +97,19 @@ The Distant Reader supplements the traditional reading process. It does this in 
 
 Put another way, the Distant Reader can answer a myriad of questions about individual items or the corpus as a whole. Such questions are not readily apparent through traditional reading. Examples include but are not limited to:
 
-  * How big is the corpus, and how does its size compare to other corpora?
-  * How difficult (scholarly) is the corpus?
-  * What words or phrases are used frequently and infrequently?
-  * What statistically significant words characterize the corpus?
-  * Are there latent themes in the corpus, and if so, then what are they and how do they change over both time and place?
-  * How do any latent themes compare to basic characteristics of each item in the corpus (author, genre, date, type, location, etc.)?
-  * What is discussed in the corpus (nouns)?
-  * What actions take place in the corpus (verbs)?
-  * How are those things and actions described (adjectives and adverbs)?
-  * What is the tone or “sentiment” of the corpus?
-  * How are the things represented by nouns, verbs, and adjective related?
-  * Who is mentioned in the corpus, how frequently, and where?
-  * What places are mentioned in the corpus, how frequently, and where?
+   * How big is the corpus, and how does its size compare to other corpora?
+   * How difficult (scholarly) is the corpus?
+   * What words or phrases are used frequently and infrequently?
+   * What statistically significant words characterize the corpus?
+   * Are there latent themes in the corpus, and if so, then what are they and how do they change over both time and place?
+   * How do any latent themes compare to basic characteristics of each item in the corpus (author, genre, date, type, location, etc.)?
+   * What is discussed in the corpus (nouns)?
+   * What actions take place in the corpus (verbs)?
+   * How are those things and actions described (adjectives and adverbs)?
+   * What is the tone or “sentiment” of the corpus?
+   * How are the things represented by nouns, verbs, and adjective related?
+   * Who is mentioned in the corpus, how frequently, and where?
+   * What places are mentioned in the corpus, how frequently, and where?
 
 People who use the Distant Reader look at the reports it generates, and they often say, “That’s interesting!” This is because it highlights characteristics of the corpus which are not readily apparent. If you were asked what a particular corpus was about or what are the names of people mentioned in the corpus, then you might answer with a couple of sentences or a few names, but with the Distant Reader you would be able to be more thorough with your answer.
 
@@ -124,11 +124,11 @@ I don’t know about you, but now-a-days I can find plenty of scholarly & author
 
 The Distant Reader can take five different types of input, and this section describes in detail what they are:
 
-  1. a file
-  2. a URL
-  3. a list of URLs
-  4. a zip file
-  5. a zip file with a companion CSV file
+   1. a file
+   2. a URL
+   3. a list of URLs
+   4. a zip file
+   5. a zip file with a companion CSV file
 
 Each of these different types of input are elaborated upon below.
 
@@ -143,10 +143,10 @@ A good set of use-cases for single file input is the whole of a book, a long rep
 
 The Distant Reader can take a single URL as input. Given a URL, the Reader will turn into a rudimentary Internet spider and build a corpus. More specifically, given a URL, the Reader will:
 
-  1. retrieve & cache the content found at the other end of the URL
-  2. extract any URLs it finds in the content
-  3. retrieve & cache the content from these additional URLs
-  4. stop building the corpus but continue with its analysis
+   1. retrieve & cache the content found at the other end of the URL
+   2. extract any URLs it finds in the content
+   3. retrieve & cache the content from these additional URLs
+   4. stop building the corpus but continue with its analysis
 
 In short, given a URL, the Reader will cache the URL’s content, crawl the URL one level deep, cache the result, and stop caching.
 
@@ -199,14 +199,14 @@ As outlined above, the Distant Reader first creates a cache of content — a cor
 
 This is where the CSV file comes in; by including a CSV file named “metadata.csv” in the .zip file, the Distant Reader will be able to provide meaningful context. In turn, you will be able to make more informed observations, and thus your analysis will be more thorough. Here’s how:
 
-  1. assemble a set of files for analysis
-  2. use your favorite spreadsheet or database application to create a list of the file names
-  3. assign a header to the list (column) and call it “file”
-  4. create one or more columns whose headers are “author” and/or “title” and/or “date”
-  5. to the best of your ability, update the list with author, title, or date values for each file
-  6. save the result as a CSV file named “metadata.csv” and put it in the folder/directory to be zipped
-  7. compress the folder/directory to create the zip file
-  8. submit the result to the Distant Reader for analysis
+   1. assemble a set of files for analysis
+   2. use your favorite spreadsheet or database application to create a list of the file names
+   3. assign a header to the list (column) and call it “file”
+   4. create one or more columns whose headers are “author” and/or “title” and/or “date”
+   5. to the best of your ability, update the list with author, title, or date values for each file
+   6. save the result as a CSV file named “metadata.csv” and put it in the folder/directory to be zipped
+   7. compress the folder/directory to create the zip file
+   8. submit the result to the Distant Reader for analysis
 
 The zip file with a companion CSV file has all the strengths & weakness of the plain o’ zip file, but it adds some more. On the weakness side, creating a CSV file can be both tedious and daunting. On the other hand, many search engines & index export lists with author, title, and data metadata. One can use these lists as the starting point for the CSV file.♱ On the strength side, the addition of the CSV metadata file makes the Distant Reader’s output immeasurably more useful, and it leads the way to additional compare & contrast opportunities.
 
@@ -261,11 +261,11 @@ Project Gutenberg is very useful resource because the content is: 1) free, and 2
 
 To date, the Distant Reader takes five different types of input. Each type has its own set of strengths & weaknesses:
 
-  * a file – good for a single large file; quick & easy; not scalable
-  * a URL – good for getting an overview of a single Web page and its immediate children; can include a lot of noise; has authorization limitations
-  * a list of URLs – can accomodate thousands of items; has authorization limitations; somewhat difficult to create list
-  * a zip file – easy to create; file names may get in the way; no authorization necessary; limited to 128 megabytes in size
-  * a zip file with CSV file – same as above; difficult to create metadata; results in much more meaningful reports & opportunities
+   * a file – good for a single large file; quick & easy; not scalable
+   * a URL – good for getting an overview of a single Web page and its immediate children; can include a lot of noise; has authorization limitations
+   * a list of URLs – can accomodate thousands of items; has authorization limitations; somewhat difficult to create list
+   * a zip file – easy to create; file names may get in the way; no authorization necessary; limited to 128 megabytes in size
+   * a zip file with CSV file – same as above; difficult to create metadata; results in much more meaningful reports & opportunities
 
 
 ## Submitting "experiments" and downloading "study carrels"
@@ -282,79 +282,79 @@ The Distant Reader takes an arbitrary amount of unstructured data (text) as inpu
 
 The results of downloading and uncompressing the Distant Reader study carrel is a directory/folder containing a standard set of files and subdirectories. Each of these files and subdirectories are listed & described below:
 
-   * A1426341535 – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
-   * adr – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
-   * bib – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
-   * cache – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
-   * css – This subdirectory contains a set of cascading stylesheets used by the HTML files in the carrel. If you really desired, one could edit these files in order to change the appearance of the carrel.
-   * input.zip – This file, or something named very similarly, is the file originally used to create your study carrel. It has already served its intended purpose, but it is retained for reasons of provenance.
-   * ent – This subdirectory contains a set of tab-delimited files, and each file contains a set of named entities from a given document in your corpus. While the files’ names end in .ent, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have five columns: 1) id, 2) sid, 3) eid, 4) entity, and 5) type. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding who, what, when, where, how, and how many.
-   * etc – This subdirectory contains a set of ancillary files, and each are described below
-     + model-data.txt – the data file used by topic-model.htm, and it is essentially an enhanced version of reader.txt
-     + queries.sql – a set of SQL queries used to generate report.txt, and this file is an excellent introduction to the use of reader.db
-     + reader.db – an SQLite database file, and it is essentially the amalgamation of the contents of the adr, bib, ent, pos, urls, and wrd directories; the intelligent use of this file can be used to answer just about any question answerable by the carrel
-     + reader.sql – a set SQL commands denoting the structure of reader.db
-     + reader.txt – the concatenation of all files in the txt directory; a plain text version of the whole of the corpus is often used for other purposes and it is provided here as a convienence
-     + report.txt – the result of applying queries.sql to reader.db; this file has the exact same content as standard-output.txt
-     + stopwords.txt – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
-   * figures – This subdirectory contains a set of image files used by the carrel’s HTML files:
-     + adjectives.png – a word cloud illustrating the most frequent adjectives in the corpus
-     + adverbs.png – a word cloud illustrating the most frequent adverbs in the corpus
-     + bigrams.png – a word cloud illustrating the most frequent bigrams (two-word phrases) in the corpus
-     + flesch-boxplot.png – a box plot illustrating the average, quartile, and outlier readability scores of the items in the corpus
-     + flesch-histogram.png – a histogram illustrating the distribution of readability scores of the items in the corpus
-     + keywords.png – a word cloud illustrating the most frequent keywords (statistically significant unigrams) in the corpus
-     + nouns.png – a word cloud illustrating the most frequent nouns in the corpus
-     + pronouns.png – a word cloud illustrating the most frequent pronouns in the corpus
-     + proper-nouns.png – a word cloud illustrating the most frequent proper nouns in the corpus
-     + sizes-boxplot.png – a box plot illustrating the average, quartile, and outlier sizes of the items (measured in unigrams) in the corpus
-     + sizes-histogram.png – a histogram illustrating the distribution of sizes of the items (measured in unigrams) in the corpus
-     + topics.png – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
-     + unigrams.png – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
-     + verbs.png – a word cloud illustrating the most frequent verbs in the corpus
-   * htm – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
-     + adjective-noun.htm – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
-     + adjectives.htm – search, sort, and browse adjectives and/or their frequency
-     + adverbs.htm – search, sort, and browse adverbs and/or their frequency
-     + bigrams.htm – search, sort, and browse bigrams (two-word phrases) and/or their frequency
-     + entities.htm – search, sort, and browse named-entities, their type, and/or their frequency
-     + keywords.htm – search, sort, and browse keywords (statistically significant unigrams) and/or their frequency
-     + noun-verb.htm – search, sort, and browse noun/verb combinations by noun, verb, or frequency
-     + nouns.htm – search, sort, and browse nouns and/or their frequency
-     + pronouns.htm – search, sort, and browse pronouns and/or their frequency
-     + proper-nouns.htm – search, sort, and browse proper nouns and/or their frequency
-     + quadgrams.htm – search, sort, and browse quadgrams (four-word phrases) and/or their frequency
-     + questions.htm – search, sort, and browse questions (sentences ending with a question mark) and from which items they were extracted
-     + search.htm – a free text query interface based on the narrative summaries of each item in the corpus
-     + topic-model.htm – a topic modeler; a tool used to enumerate as well as compare & contrast latent themes in the corpus
-     + trigrams.htm – search, sort, and browse trigrams (three-word phrases) and/or their frequency
-     + unigrams.htm – search, sort, and browse unigrams (individual words) and/or their frequency
-     + verbs.htm – search, sort, and browse verbs and/or their frequencies
-  * index.htm – This HTML file narratively reports on the content of your study carrel. It is the best place to begin once you have downloaded and unzipped the carrel.
-  * MANIFEST.htm – This file, and it is the third best place to begin once you have downloaded and unzipped a carrel.
-  * job_1819387465.slurm – This file, or a very similarly named file, is the batch file used to initially create your study carrel. In the future, this file may be removed from the study carrel all together because it serves only an administrative purpose.
-  * js – This subdirectory includes a set of Javascript libraries supporting the functionality of index.htm as well as the HTML files in the htm directory. Because these files are here your computer does not need to be connected to the Internet in order to effectively read your carrel. Study carrels are designed to be stand-alone file systems usable for years to come.
-  * LICENSE – This is the license file; each study carrel is distributed under a GNU Public License.
-  * pos – This subdirectory contains a set of tab-delimited files, and each file contains a set of part-of-speech files from a given document in your corpus. While the files’ names end in .pos, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have six columns: 1) id, 2) sid, 3) tid, 4) token, 5) lemma, and 6) pos. The definitions of these columns are described in another blog posting. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer question regarding who, what, how, how many, and actions as well as grammer and style.
-  * README – This file contains the very briefest of introductions to the carrel.
-  * standard-error.txt – As each study carrel is being created, error and status messages are output to this file. It is a log file. If the creation of your study carrel fails, then this is a good place to look for clues on what went wrong. Send me this file if you are stymied.
-  * standard-output.txt – After your study carrel as been created and distilled into a database, sets of queries are applied against the database. This file is the second best place to begin once you have downloaded and unzipped a carrel.
-  * tsv – Except for one (questions.tsv), this subdirectory contains a set of frequency tables in the form of tab-delimited text files. The exception is a tab-delimited text file too, but it is just not a frequency file. All of these files can be imported into for favorite spreadsheet, database, or analysis application. Possible uses for these files are destined to be outlined in future postings, but in short, perusal of these files will help you answer questions regarding your corpus’s “aboutness” as well as who, what, when, where, how, how many, and why questions. The structure of each file is listed below:
-     + adjective-noun.tsv – three columns: 1) adjective, 2) noun, and 3) frequency where frequency denotes the number of times the given adjective appears immediately before the given noun in the corpus
-     + adjectives.tsv – two columns: 1) adjective, and 2) frequency
-     + adverbs.tsv – two columns: 1) adverb, and 2) frequency
-     + bigrams.tsv – two columns: 1) bigram (two-word phrase), and 2) frequency
-     + entities.tsv – three columns: 1) entity, 2) type, and 3) frequency
-     + keywords.tsv – two columns: 1) keyword (statistically significant unigram), and 2) frequency
-     + noun-verb.tsv – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
-     + nouns.tsv – two columns: 1) noun, and 2) frequency
-     + pronouns.tsv – two columns: 1) pronoun, and 2) frequency
-     + proper-nouns.tsv – two columns: 1) proper, and 2) frequency
-     + quadgrams.tsv – two columns: 1) quadgram (four-word phrase), and 2) frequency
-     + questions.tsv – two columns: 1) identifier, and 2) question where each question is a “sentence” ending in a question mark
-     + trigrams.tsv – two columns: 1) trigram (three-word phrase), and 2) frequency
-     + unigrams.tsv – two columns: 1) unigram (individual word), and 2) frequency
-     + verbs.tsv – two columns: 1) verb, and 2) frequency
+   * **A1426341535** – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
+   * **adr** – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
+   * **bib** – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
+   * **cache** – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
+   * **css** – This subdirectory contains a set of cascading stylesheets used by the HTML files in the carrel. If you really desired, one could edit these files in order to change the appearance of the carrel.
+   * **input.zip** – This file, or something named very similarly, is the file originally used to create your study carrel. It has already served its intended purpose, but it is retained for reasons of provenance.
+   * **ent** – This subdirectory contains a set of tab-delimited files, and each file contains a set of named entities from a given document in your corpus. While the files’ names end in .ent, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have five columns: 1) id, 2) sid, 3) eid, 4) entity, and 5) type. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding who, what, when, where, how, and how many.
+   * **etc** – This subdirectory contains a set of ancillary files, and each are described below
+     + **model-data.txt** – the data file used by topic-model.htm, and it is essentially an enhanced version of reader.txt
+     + **queries.sq**l – a set of SQL queries used to generate report.txt, and this file is an excellent introduction to the use of reader.db
+     + **reader.db** – an SQLite database file, and it is essentially the amalgamation of the contents of the adr, bib, ent, pos, urls, and wrd directories; the intelligent use of this file can be used to answer just about any question answerable by the carrel
+     + **reader.sql** – a set SQL commands denoting the structure of reader.db
+     + **reader.txt** – the concatenation of all files in the txt directory; a plain text version of the whole of the corpus is often used for other purposes and it is provided here as a convienence
+     + **report.txt** – the result of applying queries.sql to reader.db; this file has the exact same content as standard-output.txt
+     + **stopwords.txt** – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
+   * **figures** – This subdirectory contains a set of image files used by the carrel’s HTML files:
+     + **adjectives.png** – a word cloud illustrating the most frequent adjectives in the corpus
+     + **adverbs.png** – a word cloud illustrating the most frequent adverbs in the corpus
+     + **bigrams.png** – a word cloud illustrating the most frequent bigrams (two-word phrases) in the corpus
+     + **flesch-boxplot.png** – a box plot illustrating the average, quartile, and outlier readability scores of the items in the corpus
+     + **flesch-histogram.png** – a histogram illustrating the distribution of readability scores of the items in the corpus
+     + **keywords.png** – a word cloud illustrating the most frequent keywords (statistically significant unigrams) in the corpus
+     + **nouns.png** – a word cloud illustrating the most frequent nouns in the corpus
+     + **pronouns.png** – a word cloud illustrating the most frequent pronouns in the corpus
+     + **proper-nouns.png** – a word cloud illustrating the most frequent proper nouns in the corpus
+     + **sizes-boxplot.png** – a box plot illustrating the average, quartile, and outlier sizes of the items (measured in unigrams) in the corpus
+     + **sizes-histogram.png** – a histogram illustrating the distribution of sizes of the items (measured in unigrams) in the corpus
+     + **topics.png** – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
+     + **unigrams.png** – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
+     + **verbs.png** – a word cloud illustrating the most frequent verbs in the corpus
+   * **htm** – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
+     + **adjective-noun.htm** – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
+     + **adjectives.htm** – search, sort, and browse adjectives and/or their frequency
+     + **adverbs.htm** – search, sort, and browse adverbs and/or their frequency
+     + **bigrams.htm** – search, sort, and browse bigrams (two-word phrases) and/or their frequency
+     + **entities.htm** – search, sort, and browse named-entities, their type, and/or their frequency
+     + **keywords.htm** – search, sort, and browse keywords (statistically significant unigrams) and/or their frequency
+     + **noun-verb.htm** – search, sort, and browse noun/verb combinations by noun, verb, or frequency
+     + **nouns.htm** – search, sort, and browse nouns and/or their frequency
+     + **pronouns.htm** – search, sort, and browse pronouns and/or their frequency
+     + **proper-nouns.htm** – search, sort, and browse proper nouns and/or their frequency
+     + **quadgrams.htm** – search, sort, and browse quadgrams (four-word phrases) and/or their frequency
+     + **questions.htm** – search, sort, and browse questions (sentences ending with a question mark) and from which items they were extracted
+     + **search.htm** – a free text query interface based on the narrative summaries of each item in the corpus
+     + **topic-model.htm** – a topic modeler; a tool used to enumerate as well as compare & contrast latent themes in the corpus
+     + **trigrams.htm** – search, sort, and browse trigrams (three-word phrases) and/or their frequency
+     + **unigrams.htm** – search, sort, and browse unigrams (individual words) and/or their frequency
+     + **verbs.htm** – search, sort, and browse verbs and/or their frequencies
+  * **index.htm** – This HTML file narratively reports on the content of your study carrel. It is the best place to begin once you have downloaded and unzipped the carrel.
+  * **MANIFEST.htm** – This file, and it is the third best place to begin once you have downloaded and unzipped a carrel.
+  * **job_1819387465.slurm** – This file, or a very similarly named file, is the batch file used to initially create your study carrel. In the future, this file may be removed from the study carrel all together because it serves only an administrative purpose.
+  * **js** – This subdirectory includes a set of Javascript libraries supporting the functionality of index.htm as well as the HTML files in the htm directory. Because these files are here your computer does not need to be connected to the Internet in order to effectively read your carrel. Study carrels are designed to be stand-alone file systems usable for years to come.
+  * **LICENSE** – This is the license file; each study carrel is distributed under a GNU Public License.
+  * **pos** – This subdirectory contains a set of tab-delimited files, and each file contains a set of part-of-speech files from a given document in your corpus. While the files’ names end in .pos, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have six columns: 1) id, 2) sid, 3) tid, 4) token, 5) lemma, and 6) pos. The definitions of these columns are described in another blog posting. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer question regarding who, what, how, how many, and actions as well as grammer and style.
+  * **README** – This file contains the very briefest of introductions to the carrel.
+  * **standard-error.txt** – As each study carrel is being created, error and status messages are output to this file. It is a log file. If the creation of your study carrel fails, then this is a good place to look for clues on what went wrong. Send me this file if you are stymied.
+  * **standard-output.txt** – After your study carrel as been created and distilled into a database, sets of queries are applied against the database. This file is the second best place to begin once you have downloaded and unzipped a carrel.
+  * **tsv** – Except for one (questions.tsv), this subdirectory contains a set of frequency tables in the form of tab-delimited text files. The exception is a tab-delimited text file too, but it is just not a frequency file. All of these files can be imported into for favorite spreadsheet, database, or analysis application. Possible uses for these files are destined to be outlined in future postings, but in short, perusal of these files will help you answer questions regarding your corpus’s “aboutness” as well as who, what, when, where, how, how many, and why questions. The structure of each file is listed below:
+     + **adjective-noun.tsv** – three columns: 1) adjective, 2) noun, and 3) frequency where frequency denotes the number of times the given adjective appears immediately before the given noun in the corpus
+     + **adjectives.tsv** – two columns: 1) adjective, and 2) frequency
+     + **adverbs.tsv** – two columns: 1) adverb, and 2) frequency
+     + **bigrams.tsv** – two columns: 1) bigram (two-word phrase), and 2) frequency
+     + **entities.tsv** – three columns: 1) entity, 2) type, and 3) frequency
+     + **keywords.tsv** – two columns: 1) keyword (statistically significant unigram), and 2) frequency
+     + **noun-verb.tsv** – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
+     + **nouns.tsv** – two columns: 1) noun, and 2) frequency
+     + **pronouns.tsv** – two columns: 1) pronoun, and 2) frequency
+     + **proper-nouns.tsv** – two columns: 1) proper, and 2) frequency
+     + **quadgrams.tsv** – two columns: 1) quadgram (four-word phrase), and 2) frequency
+     + **questions.ts** – two columns: 1) identifier, and 2) question where each question is a “sentence” ending in a question mark
+     + **trigrams.tsv** – two columns: 1) trigram (three-word phrase), and 2) frequency
+     + **unigrams.tsv** – two columns: 1) unigram (individual word), and 2) frequency
+     + **verbs.tsv** – two columns: 1) verb, and 2) frequency
   * txt – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
   * urls – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
   * wrd – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
@@ -407,6 +407,7 @@ Visualized word frequencies, while often considered sophomoric, can be quite use
 
 ![wordle](./images/wordle-interesting-small.png "Wordle")
 
+
 #### Wordle recipes
 
 Here is a generic Wordle recipe where World will calculate frequencies:
@@ -441,34 +442,37 @@ Notice how you used a variety of generic applications to achieve the desired res
 Concordancing is really a process about find, and AntConc is a very useful program for this purpose. Given one or more plain text files, AntConc will enable the student, researcher, or scholar to: find all the occurrences of a word, illustrate where the word is located, navigate through document(s) where the word occurs, list word collocations, and calculate quite a number of useful statistics regarding a word. Concordancing, dating from the 13th Century, is the oldest form of text mining. Think of it as control-F (^f) on steroids. AntConc does all this and more. For example, one can load all of the Iliad and the Odyssey into AntConc. Find all the occurrences of the word ship, visualize where ship appears in each chapter, and list the most significant words associated with the word ship.
 
 ![antconc](./images/antconc-occurences-small.png "AntConc")
+
 ![antconc](./images/antconc-dispersion-small.png "AntConc")
+
 ![antconc](./images/antconc-significant-small.png "AntConc")
+
 
 #### AntConc recipes
 
 This recipe simply implements search:
 
-  1. Download and install AntConc
-  2. Use the "Open Files(s)..." menu option to open all files in the txt directory
-  3. Select the Concordance tab
-  4. Enter a word of interest into the search box
-  5. Click the Start button
+   1. Download and install AntConc
+   2. Use the "Open Files(s)..." menu option to open all files in the txt directory
+   3. Select the Concordance tab
+   4. Enter a word of interest into the search box
+   5. Click the Start button
 
 The result ought to be a list of phrases where the word of interest is displayed in the middle of the screen. In modern-day terms, such a list is called a "key word in context" (KWIC) index. 
 
 This recipe combines search with "control-F":
 
-  1. Select the Concordance tab
-  2. Enter a word of interest into the search box
-  3. Click the Start button
-  4. Peruse the resulting phrases and click on one of interest; the result ought to a display of a text and the search term(s) is highlighted in the larger context
-  5. Go to Step #1 until tired
+   1. Select the Concordance tab
+   2. Enter a word of interest into the search box
+   3. Click the Start button
+   4. Peruse the resulting phrases and click on one of interest; the result ought to a display of a text and the search term(s) is highlighted in the larger context
+   5. Go to Step #1 until tired
   
 This recipe produces a dispersion plot, an illustration of where a search term appears in a document:
 
-  1. Select the Concordance tab
-  2. Enter a word of interest into the search box
-  3. Select the "Concordance Plot" tab
+   1. Select the Concordance tab
+   2. Enter a word of interest into the search box
+   3. Select the "Concordance Plot" tab
   
 The result will be a list of illustrations. Each illustration will include zero or more vertical lines denoting the location of your search term in a given file. The more lines in each illustrations, the more times the search terms appear in the document.
 
@@ -661,44 +665,44 @@ Topic modeling is an effective process for "reading" a corpus "from a distance".
 
 This set of recipes outline how to create a collection of study carrels, and then how to describe them. The first one is simple:
 
-  1. create a study carrel and download it to your computer
-  2. give your carrel a meaningful, one-word name
-  3. copy it to the directory named "library", inside the workbook directory
+   1. create a study carrel and download it to your computer
+   2. give your carrel a meaningful, one-word name
+   3. copy it to the directory named "library", inside the workbook directory
 
 Congratulations, your Distant Reader library now contains two items: homer and your newly created study carrel; your library has doubled in size.
 
 This next recipe, which only requires vanilla Perl, gives a study carrel a more meaningful name and scope:
 
-  1. Open your command-line interface, and navigate to the workbook's root directory
-  2. Run ./bin/add-metadata.pl sans any input to get an idea of the input required
-  3. Run ./bin/add-metadata.pl homer; the result ought to be a stream of HTML
-  4. Scroll backwards in your terminal, and you may notice how the HTML is a study carrel's home page
-  5. Run ./bin/add-metadata.pl homer > ./library/homer/index.html; the result will be the creation of a new file -- index.html
-  6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in the study carrel named homer
-  7. Use your text editor to open ./etc/homer.txt
-  8. Change the existing email address to your email address, and save the file
-  9. Go to Step #3 two or three times, but change something different each time
+   1. Open your command-line interface, and navigate to the workbook's root directory
+   2. Run ./bin/add-metadata.pl sans any input to get an idea of the input required
+   3. Run ./bin/add-metadata.pl homer; the result ought to be a stream of HTML
+   4. Scroll backwards in your terminal, and you may notice how the HTML is a study carrel's home page
+   5. Run ./bin/add-metadata.pl homer > ./library/homer/index.html; the result will be the creation of a new file -- index.html
+   6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in the study carrel named homer
+   7. Use your text editor to open ./etc/homer.txt
+   8. Change the existing email address to your email address, and save the file
+   9. Go to Step #3 two or three times, but change something different each time
 
 By editing ./etc/homer.txt, you were able to give the study carrel a title, scope, and provenance. Here's how to do the same for your study carrel:
 
-  1. Duplicate ./etc/homer.txt, and rename it to the one-word name of your study carrel
-  2. open the file from Step #1, and edit as per the previous recipe
-  3. Run ./bin/add-metadata.pl NAME where NAME is the name of your carrel
-  4. Scroll backwards in your terminal, and you ought to see your edits
-  5. Run ./bin/add-metadata.pl NAME > ./library/NAME/index.html where NAME is the name of your carrel
-  6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in your study carrel
-  7. Go to Step #2 until satisfied
+   1. Duplicate ./etc/homer.txt, and rename it to the one-word name of your study carrel
+   2. open the file from Step #1, and edit as per the previous recipe
+   3. Run ./bin/add-metadata.pl NAME where NAME is the name of your carrel
+   4. Scroll backwards in your terminal, and you ought to see your edits
+   5. Run ./bin/add-metadata.pl NAME > ./library/NAME/index.html where NAME is the name of your carrel
+   6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in your study carrel
+   7. Go to Step #2 until satisfied
 
 If a student, researcher, or scholar finds Distant Reader study carrels both interesting and useful, then this librarian bets subsequently created study carrels will be of a similar theme or ilk. Each carrel won't be exactly the same but similar. Moreover, this librarian bets the student, researcher, or scholar will eventually want to compare & contrast the study carrels. By giving study carrels meaningful titles, scope notes, and provenance the collection of carrels becomes even more useful. The carrels also become more shareable. ("Hint, hint.")
 
 A library of previously created study carrels is available from the Distant Reader website. This recipe outlines how to copy any number of those study carrels to your computer. First you will need a few ingredient: Bash, wget, and a program called untar, but that is probably already a part of the Bash environment. Next, you:
   
-  1. peruse the previously created study carrels at https://carrels.distantreader.org
-  2. identify a carrel, any carrel, of interest, and note its short, one-word name
-  3. open your command-line interface, and navigate to the root of the workbook directory
-  4. run ./bin/harvest.sh sans any input to get an idea of what type of input it expected
-  5. run ./bin/harvest.sh NAME, where NAME is the short name of the study carrel identified in Step #2
-  6. go to Step #1 until you get tired
+   1. peruse the previously created study carrels at https://carrels.distantreader.org
+   2. identify a carrel, any carrel, of interest, and note its short, one-word name
+   3. open your command-line interface, and navigate to the root of the workbook directory
+   4. run ./bin/harvest.sh sans any input to get an idea of what type of input it expected
+   5. run ./bin/harvest.sh NAME, where NAME is the short name of the study carrel identified in Step #2
+   6. go to Step #1 until you get tired
 
 In the end, you ought to have a collection of at least two or three study carrels. Consider the repeated use of ./bin/add-metadata.pl to give each item more context.
 
@@ -707,10 +711,10 @@ In the end, you ought to have a collection of at least two or three study carrel
 
 Text mining and natural language processing often requires the enumeration of "features" -- rather numeric characteristics of a text. These characteristics are also called "features". These recipes outline how to text a few sets of features. For example, everybody want to count & tabulate the frequency of ngrams. This first recipe requires Perl and a module called Lingua::EN::Ngram:
 
-  1. open your terminal application and navigate to the root of the workshop directory
-  2. run ./bin/ngrams.pl sans any input to learn what sort of input it expects
-  3. run ./bin/ngrams.pl ./library/homer/etc/reader.txt 1 to output all the words and their frequency in Homer
-  4. go to Step #2 a couple more times but change the value of the number of ngram
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/ngrams.pl sans any input to learn what sort of input it expects
+   3. run ./bin/ngrams.pl ./library/homer/etc/reader.txt 1 to output all the words and their frequency in Homer
+   4. go to Step #2 a couple more times but change the value of the number of ngram
 
 By counting & tabulating the frequent ngrams the student, researcher, or scholar can begin to get an idea regarding the "aboutness" of their corpus. The output of ./bin/ngrams.pl is tab-delimited. Thus the student, researcher, or scholar could redirect the output to a file and subsequently open it in their favoriate spreadsheet application for further processing -- "reading". 
 
@@ -720,10 +724,10 @@ The Distant Reader uses an algorithm called XYZZY to generate lists of keywords 
 
 This recipe takes a type of word found in a study carrel and returns a list of broader terms as well as their frequency, thus giving the reader an additional sense of aboutness. The ingredients for this recipe include Python and a couple of modules: 1) the whole of the nltk.corpus module, and 2) sqlite3. The first comes along for the ride when you install the whole of the ntlk, and the later almost surely comes along for the ride with any Python distribution. Here is how to output broader terms from many different types of words (nouns, verbs, adjectives, lemmas, and keywords) found in a study carrel:
 
-  1. open your terminal application and navigate to the root of the workshop directory
-  2. run ./bin/word2hypernym.py sans any input to get an idea of what the script requires
-  3. run ./bin/word2hypernym.py homer noun; the result ought to be a list of broader concepts of all nouns in the carrel
-  4. go to Step #3 but change the type of frequency desired
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run ./bin/word2hypernym.py sans any input to get an idea of what the script requires
+   3. run ./bin/word2hypernym.py homer noun; the result ought to be a list of broader concepts of all nouns in the carrel
+   4. go to Step #3 but change the type of frequency desired
 
 These sorts of frequencies are rather meaningless in-and-of-themselves, but they begin to take on additional meaning when they are compared with other collections (study carrels). For extra credit, add a different study carrel to your library, and then repeat this exercise against it. Then ask yourself, "How are the carrels similar or different?"
 
