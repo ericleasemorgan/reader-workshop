@@ -14,7 +14,7 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 18, 2020
+February 19, 2020
 
 
 ## Table of contents
@@ -227,11 +227,12 @@ The Distant Reader is a tool for reading. It takes an arbitrary amount of unstru
 
 As described in a previous posting, the Distant Reader can take five different types of input. [5] One of those inputs is a file where each line in the file is a URL. My locally implemented mirror of Project Gutenberg enables the reader to search & browse in a manner similar to the canonical version of Project Gutenberg, but with two exceptions. First & foremost, once a search has been gone against my mirror, one of the resulting links is "only local URLs". For example, below is an illustration of the query "love AND honor AND truth AND justice AND beauty", and the "only local URLs" link is highlighted:
 
-[INSERT IMAGE HERE]
+![gutenberg](./images/pg-search-small.png "Gutenberg")
+
 
 By selecting the "only local URLs", a list of... URLs is returned, like this:
 
-[INSERT ANOTHER IMAGE HERE]
+![gutenberg](./images/pg-urls-small.png "Gutenberg")
 
 This list of URLs can then be saved as file, and any number of things can be done with the file. For example, there are Google Chrome extensions for the purposes of mass downloading. The file of URLs can be fed to command-line utilities (ie. curl or wget) also for the purposes of mass downloading. In fact, assuming the file of URLs is named love.txt, the following command will download the files in parallel and really fast:
 
