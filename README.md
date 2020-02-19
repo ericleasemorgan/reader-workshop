@@ -355,9 +355,9 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
      + **trigrams.tsv** – two columns: 1) trigram (three-word phrase), and 2) frequency
      + **unigrams.tsv** – two columns: 1) unigram (individual word), and 2) frequency
      + **verbs.tsv** – two columns: 1) verb, and 2) frequency
-  * txt – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
-  * urls – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
-  * wrd – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
+  * **txt** – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
+  * **urls** – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
+  * **wrd** – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
 
 
 ### Links
@@ -674,10 +674,10 @@ Congratulations, your Distant Reader library now contains two items: homer and y
 This next recipe, which only requires vanilla Perl, gives a study carrel a more meaningful name and scope:
 
    1. Open your command-line interface, and navigate to the workbook's root directory
-   2. Run ./bin/add-metadata.pl sans any input to get an idea of the input required
-   3. Run ./bin/add-metadata.pl homer; the result ought to be a stream of HTML
+   2. Run `./bin/add-metadata.pl` sans any input to get an idea of the input required
+   3. Run `./bin/add-metadata.pl homer`; the result ought to be a stream of HTML
    4. Scroll backwards in your terminal, and you may notice how the HTML is a study carrel's home page
-   5. Run ./bin/add-metadata.pl homer > ./library/homer/index.html; the result will be the creation of a new file -- index.html
+   5. Run `./bin/add-metadata.pl homer > ./library/homer/index.html`; the result will be the creation of a new file -- index.html
    6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in the study carrel named homer
    7. Use your text editor to open ./etc/homer.txt
    8. Change the existing email address to your email address, and save the file
@@ -687,9 +687,9 @@ By editing ./etc/homer.txt, you were able to give the study carrel a title, scop
 
    1. Duplicate ./etc/homer.txt, and rename it to the one-word name of your study carrel
    2. open the file from Step #1, and edit as per the previous recipe
-   3. Run ./bin/add-metadata.pl NAME where NAME is the name of your carrel
+   3. Run `./bin/add-metadata.pl NAME` where NAME is the name of your carrel
    4. Scroll backwards in your terminal, and you ought to see your edits
-   5. Run ./bin/add-metadata.pl NAME > ./library/NAME/index.html where NAME is the name of your carrel
+   5. Run `./bin/add-metadata.pl NAME > ./library/NAME/index.html` where NAME is the name of your carrel
    6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in your study carrel
    7. Go to Step #2 until satisfied
 
@@ -700,8 +700,8 @@ A library of previously created study carrels is available from the Distant Read
    1. peruse the previously created study carrels at https://carrels.distantreader.org
    2. identify a carrel, any carrel, of interest, and note its short, one-word name
    3. open your command-line interface, and navigate to the root of the workbook directory
-   4. run ./bin/harvest.sh sans any input to get an idea of what type of input it expected
-   5. run ./bin/harvest.sh NAME, where NAME is the short name of the study carrel identified in Step #2
+   4. run `./bin/harvest.sh` sans any input to get an idea of what type of input it expected
+   5. run `./bin/harvest.sh NAME`, where NAME is the short name of the study carrel identified in Step #2
    6. go to Step #1 until you get tired
 
 In the end, you ought to have a collection of at least two or three study carrels. Consider the repeated use of ./bin/add-metadata.pl to give each item more context.
@@ -712,8 +712,8 @@ In the end, you ought to have a collection of at least two or three study carrel
 Text mining and natural language processing often requires the enumeration of "features" -- rather numeric characteristics of a text. These characteristics are also called "features". These recipes outline how to text a few sets of features. For example, everybody want to count & tabulate the frequency of ngrams. This first recipe requires Perl and a module called Lingua::EN::Ngram:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/ngrams.pl sans any input to learn what sort of input it expects
-   3. run ./bin/ngrams.pl ./library/homer/etc/reader.txt 1 to output all the words and their frequency in Homer
+   2. run `./bin/ngrams.pl` sans any input to learn what sort of input it expects
+   3. run `./bin/ngrams.pl ./library/homer/etc/reader.txt 1` to output all the words and their frequency in Homer
    4. go to Step #2 a couple more times but change the value of the number of ngram
 
 By counting & tabulating the frequent ngrams the student, researcher, or scholar can begin to get an idea regarding the "aboutness" of their corpus. The output of ./bin/ngrams.pl is tab-delimited. Thus the student, researcher, or scholar could redirect the output to a file and subsequently open it in their favoriate spreadsheet application for further processing -- "reading". 
@@ -725,8 +725,8 @@ The Distant Reader uses an algorithm called XYZZY to generate lists of keywords 
 This recipe takes a type of word found in a study carrel and returns a list of broader terms as well as their frequency, thus giving the reader an additional sense of aboutness. The ingredients for this recipe include Python and a couple of modules: 1) the whole of the nltk.corpus module, and 2) sqlite3. The first comes along for the ride when you install the whole of the ntlk, and the later almost surely comes along for the ride with any Python distribution. Here is how to output broader terms from many different types of words (nouns, verbs, adjectives, lemmas, and keywords) found in a study carrel:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/word2hypernym.py sans any input to get an idea of what the script requires
-   3. run ./bin/word2hypernym.py homer noun; the result ought to be a list of broader concepts of all nouns in the carrel
+   2. run `./bin/word2hypernym.py` sans any input to get an idea of what the script requires
+   3. run `./bin/word2hypernym.py homer noun`; the result ought to be a list of broader concepts of all nouns in the carrel
    4. go to Step #3 but change the type of frequency desired
 
 These sorts of frequencies are rather meaningless in-and-of-themselves, but they begin to take on additional meaning when they are compared with other collections (study carrels). For extra credit, add a different study carrel to your library, and then repeat this exercise against it. Then ask yourself, "How are the carrels similar or different?"
@@ -739,8 +739,8 @@ In the English language, sentences ending in question marks are... questions, mo
 This recipe's ingredience include Bash, a program called "parallel", Perl, and the Perl module named "DBI" is also required. Here's how to list the questions in a study carrel:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/list-questions.sh sans any input to get an idea of what the input is
-   3. run ./bin/list-questions.sh homer; the result ought to be a list of questions homer study carrel
+   2. run `./bin/list-questions.sh` sans any input to get an idea of what the input is
+   3. run `./bin/list-questions.sh homer`; the result ought to be a list of questions homer study carrel
    4. identify a question of interest, and use a concordance to find the question in the study carrel
    5. read the text around the location of the question; is there an answer nearby?
    6. go to Step #3 until you get tired
@@ -751,8 +751,8 @@ This recipe's ingredience include Bash, a program called "parallel", Perl, and t
 If a word has been denoted as a keyword, then the student, researcher, or scholar will want to read the sentences with the keyword. Such sentences and their surroundings will usually allude to the aboutness of a document. The ingredients for this recipe include Perl and the Perl module named "DBI". This recipe is simple:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/keyword2sentences.pl sans any input to get an idea of what the input is
-   3. run ./bin/keyword2sentences.pl homer; the result ought to a stream of Sentence
+   2. run `./bin/keyword2sentences.pl` sans any input to get an idea of what the input is
+   3. run `./bin/keyword2sentences.pl homer`; the result ought to a stream of Sentence
    4. identify a sentence of interest, and use a concordance to find the sentence in the study carrel
    5. read the text around the location of the sentence; does it give you further insite regarding the document?
    6. go to Step #3 until you get tired
@@ -779,8 +779,8 @@ Everybody likes to search.
 Now-a-days concordancing goes by the name of keyword-in-context indexing. This recipe's ingredients include Perl and two of its library modules: 1) Lingua::Concordance which does the actual work, and 2) Text::BarGraph used to create a sort of dispersion chart/plot. Here goes:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/concordance.pl sans any input to get an idea of what input is expected
-   3. run ./bin/concordance.pl ./library/homer/etc/reader.txt peace; the result will be two fold: 1) a list of phrases centered on the given word (or regular expression), and a bar graph illustrating where the given word occurs in the text
+   2. run `./bin/concordance.pl` sans any input to get an idea of what input is expected
+   3. run `./bin/concordance.pl ./library/homer/etc/reader.txt peace`; the result will be two fold: 1) a list of phrases centered on the given word (or regular expression), and a bar graph illustrating where the given word occurs in the text
    4. go to Step #3 until you get tired, and if you do go to Step #3, then change your query
 
 The concordance script demonstrated here is no match for the functionality of AntConc, but the script is relatively quick and easy.
@@ -793,16 +793,16 @@ A semantic index is essentially a matrix of vectors where each vector denotes a 
 Semantic indexes require "a lot" of data in order to truly be effective; the following recipes do not do semantic indexing justice because of the size of the corpus is too small. That said, the first recipe creates a semantic index, and the process is heavy. The ingredients include: Bash, Python, and a few few modules. One Python module is called "gensim" and it supports many natural languaging functions. Gensim does all the hard work of this recipe. The NLTK is needed, merely for its stop words. Lastly, a large module called "spacy" is required. Like Gensim, it supports a wide variety of natural language processing functions, but it used here mainly to parse the corpus into sentences. After installing the necessary modules:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/carrel2vec.sh to get an idea of what is required
-   3. run ./bin/carrel2vec.sh homer; the result will be a set of diagnostic messages outlining the indexing process, and after at least a couple of minutes the process ought to complete
+   2. run `./bin/carrel2vec.sh` to get an idea of what is required
+   3. run `./bin/carrel2vec.sh homer`; the result will be a set of diagnostic messages outlining the indexing process, and after at least a couple of minutes the process ought to complete
    
 In the end a new file will have been created -- ./library/homer/etc/reader.vec. The resulting file is an index, and the index is not really readable with your text editor.
 
 Once the index is created, you will want to search it. This recipe only requires Python, and more specifically the Gensim module. While the index supports many functions, the following recipe only returns words which have similar vectors to the search word:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/search-vec.py san any input... to get an idea of what is required
-   3. run ./bin/search-vec.py homer war; the result ought to be a list of "similar" words and a similarity score where scores closer to 100 are exact matches
+   2. run `./bin/search-vec.py` san any input... to get an idea of what is required
+   3. run `./bin/search-vec.py homer war`; the result ought to be a list of "similar" words and a similarity score where scores closer to 100 are exact matches
    4. identiy a word of interest from the result
    5. got to Step #3 until you get tired but this time use the word of interest
 
@@ -820,7 +820,7 @@ The first few steps of the following recipe are the most complicated:
    1. create a Solr instance/core and the core must be named "carrels-reader" (see the Solr documentation)
    2. copy ./library/homer/etc/schema.xml to the newly created core's conf directory; each core is required to include a file denoting the shape of the index, and ./library/homer/etc/schema.xml is just such a file
    3. open your terminal application and navigate to the root of the solr directory
-   4. run ./bin/solr start
+   4. run `./bin/solr start`
    5. examine the output
    6. if the output looks like a failure, then ask a friend to help you, and go to Step #1 until you get tired
    7. open your Web browser and go to http://localhost:8983/solr/; the result ought to be graphical interface to your Solr index(es)
@@ -829,8 +829,8 @@ The first few steps of the following recipe are the most complicated:
 Whew, if you got all the way through, then the hardest part is over. You now need to index a carrel. Here's how:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/db2solr.pl sans any input... to get an idea of what is required
-   3. run ./bin/db2solr.pl homer
+   2. run `./bin/db2solr.pl` sans any input... to get an idea of what is required
+   3. run `./bin/db2solr.pl homer`
    4. examine the output
    5. if the output looks like garbage, then find a friend and repeat the first recipe
 
@@ -839,8 +839,8 @@ If you have gotten this far, then the output probably looked like the contents o
 Solr is now running. An index has now been created. It is time to search. The following recipe supports free-text and fielded queries with Boolean logic. The results are faceted on the names of people and keywords. The search results are relevancy ranked, and each item in the list includes basic bibliographics as well as a pointer to the associated document:
 
    1. open your terminal application and navigate to the root of the workshop directory
-   2. run ./bin/search-solr.pl sans any input... to get an idea of what is required
-   3. run ./bin/search-solr.pl homer war; the result ought to be a narrative text
+   2. run ./bin/search-solr.pl` sans any input... to get an idea of what is required
+   3. run ``./bin/search-solr.pl homer war`; the result ought to be a narrative text
    4. scroll up and down the text and identify an item of interest
    5. use your text editor to open the item of interest
    6. use your Web browser to open to the same item of interest but located in the study carrel's directory named "cache"; the item in the cache may be more amenable to traditional reading
