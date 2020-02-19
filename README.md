@@ -229,7 +229,6 @@ As described in a previous posting, the Distant Reader can take five different t
 
 ![gutenberg](./images/pg-search-small.png "Gutenberg")
 
-
 By selecting the "only local URLs", a list of... URLs is returned, like this:
 
 ![gutenberg](./images/pg-urls-small.png "Gutenberg")
@@ -402,10 +401,11 @@ Again, every single file (except one) making up a study carrel is a plain text f
 
 Visualized word frequencies, while often considered sophomoric, can be quite useful when it comes to understanding a text, especially when the frequencies are focused on things like parts-of-speech, named entities, or co-occurrences. Wordle visualizes such frequencies very well. For example, the 100 most frequent words in the Iliad and the Odyssey, the 100 most frequent nouns in the Iliad and the Odyssey, or the statistically significant words associated with the word ship from the Iliad and the Odyssey.
 
-./images/wordle-words.png
-./images/wordle-nouns.png
-./images/wordle-ship.png
+![wordle](./images/wordle-words-small.png "Wordle")
 
+![wordle](./images/worlde-nouns-small.png "Wordle")
+
+![wordle](./images/wordle-interesting-small.png "Wordle")
 
 #### Wordle recipes
 
@@ -440,10 +440,9 @@ Notice how you used a variety of generic applications to achieve the desired res
 
 Concordancing is really a process about find, and AntConc is a very useful program for this purpose. Given one or more plain text files, AntConc will enable the student, researcher, or scholar to: find all the occurrences of a word, illustrate where the word is located, navigate through document(s) where the word occurs, list word collocations, and calculate quite a number of useful statistics regarding a word. Concordancing, dating from the 13th Century, is the oldest form of text mining. Think of it as control-F (^f) on steroids. AntConc does all this and more. For example, one can load all of the Iliad and the Odyssey into AntConc. Find all the occurrences of the word ship, visualize where ship appears in each chapter, and list the most significant words associated with the word ship.
 
-./images/antconc-occurences.png
-./images/antconc-dispersion.png
-./images/antconc-significant.png
-
+![antconc](./images/antconc-occurences-small.png "AntConc")
+![antconc](./images/antconc-dispersion-small.png "AntConc")
+![antconc](./images/antconc-significant-small.png "AntConc")
 
 #### AntConc recipes
 
@@ -515,10 +514,13 @@ The student, researcher, or scholar can use OpenRefine to open one or more diffe
 
 Many (actually, most) of the files in a study carrel are tab-delimited files, and they will import into OpenRefine with ease. For example, after all a carrel's part-of-speech (pos) files are imported into OpenRefine, the student, researcher, or scholar can very easily count, tabulate, search (filter), and facet on nouns, verbs, adjectives, etc. If the named entities files (ent) are imported, then it is easy to see what types of entities exist and who might be the people mentioned in the carrel:
 
-./images/openrefine-pos.png
-./images/openrefine-lemmatized-nouns.png
-./images/openrefine-entities.png
-./images/openrefine-faceted-persons.png
+![openrefine](./images/openrefine-pos-small.png "OpenRefine")
+
+![openrefine](./images/openrefine-lemmatized-nouns-small.png "OpenRefine")
+
+![openrefine](./images/openrefine-entities-small.png "OpenRefine")
+
+![openrefine](./images/openrefine-faceted-persons-small.png "OpenRefine")
 
 
 #### OpenRefine recipes
@@ -575,10 +577,13 @@ Technically speaking, topic modeling is an unsupervised machine learning process
 
 Topic Modeling Tool is a GUI/desktop topic modeler based on the venerable MALLET suite of software. It can be used in a number of ways, and it is relatively easy to use it to: list five distinct themes from the Iliad and the Odyssey, compare those themes between books, and, assuming each chapter occurs chronologically, compare the themes over time.
 
-./images/model-topics-01.png
-./images/model-topics-02.png
-./images/model-books.png
-./images/model-chapters.png
+![modeling](./images/model-topics-01-small.png "topic modeling")
+
+![modeling](./images/model-topics-02-small.png "topic modeling")
+
+![modeling](./images/model-books-small.png "topic modeling")
+
+![modeling](./images/model-chapters-small.png "topic modeling")
 
 
 #### Topic Modeling Tool Recipes
