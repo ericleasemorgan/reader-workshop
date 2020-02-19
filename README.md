@@ -853,4 +853,4 @@ Everybody likes to search, but even more, everybody loves to get. Remember, the 
 
 
 ## About the author
-Eric Lease Morgan has been practicing librarianship since 1984, but he has been consistently writing software since 1976. He is currently employed at the University of Notre Dame where he works in the Navari Family Center for Digital Scholarship of where he provides text mining and natural language processing services to the University community.
+Eric Lease Morgan has been practicing librarianship since 1984, but he has been consistently writing software since 1976. He is currently employed at the University of Notre Dame where he works in the Navari Family Center for Digital Scholarship. In the Center he provides text mining and natural language processing services to the University community.
