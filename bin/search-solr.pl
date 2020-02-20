@@ -33,8 +33,8 @@ $search_options{ 'facet.field' } = [ FACETFIELD ];
 $search_options{ 'facet' }       = 'true';
 
 # search
-#my $response = $solr->search( "carrel:$carrel AND $query", \%search_options );
-my $response = $solr->search( "$query", \%search_options );
+my $response = $solr->search( "carrel:$carrel AND $query", \%search_options );
+#my $response = $solr->search( "$query", \%search_options );
 
 # build a list of keyword facets
 my @facet_keyword = ();
