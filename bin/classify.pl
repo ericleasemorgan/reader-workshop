@@ -3,16 +3,17 @@
 # classify.pl - list most significant words in a text; based on http://en.wikipedia.org/wiki/Tfidf
 
 # Eric Lease Morgan <eric_morgan@infomotions.com>
-# April 10, 2009 - first investigations; based on search.pl
-# April 12, 2009 - added dynamic corpus
+# April    10, 2009 - first investigations; based on search.pl
+# April    12, 2009 - added dynamic corpus
+# February 22, 2020 - added lower bounds as and input
 
 
 # define
-use constant LOWERBOUNDS  => .005;
-use constant EXTRAS       => ( 'upon', 'one', 'though', 'will', 'shall', 'yet', 'thus', 'thou' );
+use constant EXTRAS => ( 'upon', 'one', 'though', 'will', 'shall', 'yet', 'thus', 'thou' );
 
-my $directory = $ARGV[ 0 ];
-if ( ! $directory ) { die "Usage $0 <directory>\n" }
+my $directory   = $ARGV[ 0 ];
+my $lowerbounds = $ARGV[ 1 ];
+if ( ! $directory || ! $lowerbounds ) { die "Usage $0 <directory> <a threshold value between 0 and 1>\n" }
 
 # use/require
 use strict;
@@ -41,7 +42,7 @@ foreach my $file ( @corpus ) {
 	# list tags greater than a given score
 	foreach my $tag ( sort { $$tags{ $b } <=> $$tags{ $a } } keys %$tags ) {
 	
-		if ( $$tags{ $tag } > LOWERBOUNDS ) {
+		if ( $$tags{ $tag } > $lowerbounds ) {
 		
 			$file =~ s/$directory\///e;
 			print "$tag (" . $$tags{ $tag } . ") $file\n";

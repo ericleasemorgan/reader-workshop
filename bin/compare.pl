@@ -68,7 +68,8 @@ for ( my $a = 0; $a <= $#corpus; $a++ ) {
 			
 		}
 		
-		last if ( $index == 1000 );
+		#last if ( $index == 1000 );
+		
 	}
 	
 	# next line

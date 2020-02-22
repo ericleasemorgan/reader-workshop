@@ -14,7 +14,7 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 19, 2020
+February 22, 2020
 
 
 ## Table of contents
@@ -138,6 +138,7 @@ Each of these different types of input are elaborated upon below.
 The simplest form of input is a single file from your computer. This can be just about file available to you, but to make sense, the file needs to contain textual data. Thus, the file can be a Word document, a PDF file, an Excel spreadsheet, an HTML file, a plain text file, etc. A file in the form of an image will not work because it contains zero text. Also, not all PDF files are created equal. Some PDF files are only facsimiles of their originals. Such PDF files are merely sets of images concatenated together. In order for PDF files to be used as input, the PDF files need to have been “born digitally” or they need to have had optical character recognition previously applied against them. Most PDF files are born digitally nor do they suffer from being facsimiles.
 
 A good set of use-cases for single file input is the whole of a book, a long report, or maybe a journal article. Submitting a single file to the Distant Reader is quick & easy, but the Reader is designed for analyzing larger rather than small corpora. Thus, supplying a single journal article to the Reader doesn’t make much sense; the use of the traditional reading process probably makes more sense for a single journal article.
+
 
 ### A URL
 
@@ -718,6 +719,7 @@ Text mining and natural language processing often requires the enumeration of "f
 
 By counting & tabulating the frequent ngrams the student, researcher, or scholar can begin to get an idea regarding the "aboutness" of their corpus. The output of ./bin/ngrams.pl is tab-delimited. Thus the student, researcher, or scholar could redirect the output to a file and subsequently open it in their favoriate spreadsheet application for further processing -- "reading". 
 
+
 #### Broader concepts
 
 The Distant Reader uses an algorithm called XYZZY to generate lists of keywords for every document in a study carrel. These keywords allude to the "aboutness" of a document. Many words in the English language have broader words as their parents. For example, the word "feeling" may be a broader word for the words "love", "sadness", or "elation". Sets of words characterizing this broadness are called "hypernyms". Given a word, the venerable WordNet thesaurus will return a word's broader term.
@@ -746,6 +748,7 @@ This recipe's ingredience include Bash, a program called "parallel", Perl, and t
    6. go to Step #3 until you get tired
    7. go to Step #3 but this time output the questions from a different study carrel in your library
 
+
 #### Sentences with given keywords
 
 If a word has been denoted as a keyword, then the student, researcher, or scholar will want to read the sentences with the keyword. Such sentences and their surroundings will usually allude to the aboutness of a document. The ingredients for this recipe include Perl and the Perl module named "DBI". This recipe is simple:
@@ -759,20 +762,93 @@ If a word has been denoted as a keyword, then the student, researcher, or schola
    7. go to Step #3 but this time output the sentences from a different study carrel
 
 
+### Classification and clustering
+
+Classification and clustering are complementary tasks used to subdivide a corpus into smaller corpora whose documents center on a set of themes, subjects, or topics. The use of classification and clustering is a good way to compare and contrast items in a study carrel. Classification and clustering are akin to the process of "divide and conquer".
+
+
+#### Cosine similarities
+
+Given a directory of plain text files and a lexicon articulated by the student, researcher, or scholar, this first recipe employs an algorithm called "cosine similarity" to calculate which documents are most alike.
+
+Computing the cosine similarity between sets of documents can be quite computationally heavy. It usually involves the creation of a set of vectors from an entire corpus, and then comparing those vectors to individual items in the corpus. Study carrels can easily include millions of words and the size of resulting matrix can be quite high -- beyond reasonable feasibility for personal computers. Thus, instead of using a whole corpus as the yard stick for comparison, this recipe allows the student, researcher, or scholar to employ a lexicon of their own design as the standard for comparison. Three sample lexicons are provided here: a list of colors, a list of names, and a list of "big ideas". The ingredients for this recipe merely requires Perl and an already-included library called "tfidf-toolbox.pl"; this is a simple recipe: 
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/compare.pl` sans any input to get an idea of what input is required
+   3. run `./bin/compare.pl ./library/homer/txt ./etc/ideas.txt`; after a minute or so the result will include a matrix of cosine similarity scores, a list of document pairs ordered by similarity score, and a key denoting which identifiers in the matrix are associated with which documents in the corpus
+   4. go to Step #3 but this time use ./etc/names.txt and ./etc/colors.txt as the given lexicons
+
+Using the homer study carrel and the ideas lexicon, we can see that the files homer-iliad-850_17.txt and homer-iliad-850_24.txt have a similarity score of 980. Since scores of 1000 denote exact similarity, we can state that when it comes to the set of big ideas, the files homer-iliad-850_17.txt and homer-iliad-850_24.txt are almost identical. In other words, these two documents use the given lexicon in almost the exact same ratio. They are not the documents which use the lexicon the most; they are the documents which use the lexicon similarly. 
+
+Here are two exercises left up to the reader. First, identify a document of particular interest. Then, duplicate the document, lower-case all of its words, remove any punctation, find & replace white space with carriage returns, sort the resulting list, remove duplicates, and save the result in a location where you can find it again. Re-run the foregoing recipe but this time use the file you just created as the lexicon. The result will be an ordered list of documents which are most similar to the document of interest. The document of interest ought to be at the top of the list. This exercise is one way to address a perennial problem, "Find more like this one."
+
+Second, identify a document of particular interest. Articulate the qualities that interest you. Do these qualities center around what is discussed (the nouns), what is done (the verbs), how things are described (the adjectives), or maybe who or where is discussed (the named-entities)? Use OpenRefine to count & tabulate these qualities in your document of interest. Save the resulting words in a file, and use them as the lexicon in the foregoing recipe. Again, you will be addressing the perennial problem, "Find more like this one."
+
+
+#### Classifying/tagging documents
+
+Students, researchers, and scholars often desire to classify their documents by assigning them with one or more keywords. The student, researcher, and scholar then want to observe the overall "aboutness" of their corpus. This recipe uses the venerable term-frequency/inverse-document frequency (TF/IDF) algorithm to accomplish this task.
+
+TF/IDF is one of the simplest and most well-understood algorithms for calculating the relevancy ranking of search results. Simply stated, it first calculates the relative weight of a given word in a document, and it then compares the weight of the  word across the whole corpus. Documents which contain the given word relatively a lot compared to all the other documents in the corpus are considered more relevant. This same algorithm can be turned on its head to determine what words are significant in a corpus as well as significant for a document. In the end, a sort of aboutness of each document can be articulated -- classification/tagging.
+
+The ingredients for this recipe include Perl and two libraries. The first, Lingua::StopWords, is used to import a list of stopwords. The second, which is already included here, is called "tfidf-toolbox.pl":
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/classify.pl` sans any input to get an idea of what input is required
+   3. run `./bin/classify.pl ./library/homer/txt .005`; the result will be two-fold: a list of keywords (tags) for each document as well as a count & tabulation of the keywords for the corpus as a whole
+   4. run `./bin/classify.pl ./library/homer/txt .009`; the result, because of a higher threshold value, will be similar to the results of Step #3 but with fewer keywords
+   5. run `./bin/classify.pl ./library/homer/txt .001`; the result, because of a lower threshold value, will be similar to the results of Step #3 but with a greater number of keywords
+   6. go to Step #5 until you get tired, but each time change the value of the threshold value until the output outputs values for most (all) documents makes the most sense to you
+
+There is no correct value for the threshold, and it needs to be adjusted up or down depending on: 1) the size of your corpus, and 2) the level of detail the student, researcher, or scholar desires. The application of TF/IDF is a quick & easy way to read a corpus. 
+
+
+#### Visualizing clusters
+
+The following recipe literally illustrates how sets of documents can be grouped into clusters, but the author is remiss because he does not really know how nor why they work. Such is left for the second edition of this workbook. Despite this omission, this recipe is both fun and demonstrative. The ingredients include Python and a whole slew of modules. Please see the source code for details, and upon examination the student, researcher, and scholar will observe the modules rely on themes from the previous recipes: cosine similarity and TF/IDF: 
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/cluster.py` sans any input to get an idea of what input is required
+   3. run `./bin/cluster.py homer dendrogram`; the result will be the appearance of a dendrogram illustrating the similarity and differences between the documents in the given study carrel
+   4. run `./bin/cluster.py homer cube`; the result will be the appearance of a movable cube containing points plotted in a 3-dimensional space, and if you move the cube correctly, then you will literally see how the documents fall into two clusters
+
+
+![clustering](./images/clustering-dendrogram-small.png "dendrogram")
+
+![clustering](./images/clustering-cube-small.png "cube")
+
   
-	C. Classification and clustering
-		 i. Cosine similarities (./bin/compare.pl)
-	    ii. Classifying/tagging documents (./bin/classify.pl)
-	   iii. Visualize clusters (./bin/cluster.py)
-	    iv. Visualize network diagram of nouns (./bin/carrel2diagram.sh)
-	D. Topic modeling
+#### Visualizing a network diagram of nouns
+
+Mathematical graph theory (think "nodes and edges") can be applied to texts for the purposes of illustrating relationships between words -- network diagrams. The following recipe applies this concept to co-occurring nouns -- pairs of nouns found in the same sentence. The heart of this recipe is the good work of Team JAMS who submitted it to the PEARC '19 Hack-a-thon contest and subsequently won first prize. *Thank you, and congratulations Team JAMS!*
+
+The ingredients for the recipe include Bash, Python, a number of pretty much standard Python modules (which you probably already have installed), and a Javascript library called "D3" (which is included in all Distant Reader study carrels). Let's go:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/carrel2diagram.sh` sans any input to get an idea of what input is required
+   3. run `./bin/carrel2diagram.sh homer NN`; after a bit of computation, the result will be the creation of two new study carrel files: 1) a data file (./library/homer/etc/homer.json), and 2) an HTML file (./library/homer/htm/network-diagram.htm)
+   4. use your Web browser to open the newly created HTML file; the result will look similar to the images below
+   5. go to Step #3 for each type of noun (NN, NNS, NNP, NNPS)
+
+Each visualization illustrates the number of times a given noun type (nouns, plural nouns, proper nouns, and plural proper nouns) occurs as well as the number of times they co-occur in the same sentence. Put another way, "What are the nouns mentioned 'in the same breath' for a given noun and how often?"
+
+It is not uncommon for mathematical graphs to include too many nodes for effective visualization; the canvas for a large graph often needs be much larger than the typical computer screen. Consequently the results of this recipe are sometimes difficult to interpret. Solutions are three-fold: 1) output a data file with fewer nodes, 2) apply the recipe to a smaller rather than larger study carrel, or 3) get a bigger computer screen. 
+
+![networks](./images/network-nn-small.png "nouns")
+
+![networks](./images/network-nnp-small.png "proper nouns")
+
+
+### Topic modeling
+
 		 i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
 	    ii. Visualize comparison of topics to metadata (./bin/pivot.py)
 	   iii. Visualize topic model (./bin/topic-model.py)
-	E. Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
+
+### Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
 
 
-## Searching
+### Searching
 
 Everybody likes to search.
 
@@ -786,9 +862,9 @@ Now-a-days concordancing goes by the name of keyword-in-context indexing. This r
 The concordance script demonstrated here is no match for the functionality of AntConc, but the script is relatively quick and easy.
 
 
-### Semantic indexing
+#### Semantic indexing
 
-A semantic index is essentially a matrix of vectors where each vector denotes a word in a corpus. Query words are first looked up in the matrix and then linear algebra is used to compare the associated vector with the other vectors in the matrix. When vectors "point" in the same direction, then they are considered similar. When vectors point in opposite directions, then they may be akin to antonyms. Searches against semantic indexes return relationships. Given three words of input, some semantic queries may solve an analogy. [Eric waves his arms around in an attempt to point to a few places in a three-dimensional space in order to illustrate the definition of an analogy in a semantic index.]
+A semantic index (often times called "word embedding") is essentially a matrix of vectors where each vector denotes a word in a corpus. Query words are first looked up in the matrix and then linear algebra is used to compare the associated vector with the other vectors in the matrix. When vectors "point" in the same direction, then they are considered similar. When vectors point in opposite directions, then they may be akin to antonyms. Searches against semantic indexes return relationships. Given three words of input, some semantic queries may solve an analogy. [Eric waves his arms around in an attempt to point to a few places in a three-dimensional space in order to illustrate the definition of an analogy in a semantic index.]
 
 Semantic indexes require "a lot" of data in order to truly be effective; the following recipes do not do semantic indexing justice because of the size of the corpus is too small. That said, the first recipe creates a semantic index, and the process is heavy. The ingredients include: Bash, Python, and a few few modules. One Python module is called "gensim" and it supports many natural languaging functions. Gensim does all the hard work of this recipe. The NLTK is needed, merely for its stop words. Lastly, a large module called "spacy" is required. Like Gensim, it supports a wide variety of natural language processing functions, but it used here mainly to parse the corpus into sentences. After installing the necessary modules:
 
@@ -809,7 +885,7 @@ Once the index is created, you will want to search it. This recipe only requires
 Your search results will most likely be disappointing, especially since the similarity scores will almost always be near 100. This is because the corpus is not large enough to be effective. For extra credit, harvest an additional study carrel or two and repeat the previous two recipes accordingly, but keep in mind, the indexing process is not fast. The size and scope of the study carrel named "knowledge" begins to demonstrate the ideas behind semantic indexing.
    
    
-### Free-text indexing with facets
+#### Free-text indexing with facets
 
 Free-text indexing with faceted results is the type of searching we have all come to love. Enter a word, get back (faceted) results, select an item, and get the associated document. Unfortunately, preparing this recipe is by far the most complicated in the workbook, thus, only an outline will be presented here.
 
@@ -853,4 +929,5 @@ Everybody likes to search, but even more, everybody loves to get. Remember, the 
 
 
 ## About the author
+
 Eric Lease Morgan has been practicing librarianship since 1984, but he has been consistently writing software since 1976. He is currently employed at the University of Notre Dame where he works in the Navari Family Center for Digital Scholarship. In the Center he provides text mining and natural language processing services to the University community.
