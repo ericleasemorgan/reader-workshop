@@ -284,9 +284,9 @@ The Distant Reader takes an arbitrary amount of unstructured data (text) as inpu
 The results of downloading and uncompressing the Distant Reader study carrel is a directory/folder containing a standard set of files and subdirectories. Each of these files and subdirectories are listed & described below:
 
    * **A1426341535** – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
-   * **adr** – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
-   * **bib** – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
-   * **cache** – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
+   * [adr](./library/homer/adr) – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
+   * [bib](./library/homer/bib/) – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
+   * [cache](./library/homer/cache/) – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
    * **css** – This subdirectory contains a set of cascading stylesheets used by the HTML files in the carrel. If you really desired, one could edit these files in order to change the appearance of the carrel.
    * **input.zip** – This file, or something named very similarly, is the file originally used to create your study carrel. It has already served its intended purpose, but it is retained for reasons of provenance.
    * **ent** – This subdirectory contains a set of tab-delimited files, and each file contains a set of named entities from a given document in your corpus. While the files’ names end in .ent, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have five columns: 1) id, 2) sid, 3) eid, 4) entity, and 5) type. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding who, what, when, where, how, and how many.
@@ -584,12 +584,6 @@ Topic Modeling Tool is a GUI/desktop topic modeler based on the venerable MALLET
 
 ![modeling](./images/model-topics-01-small.png "topic modeling")
 
-![modeling](./images/model-topics-02-small.png "topic modeling")
-
-![modeling](./images/model-books-small.png "topic modeling")
-
-![modeling](./images/model-chapters-small.png "topic modeling")
-
 
 #### Topic Modeling Tool Recipes
 
@@ -628,6 +622,9 @@ Adding individual words to the stopword list can be tedious, and consequently, h
    3. Run the topic modeling process
    4. Go to Step #1 until you: 1) get tired, or 2) are satisfied with the results
 
+
+#### Visualize topic model (./bin/topic-model.py)
+
 Now that you have somewhat meaningful topics, you will probably want to visualize the results, and one way to do that is to illustrate how the topics are dispersed over the whole of the corpus. Luckily, the list of topics displayed in the Tool's console is tab-delimited, making it easy to visualize. Here's how:
 
    1. Topic model until you get a set of topics which you think is meaningful
@@ -637,26 +634,9 @@ Now that you have somewhat meaningful topics, you will probably want to visualiz
    5. Optionally replace the generic labels (numbers 0 through n) with a single meaningful word, thus denoting a topic
    6. Create a pie chart based on the contents of the first two columns (labels and scores); the result will appear similar to an illustration above and it will give you an idea of how large each topic is in relation to the others
 
-Because of a great feature in Topic Modeling Tool it is relatively easy to compare topics against metadata values such as authors, dates, formats, genres, etc. To accomplish this goal the raw numeric information output by the Tool (the actual model) needs to be supplemented with metadata, the data then needs to be pivoted, and subsequently visualized. This is a power-user's recipe because it requires: 1) a specifically shaped comma-separated values (CSV) file, 2) Python and a few accompanying modules, and 3) the ability to work from the command line. That said, here's a recipe to compare & contrast the two books of Homer:
-
-   1. Copy the file named homer-books.csv to your computer's desktop
-   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
-   3. Click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
-   4. Copy the file named pivot.py to your computer's desktop
-   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-   6. Run the pivot program (python pivot.py); the result ought to an error message outlining the input pivot.py expects
-   7. Run the pivot program again, but this time give it input; more specifically, specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "barh" for the second argument, and "title" as the third argument; the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and ask yourself, "To what degree are the books similar?"
-  
-The following recipe is very similar to the previous recipe, but it illustrates the ebb & flow of topics throughout the whole of the two books:
-
-   1. Copy the file named homer-chapters.csv to your computer's desktop
-   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.csv; click "Ok" 
-   3. Click "Learn Topics"
-   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-   7. Run the pivot program and specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "line" for the second argument, and "title" as the third argument; the result ought to be a line chart illustrating the increase & decrease of topics from the beginning of the saga to the end, and ask yourself "What topics are discussed concurrently, and what topics are discussed when others are not?"
-
 Topic modeling is an effective process for "reading" a corpus "from a distance". Topic Modeling Tool makes the process easier, but the process requires practice. Next steps are for the student to play with the additional options behind the "Optional Settings..." dialog box, read the Tool's documentation, take a look at the structure of the CSV/metadata file, and take a look under the hood at pivot.py. 
   
+![modeling](./images/model-topics-02-small.png "topic modeling")
 
 
 ## Using command-line tools to read a study carrel
@@ -841,9 +821,34 @@ It is not uncommon for mathematical graphs to include too many nodes for effecti
 
 ### Topic modeling
 
-		 i. Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
-	    ii. Visualize comparison of topics to metadata (./bin/pivot.py)
-	   iii. Visualize topic model (./bin/topic-model.py)
+
+#### Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
+
+
+#### Visualize comparison of topics to metadata
+
+Because of a great feature in Topic Modeling Tool it is relatively easy to compare topics against metadata values such as authors, dates, formats, genres, etc. To accomplish this goal the raw numeric information output by the Tool (the actual model) needs to be supplemented with metadata, the data then needs to be pivoted, and subsequently visualized. This is a power-user's recipe because it requires: 1) a specifically shaped comma-separated values (CSV) file, 2) Python and a few accompanying modules, and 3) the ability to work from the command line. That said, here's a recipe to compare & contrast the two books of Homer:
+
+   1. Copy the file named homer-books.csv to your computer's desktop
+   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
+   3. Click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
+   4. Copy the file named pivot.py to your computer's desktop
+   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
+   6. Run the pivot program (python pivot.py); the result ought to an error message outlining the input pivot.py expects
+   7. Run the pivot program again, but this time give it input; more specifically, specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "barh" for the second argument, and "title" as the third argument; the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and ask yourself, "To what degree are the books similar?"
+  
+The following recipe is very similar to the previous recipe, but it illustrates the ebb & flow of topics throughout the whole of the two books:
+
+   1. Copy the file named homer-chapters.csv to your computer's desktop
+   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.csv; click "Ok" 
+   3. Click "Learn Topics"
+   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
+   7. Run the pivot program and specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "line" for the second argument, and "title" as the third argument; the result ought to be a line chart illustrating the increase & decrease of topics from the beginning of the saga to the end, and ask yourself "What topics are discussed concurrently, and what topics are discussed when others are not?"
+
+![modeling](./images/model-books-small.png "topic modeling")
+
+![modeling](./images/model-chapters-small.png "topic modeling")
+
 
 ### Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
 
