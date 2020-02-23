@@ -298,18 +298,18 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
      + [reader.txt](./library/homer/etc/reader.txt) – the concatenation of all files in the txt directory; a plain text version of the whole of the corpus is often used for other purposes and it is provided here as a convienence
      + [report.txt](./library/homer/etc/report.txt) – the result of applying queries.sql to reader.db; this file has the exact same content as standard-output.txt
      + [stopwords.txt](./library/homer/etc/stopwords.txt) – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
-   * **figures** – This subdirectory contains a set of image files used by the carrel’s HTML files:
-     + **adjectives.png** – a word cloud illustrating the most frequent adjectives in the corpus
-     + **adverbs.png** – a word cloud illustrating the most frequent adverbs in the corpus
-     + **bigrams.png** – a word cloud illustrating the most frequent bigrams (two-word phrases) in the corpus
-     + **flesch-boxplot.png** – a box plot illustrating the average, quartile, and outlier readability scores of the items in the corpus
-     + **flesch-histogram.png** – a histogram illustrating the distribution of readability scores of the items in the corpus
-     + **keywords.png** – a word cloud illustrating the most frequent keywords (statistically significant unigrams) in the corpus
-     + **nouns.png** – a word cloud illustrating the most frequent nouns in the corpus
-     + **pronouns.png** – a word cloud illustrating the most frequent pronouns in the corpus
-     + **proper-nouns.png** – a word cloud illustrating the most frequent proper nouns in the corpus
-     + **sizes-boxplot.png** – a box plot illustrating the average, quartile, and outlier sizes of the items (measured in unigrams) in the corpus
-     + **sizes-histogram.png** – a histogram illustrating the distribution of sizes of the items (measured in unigrams) in the corpus
+   * [figures](./library/homer/figures/) – This subdirectory contains a set of image files used by the carrel’s HTML files:
+     + [adjectives.png](./library/homer/figures/adjectives.png) – a word cloud illustrating the most frequent adjectives in the corpus
+     + [adverbs.png](./library/homer/figures/adverbs.png) – a word cloud illustrating the most frequent adverbs in the corpus
+     + [bigrams.png](./library/homer/figures/bigrams.png) – a word cloud illustrating the most frequent bigrams (two-word phrases) in the corpus
+     + [flesch-boxplot.png](./library/homer/figures/flesch-boxplot.png) – a box plot illustrating the average, quartile, and outlier readability scores of the items in the corpus
+     + [flesch-histogram.png](./library/homer/figures/flesch-histogram.png) – a histogram illustrating the distribution of readability scores of the items in the corpus
+     + [keywords.png](./library/homer/figures/keywords.png) – a word cloud illustrating the most frequent keywords (statistically significant unigrams) in the corpus
+     + [nouns.png](./library/homer/figures/nouns.png) – a word cloud illustrating the most frequent nouns in the corpus
+     + [pronouns.png](./library/homer/figures/pronouns.png) – a word cloud illustrating the most frequent pronouns in the corpus
+     + [proper-nouns.png](./library/homer/figures/proper-nouns.png) – a word cloud illustrating the most frequent proper nouns in the corpus
+     + [sizes-boxplot.png](./library/homer/figures/sizes-boxplot.png) – a box plot illustrating the average, quartile, and outlier sizes of the items (measured in unigrams) in the corpus
+     + [sizes-histogram.png](./library/homer/figures/sizes-histogram.png) – a histogram illustrating the distribution of sizes of the items (measured in unigrams) in the corpus
      + **topics.png** – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
      + **unigrams.png** – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
      + **verbs.png** – a word cloud illustrating the most frequent verbs in the corpus
