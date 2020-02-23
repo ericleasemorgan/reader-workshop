@@ -2,19 +2,19 @@
 
 # Hands-on with the Distant Reader: A Workbook
 
-This workbook outlines sets of hands-on exercises surrounding a computer system called the Distant Reader -- https://distantreader.org.
+This workbook outlines sets of hands-on exercises surrounding a computer system called the Distant Reader -- [https://distantreader.org](https://distantreader.org).
 
 By going through the workbook, you will become familiar with the problems the Distant Reader is designed to address, how to submit content to the Reader, how to download the results (affectionately called "study carrels"), and how to interpret them. The bulk of the workbook is about the later. Interpretation can be as simple as reading a narrative report in your Web browser, as complex as doing machine learning, and everything else in-between.
 
-You will need to bring very little to the workbook in order to get very much out. At the very least, you will need a computer with a Web browser and an Internet connection. A text editor such as Notepad++ for Windows or BBEdit for Macintosh will come in very handy, but a word processor of any type will do in a pinch. You will want some sort of spreadsheet application for reading tabular data, and Microsoft Excel or Macintosh Numbers will both work quite well. All the other applications used in the workbook are freely available for downloading and cross-platform in nature. You may need to install a Java virtual machine in order to use some of them, but Java is probably already installed on your compu9er.
+You will need to bring very little to the workbook in order to get very much out. At the very least, you will need a computer with a Web browser and an Internet connection. A text editor such as Notepad++ for Windows or BBEdit for Macintosh is all most indispensable, but a word processor of any type will do in a pinch. You will want some sort of spreadsheet application for reading tabular data, and Microsoft Excel or Macintosh Numbers both work quite well. All the other applications used in the workbook are freely available for downloading and cross-platform in nature. You may need to install a Java virtual machine in order to use some of them, but Java is probably already installed on your compu9er.
 
-I hope you enjoy using the Distant Reader. It helps me use and understand large volumes of text quickly and easily. 
+I hope you enjoy using the Distant Reader. It helps me use and understand large volumes of text quickly and easily. I hope it helps you too.
 
 --- 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 22, 2020
+February 23, 2020
 
 
 ## Table of contents
@@ -122,15 +122,7 @@ I don’t know about you, but now-a-days I can find plenty of scholarly & author
 
 ## Five different types of input
 
-The Distant Reader can take five different types of input, and this section describes in detail what they are:
-
-   1. a file
-   2. a URL
-   3. a list of URLs
-   4. a zip file
-   5. a zip file with a companion CSV file
-
-Each of these different types of input are elaborated upon below.
+The Distant Reader can take five different types of input, and this section describes in detail what they are: 1) a file, 2) a URL, 3) a list of URLs, 4) a zip file, and 5) a zip file with a companion CSV file. Each of these different types of input are elaborated upon below. This section also includes a case-study -- the use of an unofficial mirror of Project Gutenberg as fodder for the Distant Reader. 
 
 
 ### A file
@@ -181,7 +173,7 @@ Despite these caveats, the list of URLs approach is enormously scalable; the lis
 
 The Distant Reader can take a zip file as input. Create a folder/directory on your computer. Copy just about any file into the folder/directory. Compress the file into a .zip file. Submit the result to the Reader.
 
-Like the other approaches, there are a few caveats. First of all, the Reader is not able to accept .zip files whose size is greater than 64 megabytes. While we do it all the time, the World Wide Web was not really designed to push around files of any great size, and 64 megabytes is/was considered plenty. Besides, you will be surprised how many files can fit in a 64 megabyte file.
+Like the other approaches, there are a few caveats. First of all, the Reader is not able to accept .zip files whose size is greater than 256 megabytes. While we do it all the time, the World Wide Web was not really designed to push around files of any great size, and 256 megabytes is/was considered plenty. Besides, you will be surprised how many files can fit in a 256 megabyte file.
 
 Second, the computer gods never intended file names to contain things other than simple Romanesque letters and a few rudimentary characters. Now-a-days our file names contain spaces, quote marks, apostrophes, question marks, back slashes, forward slashes, colons, commas, etc. Moreover, file names might be 64 characters long or longer! While every effort as been made to accomodate file names with such characters, your milage may vary. Instead, consider using file names which are shorter, simpler, and have some sort of structure. An example might be first word of author’s last name, first meaningful word of title, year (optional), and extension. Herman Melville’s Moby Dick might thus be named melville-moby.txt. In the end the Reader will be less confused, and you will be more able to find things on your computer.
 
@@ -216,17 +208,17 @@ The zip file with a companion CSV file has all the strengths & weakness of the p
 
 The venerable Project Gutenberg is perfect fodder for the Distant Reader, and this section outlines how & why.
 
-A long time ago, in a galaxy far far away, there was a man named Micheal Hart. Story has it he went to college at the University of Illinois, Urbana-Champagne. He was there during a summer, and the weather was seasonably warm. On the other hand, the computer lab was cool. After all, computers run hot, and air conditioning is a must. To cool off, Micheal went into the computer lab to be in a cool space.†  While he was there he decided to transcribe the United States Declaration of Independence, ultimately, in the hopes of enabling people to use a computers to "read" this and additional transcriptions. That was in 1971. One thing led to another, and Project Gutenberg was born. I learned this story while attending a presentation by the now late Mr. Hart on Saturday, February 27, 2010 in Roanoke (Indiana). As it happened it was also Mr. Hart's birthday. [1]
+A long time ago, in a galaxy far far away, there was a man named Micheal Hart. Story has it he went to college at the University of Illinois, Urbana-Champagne. He was there during a summer, and the weather was seasonably warm. On the other hand, the computer lab was cool. After all, computers run hot, and air conditioning is a must. To cool off, Micheal went into the computer lab to be in a cool space.†  While he was there he decided to transcribe the United States Declaration of Independence, ultimately, in the hopes of enabling people to use a computers to "read" this and additional transcriptions. That was in 1971. One thing led to another, and Project Gutenberg was born. The author learned this story while attending a presentation by the now late Mr. Hart on Saturday, February 27, 2010 in Roanoke (Indiana). As it happened it was also Mr. Hart's birthday. [1]
 
 To date, Project Gutenberg is a corpus of more than 60,000 freely available transcribed ebooks. The texts are predominantly in English, but many languages are represented. Many academics look down on Project Gutenberg, probably because it is not as scholarly as they desire, or maybe because the provenance of the materials is in dispute. Despited these things, Project Gutenberg is a wonderful resource, especially for high school students, college students, or life-long learners. Moreover, their transcribed nature eliminates any problems of optical character recognition, such as one encounters with the HathiTrust. The content of Project Gutenberg is all but perfectly formatted for distant reading.
 
-Unfortunately, the interface to Project Gutenberg is less than desirable; the index to Project Gutenberg is limited to author, title, and "category" values. The interface does not support free text searching, and there is limited support for fielded searching and Boolean logic. Similarly, the search results are not very interactive nor faceted. Nor is there any application programmer interface to the index. With so much "clean" data, so much more could be implemented. In order to de\monstrate the power of distant reading, I endeavored to create a mirror of Project Gutenberg while enhancing the user interface.
+Unfortunately, the interface to Project Gutenberg is less than desirable; the index to Project Gutenberg is limited to author, title, and "category" values. The interface does not support free text searching, and there is limited support for fielded searching and Boolean logic. Similarly, the search results are not very interactive nor faceted. Nor is there any application programmer interface to the index. With so much "clean" data, so much more could be implemented. In order to demonstrate the power of distant reading, the author endeavored to create a mirror of Project Gutenberg while enhancing the user interface.
 
-To create a mirror of Project Gutenberg, I first downloaded a set of RDF files describing the collection. [2] I then wrote a suite of software which parses the RDF, updates a database of desired content, loops through the database, caches the content locally, indexes it, and provides a search interface to the index. [3, 4] The resulting interface is ill-documented but 100% functional. It supports free text searching, phrase searching, fielded searching (author, title, subject, classification code, language) and Boolean logic (using AND, OR, or NOT). Search results are faceted enabling the reader to refine their query sans a complicated query syntax. Because the cached content includes only English language materials, the index is only 33,000 items in size.
+To create a mirror of Project Gutenberg, the author first downloaded a set of RDF files describing the collection. [2] He then wrote a suite of software which parses the RDF, updates a database of desired content, loops through the database, caches the content locally, indexes it, and provides a search interface to the index. [3, 4] The resulting interface is ill-documented but 100% functional. It supports free text searching, phrase searching, fielded searching (author, title, subject, classification code, language) and Boolean logic (using AND, OR, or NOT). Search results are faceted enabling the reader to refine their query sans a complicated query syntax. Because the cached content includes only English language materials, the index is only 33,000 items in size.
 
 The Distant Reader is a tool for reading. It takes an arbitrary amount of unstructured data (text) as input, and it outputs sets of structured data for analysis — reading. Given a corpus of any size, the Distant Reader will analyze the corpus, and it will output a myriad of reports enabling you to use & understand the corpus. The Distant Reader is intended to supplement the traditional reading process. Project Gutenberg and the Distant Reader can be used hand-in-hand. 
 
-As described in a previous posting, the Distant Reader can take five different types of input. [5] One of those inputs is a file where each line in the file is a URL. My locally implemented mirror of Project Gutenberg enables the reader to search & browse in a manner similar to the canonical version of Project Gutenberg, but with two exceptions. First & foremost, once a search has been gone against my mirror, one of the resulting links is "only local URLs". For example, below is an illustration of the query "love AND honor AND truth AND justice AND beauty", and the "only local URLs" link is highlighted:
+As described above, the Distant Reader takes five different types of input. One of those inputs is a file where each line in the file is a URL. The locally implemented mirror of Project Gutenberg enables the reader to search & browse in a manner similar to the canonical version of Project Gutenberg, but with two exceptions. First & foremost, once a search has been gone against the mirror, one of the resulting links is "only local URLs". For example, below is an illustration of the query "love AND honor AND truth AND justice AND beauty", and the "only local URLs" link is highlighted:
 
 ![gutenberg](./images/pg-search-small.png "Gutenberg")
 
@@ -234,16 +226,14 @@ By selecting the "only local URLs", a list of... URLs is returned, like this:
 
 ![gutenberg](./images/pg-urls-small.png "Gutenberg")
 
-This list of URLs can then be saved as file, and any number of things can be done with the file. For example, there are Google Chrome extensions for the purposes of mass downloading. The file of URLs can be fed to command-line utilities (ie. curl or wget) also for the purposes of mass downloading. In fact, assuming the file of URLs is named love.txt, the following command will download the files in parallel and really fast:
-
-`cat love.txt | parallel wget`
+This list of URLs can then be saved as file, and any number of things can be done with the file. For example, there are Google Chrome extensions for the purposes of mass downloading. The file of URLs can be fed to command-line utilities (ie. curl or wget) also for the purposes of mass downloading. In fact, assuming the file of URLs is named love.txt, the following command will download the files in parallel and really fast: `cat love.txt | parallel wget`
   
 This same file of URLs can be used as input against the Distant Reader, and the result will be a "study carrel" where the whole corpus could be analyzed -- read. For example, the Reader will extract all the nouns, verbs, and adjectives from the corpus. Thus you will be able to answer what and how questions. It will pull out named entities and enable you to answer who and where questions. The Reader will extract keywords and themes from the corpus, thus outlining the aboutness of your corpus. From the results of the Reader you will be set up for concordancing and machine learning (such as topic modeling or classification) thus enabling you to search for more narrow topics or "find more like this one". The search for love, etc returned more than 8000 items. Just less than 500 of them were returned in the search result, and the Reader empowers you to read all 500 of them at one go.
 
 Project Gutenberg is very useful resource because the content is: 1) free, and 2) transcribed. Mirroring Project Gutenberg is not difficult, and by doing so an interface to it can be enhanced. Project Gutenberg items are perfect items for reading & analysis by the Distant Reader. Search Project Gutenberg, save the results as a file, feed the file to the Reader and... read the results at scale.
 
 
-#### Notes and links
+#### Footnotes
 
 † All puns are intended.
 
@@ -253,9 +243,7 @@ Project Gutenberg is very useful resource because the content is: 1) free, and 2
 
 [3] The suite of software to cache and index Project Gutenberg is available on GitHub at https://github.com/ericleasemorgan/gutenberg-index
 
-[4] My full text index to the English language texts in Project Gutenberg is available at http://dh.crc.nd.edu/sandbox/gutenberg/cgi-bin/search.cgi
-
-[5] The Distant Reader and its five different types of input - http://sites.nd.edu/emorgan/2019/10/dr-inputs/
+[4] The full text index to the English language texts in Project Gutenberg is available at http://dh.crc.nd.edu/sandbox/gutenberg/cgi-bin/search.cgi
 
 
 ### Summary
@@ -264,9 +252,11 @@ To date, the Distant Reader takes five different types of input. Each type has i
 
    * a file – good for a single large file; quick & easy; not scalable
    * a URL – good for getting an overview of a single Web page and its immediate children; can include a lot of noise; has authorization limitations
-   * a list of URLs – can accomodate thousands of items; has authorization limitations; somewhat difficult to create list
-   * a zip file – easy to create; file names may get in the way; no authorization necessary; limited to 128 megabytes in size
-   * a zip file with CSV file – same as above; difficult to create metadata; results in much more meaningful reports & opportunities
+   * a list of URLs – can accomodate thousands of items; has authorization limitations; somewhat difficult to create
+   * a zip file – easy to create; file names may get in the way; no authorization necessary; limited to 256 megabytes in size
+   * a zip file with CSV file – same as above; difficult to create metadata; results in much more meaningful reports & analaysis opportunities
+
+A particular and unofficial mirror of Project Gutenberg is very amenable as fodder for the Distant Reader.
 
 
 ## Submitting "experiments" and downloading "study carrels"
@@ -283,7 +273,7 @@ The Distant Reader takes an arbitrary amount of unstructured data (text) as inpu
 
 The results of downloading and uncompressing the Distant Reader study carrel is a directory/folder containing a standard set of files and subdirectories. Each of these files and subdirectories are listed & described below:
 
-   * **A1426341535** – This, or a very similarly named file, is an administrative file, a unique identifier created by the system (Airivata, https://airavata.apache.org) which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
+   * **A1426341535** – This, or a very similarly named file, is an administrative file, a unique identifier created by the system [Airivata](https://airavata.apache.org] which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
    * [adr](./library/homer/adr) – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
    * [bib](./library/homer/bib) – This subdirectory contains a set of tab-delimited files. Each file contains a set of rudimentary bibliographic information from a given document in your corpus. While the files’ names end in .bib, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have thirteen columns: 1) id, 2) author, 3) title, 4) date, 5) page 6), extension, 7) mime, 8) words, 9) sentences, 10) flesch, 11) summary, 12) cache, and 13) txt. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer the question “What items are in my corpus, and how can they be described?”
    * [cache](./library/homer/cache) – This subdirectory contains original copies of the files you intended for analysis. It is populated by harvesting content from URLs or were supplied in the zip file you uploaded to the Reader. Each file is named with a unique and somewhat meaningful name and an extension. These files are intended for reading on your computer, or better yet, printed and then read in the more traditional manner.
@@ -361,11 +351,6 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
   * [wrd](./library/homer/wrd/) – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
 
 
-### Links
-
-[1] Airivata – https://airavata.apache.org
-
-
 ## Using combinations of desktop tools to analyze the data
 
 This section first describes the types of desktop tools (computer programs) the student, researcher, or scholar will need in order to use a Distant Reader study carrel. This section then describes how some of the more specific tools can be used for the purpose of use & understanding.
@@ -381,6 +366,7 @@ There are three essential types of desktop tools you will need/want in order to 
 Text editors read and write plain text files -- files with no formatting and no binary characters. Plain text files usually have a .txt extension. Every single file in a Distant Reader study carrel (except one) is a plain text file, and therefore, every single file (except one) is openable by any text editor.
 
 There are a few essencial tools you will want in a text editor, and the most important is a find/replace function. The function ought to allow you to find any character and change it to something else. This is useful for removing stopwords from a file. It is useful for removing carriage returns or newline characters, thus unwrapping your text. The text editor gets bonus points if the find/replace function supports "regular expressions". The second most important function of a text editor is a sorting feature. Each line in many text files is really an item in a list, and you will invariably want to sort the list. Another very useful function of a text editor, especially used for the purposes of text mining and natural language processing, is the ability to change the case of all letters to either their upper or lower-case forms. Such is the most basic of text normalization/cleaning processes. Religious wars are fought over text editors, and for the purposes of this workbook, only a number are listed, and not all of them support all the functions outlined above: Notepad, Wordpad, Text Edit, Notepad++, Atom, and BBedit. 
+
 The student, researcher, or scholar will want/need a plain text editor in order to truly exploit the use of the Distant Reader. 
 
 
@@ -420,7 +406,6 @@ Here is a generic Wordle recipe where World will calculate frequencies:
 
 Congratulations, you have just visualized the whole of your study carrel.
 
-  
 Here is another recipe, a recipe where you supply the frequencies (or any other score):
 
    1. Download and install AntConc.
@@ -791,7 +776,6 @@ The following recipe literally illustrates how sets of documents can be grouped 
    2. run `./bin/cluster.py` sans any input to get an idea of what input is required
    3. run `./bin/cluster.py homer dendrogram`; the result will be the appearance of a dendrogram illustrating the similarity and differences between the documents in the given study carrel
    4. run `./bin/cluster.py homer cube`; the result will be the appearance of a movable cube containing points plotted in a 3-dimensional space, and if you move the cube correctly, then you will literally see how the documents fall into two clusters
-
 
 ![clustering](./images/clustering-dendrogram-small.png "dendrogram")
 
