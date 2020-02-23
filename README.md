@@ -313,52 +313,52 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
      + [topics.png](./library/homer/figures/topics.png) – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
      + [unigrams.png](./library/homer/figures/unigrams.png) – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
      + [verbs.png](./library/homer/figures/verbs.png) – a word cloud illustrating the most frequent verbs in the corpus
-   * **htm** – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
-     + **adjective-noun.htm** – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
-     + **adjectives.htm** – search, sort, and browse adjectives and/or their frequency
-     + **adverbs.htm** – search, sort, and browse adverbs and/or their frequency
-     + **bigrams.htm** – search, sort, and browse bigrams (two-word phrases) and/or their frequency
-     + **entities.htm** – search, sort, and browse named-entities, their type, and/or their frequency
-     + **keywords.htm** – search, sort, and browse keywords (statistically significant unigrams) and/or their frequency
-     + **noun-verb.htm** – search, sort, and browse noun/verb combinations by noun, verb, or frequency
-     + **nouns.htm** – search, sort, and browse nouns and/or their frequency
-     + **pronouns.htm** – search, sort, and browse pronouns and/or their frequency
-     + **proper-nouns.htm** – search, sort, and browse proper nouns and/or their frequency
-     + **quadgrams.htm** – search, sort, and browse quadgrams (four-word phrases) and/or their frequency
-     + **questions.htm** – search, sort, and browse questions (sentences ending with a question mark) and from which items they were extracted
-     + **search.htm** – a free text query interface based on the narrative summaries of each item in the corpus
-     + **topic-model.htm** – a topic modeler; a tool used to enumerate as well as compare & contrast latent themes in the corpus
-     + **trigrams.htm** – search, sort, and browse trigrams (three-word phrases) and/or their frequency
-     + **unigrams.htm** – search, sort, and browse unigrams (individual words) and/or their frequency
-     + **verbs.htm** – search, sort, and browse verbs and/or their frequencies
-  * **index.htm** – This HTML file narratively reports on the content of your study carrel. It is the best place to begin once you have downloaded and unzipped the carrel.
-  * **MANIFEST.htm** – This file, and it is the third best place to begin once you have downloaded and unzipped a carrel.
+   * [htm](./library/homer/htm/) – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
+     + [adjective-noun.htm](./library/homer/htm/adjective-noun.htm) – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
+     + [adjectives.htm](./library/homer/htm/adjectives.htm) – search, sort, and browse adjectives and/or their frequency
+     + [adverbs.htm](./library/homer/htm/adverbs.htm) – search, sort, and browse adverbs and/or their frequency
+     + [bigrams.htm](./library/homer/htm/bigrams.htm) – search, sort, and browse bigrams (two-word phrases) and/or their frequency
+     + [entities.htm](./library/homer/htm/entities.htm) – search, sort, and browse named-entities, their type, and/or their frequency
+     + [keywords.htm](./library/homer/htm/keywords.htm) – search, sort, and browse keywords (statistically significant unigrams) and/or their frequency
+     + [noun-verb.htm](./library/homer/htm/noun-verb.htm) – search, sort, and browse noun/verb combinations by noun, verb, or frequency
+     + [nouns.htm](./library/homer/htm/nouns.htm) – search, sort, and browse nouns and/or their frequency
+     + [pronouns.htm](./library/homer/htm/pronouns.htm) – search, sort, and browse pronouns and/or their frequency
+     + [proper-nouns.htm](./library/homer/htm/proper-nouns.htm) – search, sort, and browse proper nouns and/or their frequency
+     + [quadgrams.htm](./library/homer/htm/quadgrams.htm) – search, sort, and browse quadgrams (four-word phrases) and/or their frequency
+     + [questions.htm](./library/homer/htm/questions.htm) – search, sort, and browse questions (sentences ending with a question mark) and from which items they were extracted
+     + [search.htm](./library/homer/htm/search.htm) – a free text query interface based on the narrative summaries of each item in the corpus
+     + [topic-model.htm](./library/homer/htm/topic-model.htm) – a topic modeler; a tool used to enumerate as well as compare & contrast latent themes in the corpus
+     + [trigrams.htm](./library/homer/htm/trigrams.htm) – search, sort, and browse trigrams (three-word phrases) and/or their frequency
+     + [unigrams.htm](./library/homer/htm/unigrams.htm) – search, sort, and browse unigrams (individual words) and/or their frequency
+     + [verbs.htm](./library/homer/htm/verbs.htm) – search, sort, and browse verbs and/or their frequencies
+  * [index.htm](./library/homer/index.htm) – This HTML file narratively reports on the content of your study carrel. It is the best place to begin once you have downloaded and unzipped the carrel.
+  * [MANIFEST.htm](./library/homer/MANIFEST.htm) – This file, and it is the third best place to begin once you have downloaded and unzipped a carrel.
   * **job_1819387465.slurm** – This file, or a very similarly named file, is the batch file used to initially create your study carrel. In the future, this file may be removed from the study carrel all together because it serves only an administrative purpose.
-  * **js** – This subdirectory includes a set of Javascript libraries supporting the functionality of index.htm as well as the HTML files in the htm directory. Because these files are here your computer does not need to be connected to the Internet in order to effectively read your carrel. Study carrels are designed to be stand-alone file systems usable for years to come.
-  * **LICENSE** – This is the license file; each study carrel is distributed under a GNU Public License.
-  * **pos** – This subdirectory contains a set of tab-delimited files, and each file contains a set of part-of-speech files from a given document in your corpus. While the files’ names end in .pos, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have six columns: 1) id, 2) sid, 3) tid, 4) token, 5) lemma, and 6) pos. The definitions of these columns are described in another blog posting. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer question regarding who, what, how, how many, and actions as well as grammer and style.
-  * **README** – This file contains the very briefest of introductions to the carrel.
-  * **standard-error.txt** – As each study carrel is being created, error and status messages are output to this file. It is a log file. If the creation of your study carrel fails, then this is a good place to look for clues on what went wrong. Send me this file if you are stymied.
-  * **standard-output.txt** – After your study carrel as been created and distilled into a database, sets of queries are applied against the database. This file is the second best place to begin once you have downloaded and unzipped a carrel.
-  * **tsv** – Except for one (questions.tsv), this subdirectory contains a set of frequency tables in the form of tab-delimited text files. The exception is a tab-delimited text file too, but it is just not a frequency file. All of these files can be imported into for favorite spreadsheet, database, or analysis application. Possible uses for these files are destined to be outlined in future postings, but in short, perusal of these files will help you answer questions regarding your corpus’s “aboutness” as well as who, what, when, where, how, how many, and why questions. The structure of each file is listed below:
-     + **adjective-noun.tsv** – three columns: 1) adjective, 2) noun, and 3) frequency where frequency denotes the number of times the given adjective appears immediately before the given noun in the corpus
-     + **adjectives.tsv** – two columns: 1) adjective, and 2) frequency
-     + **adverbs.tsv** – two columns: 1) adverb, and 2) frequency
-     + **bigrams.tsv** – two columns: 1) bigram (two-word phrase), and 2) frequency
-     + **entities.tsv** – three columns: 1) entity, 2) type, and 3) frequency
-     + **keywords.tsv** – two columns: 1) keyword (statistically significant unigram), and 2) frequency
-     + **noun-verb.tsv** – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
-     + **nouns.tsv** – two columns: 1) noun, and 2) frequency
-     + **pronouns.tsv** – two columns: 1) pronoun, and 2) frequency
-     + **proper-nouns.tsv** – two columns: 1) proper, and 2) frequency
-     + **quadgrams.tsv** – two columns: 1) quadgram (four-word phrase), and 2) frequency
-     + **questions.ts** – two columns: 1) identifier, and 2) question where each question is a “sentence” ending in a question mark
-     + **trigrams.tsv** – two columns: 1) trigram (three-word phrase), and 2) frequency
-     + **unigrams.tsv** – two columns: 1) unigram (individual word), and 2) frequency
-     + **verbs.tsv** – two columns: 1) verb, and 2) frequency
-  * **txt** – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
-  * **urls** – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
-  * **wrd** – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
+  * [js](./library/homer/js/) – This subdirectory includes a set of Javascript libraries supporting the functionality of index.htm as well as the HTML files in the htm directory. Because these files are here your computer does not need to be connected to the Internet in order to effectively read your carrel. Study carrels are designed to be stand-alone file systems usable for years to come.
+  * [LICENSE](./library/homer/LICENSE) – This is the license file; each study carrel is distributed under a GNU Public License.
+  * [pos](./library/homer/pos/) – This subdirectory contains a set of tab-delimited files, and each file contains a set of part-of-speech files from a given document in your corpus. While the files’ names end in .pos, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have six columns: 1) id, 2) sid, 3) tid, 4) token, 5) lemma, and 6) pos. The definitions of these columns are described in another blog posting. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer question regarding who, what, how, how many, and actions as well as grammer and style.
+  * [README](./library/homer/README) – This file contains the very briefest of introductions to the carrel.
+  * [standard-error.txt](./library/homer/standard-error.txt) – As each study carrel is being created, error and status messages are output to this file. It is a log file. If the creation of your study carrel fails, then this is a good place to look for clues on what went wrong. Send me this file if you are stymied.
+  * [standard-output.txt](./library/homer/standard-output.txt) – After your study carrel as been created and distilled into a database, sets of queries are applied against the database. This file is the second best place to begin once you have downloaded and unzipped a carrel.
+  * [tsv](./library/homer/tsv/) – Except for one (questions.tsv), this subdirectory contains a set of frequency tables in the form of tab-delimited text files. The exception is a tab-delimited text file too, but it is just not a frequency file. All of these files can be imported into for favorite spreadsheet, database, or analysis application. Possible uses for these files are destined to be outlined in future postings, but in short, perusal of these files will help you answer questions regarding your corpus’s “aboutness” as well as who, what, when, where, how, how many, and why questions. The structure of each file is listed below:
+     + [adjective-noun.tsv](./library/homer/tsv/adjective-noun.tsv) – three columns: 1) adjective, 2) noun, and 3) frequency where frequency denotes the number of times the given adjective appears immediately before the given noun in the corpus
+     + [adjectives.tsv](./library/homer/tsv/adjectives.tsv) – two columns: 1) adjective, and 2) frequency
+     + [adverbs.tsv](./library/homer/tsv/adverbs.tsv) – two columns: 1) adverb, and 2) frequency
+     + [bigrams.tsv](./library/homer/tsv/bigrams.tsv) – two columns: 1) bigram (two-word phrase), and 2) frequency
+     + [entities.tsv](./library/homer/tsv/entities.tsv) – three columns: 1) entity, 2) type, and 3) frequency
+     + [keywords.tsv](./library/homer/tsv/keywords.tsv) – two columns: 1) keyword (statistically significant unigram), and 2) frequency
+     + [noun-verb.tsv](./librar/homer/tsv/noun-verb.tsv) – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
+     + [nouns.tsv](./library/homer/tsv/nouns.tsv) – two columns: 1) noun, and 2) frequency
+     + [pronouns.tsv](./library/homer/tsv/pronouns.tsv) – two columns: 1) pronoun, and 2) frequency
+     + [proper-nouns.tsv](./library/homer/tsv/proper-nouns.tsv) – two columns: 1) proper, and 2) frequency
+     + [quadgrams.tsv](./library/homer/tsv/quadgrams.tsv) – two columns: 1) quadgram (four-word phrase), and 2) frequency
+     + [questions.tsv](./library/homer/tsv/questions.tsv) – two columns: 1) identifier, and 2) question where each question is a “sentence” ending in a question mark
+     + [trigrams.tsv](./library/homer/tsv/trigrams.tsv) – two columns: 1) trigram (three-word phrase), and 2) frequency
+     + [unigrams.tsv](./library/homer/tsv/unigrams.tsv) – two columns: 1) unigram (individual word), and 2) frequency
+     + [verbs.tsv](./library/homer/tsv/verbs.tsv) – two columns: 1) verb, and 2) frequency
+  * [txt](./library/homer/txt/) – This subdirectory contains plain text versions of the files stored in the cache directory. A plain text version of each & every item in the cache directory ought to exist in this directory. The contents of this directory is what was used to do the Reader’s analysis. The contents of this directory are excellent candidates for further analysis with tools such as concordances, indexers, or topic modelers.
+  * [urls](./library/homer/urls/) – This subdirectory contains a set of tab-delimited files, and each file contains a set of URLs from a given document in your corpus. While the files’ names end in .url, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have three columns: 1) id, 2) domain, and 3) url. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions regarding document provenance and relationships as well as addressing the perenial issue of “finding more like this one”.
+  * [wrd](./library/homer/wrd/) – This subdirectory contains a set of tab-delimited files, and each file contains a set of computed keywords from a given document in your corpus. While the files’ names end in .wrd, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2 keyword. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files help answer questions such as “What is this document about?”
 
 
 ### Links
