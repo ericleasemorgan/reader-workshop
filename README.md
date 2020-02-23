@@ -310,9 +310,9 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
      + [proper-nouns.png](./library/homer/figures/proper-nouns.png) – a word cloud illustrating the most frequent proper nouns in the corpus
      + [sizes-boxplot.png](./library/homer/figures/sizes-boxplot.png) – a box plot illustrating the average, quartile, and outlier sizes of the items (measured in unigrams) in the corpus
      + [sizes-histogram.png](./library/homer/figures/sizes-histogram.png) – a histogram illustrating the distribution of sizes of the items (measured in unigrams) in the corpus
-     + **topics.png** – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
-     + **unigrams.png** – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
-     + **verbs.png** – a word cloud illustrating the most frequent verbs in the corpus
+     + [topics.png](./library/homer/figures/topics.png) – a pie chart illustrating how the corpus is subdivided if topic modeling were applied to the corpus, and the desired number of topics (latent themes) equals five
+     + [unigrams.png](./library/homer/figures/unigrams.png) – a word cloud illustrating the most frequent unigrams (individual words) in the corpus
+     + [verbs.png](./library/homer/figures/verbs.png) – a word cloud illustrating the most frequent verbs in the corpus
    * **htm** – This subdirectory contains a set of interactive HTML files linked from the file named index.htm. The functionality of each file is outlined below:
      + **adjective-noun.htm** – search, sort, and browse adjective/noun combinations by adjective, noun, or frequency
      + **adjectives.htm** – search, sort, and browse adjectives and/or their frequency
