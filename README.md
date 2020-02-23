@@ -347,7 +347,7 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
      + [bigrams.tsv](./library/homer/tsv/bigrams.tsv) – two columns: 1) bigram (two-word phrase), and 2) frequency
      + [entities.tsv](./library/homer/tsv/entities.tsv) – three columns: 1) entity, 2) type, and 3) frequency
      + [keywords.tsv](./library/homer/tsv/keywords.tsv) – two columns: 1) keyword (statistically significant unigram), and 2) frequency
-     + [noun-verb.tsv](./librar/homer/tsv/noun-verb.tsv) – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
+     + [noun-verb.tsv](./library/homer/tsv/noun-verb.tsv) – three columns: 1) noun, 2) verb, and 3) a frequency where frequency denotes the number of times the given noun appears immediately before the given verb in the entire corpus
      + [nouns.tsv](./library/homer/tsv/nouns.tsv) – two columns: 1) noun, and 2) frequency
      + [pronouns.tsv](./library/homer/tsv/pronouns.tsv) – two columns: 1) pronoun, and 2) frequency
      + [proper-nouns.tsv](./library/homer/tsv/proper-nouns.tsv) – two columns: 1) proper, and 2) frequency
