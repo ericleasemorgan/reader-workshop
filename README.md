@@ -293,11 +293,11 @@ The results of downloading and uncompressing the Distant Reader study carrel is 
    * [etc](./library/homer/etc/) – This subdirectory contains a set of ancillary files, and each are described below
      + [model-data.txt](./library/homer/etc/model-data.txt) – the data file used by topic-model.htm, and it is essentially an enhanced version of reader.txt
      + [queries.sql](./library/homer/etc/queries.sql) – a set of SQL queries used to generate report.txt, and this file is an excellent introduction to the use of reader.db
-     + **reader.db** – an SQLite database file, and it is essentially the amalgamation of the contents of the adr, bib, ent, pos, urls, and wrd directories; the intelligent use of this file can be used to answer just about any question answerable by the carrel
-     + **reader.sql** – a set SQL commands denoting the structure of reader.db
-     + **reader.txt** – the concatenation of all files in the txt directory; a plain text version of the whole of the corpus is often used for other purposes and it is provided here as a convienence
-     + **report.txt** – the result of applying queries.sql to reader.db; this file has the exact same content as standard-output.txt
-     + **stopwords.txt** – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
+     + [reader.db](./library/homer/etc/reader.db) – an SQLite database file, and it is essentially the amalgamation of the contents of the adr, bib, ent, pos, urls, and wrd directories; the intelligent use of this file can be used to answer just about any question answerable by the carrel
+     + [reader.sql](./library/homer/etc/reader.sql) – a set SQL commands denoting the structure of reader.db
+     + [reader.txt](./library/homer/etc/reader.txt) – the concatenation of all files in the txt directory; a plain text version of the whole of the corpus is often used for other purposes and it is provided here as a convienence
+     + [report.txt](./library/homer/etc/report.txt) – the result of applying queries.sql to reader.db; this file has the exact same content as standard-output.txt
+     + [stopwords.txt](./library/homer/etc/stopwords.txt) – a list of function words (i.e. “a”, “an”, “the”, etc.) used through the creation of the study carrel
    * **figures** – This subdirectory contains a set of image files used by the carrel’s HTML files:
      + **adjectives.png** – a word cloud illustrating the most frequent adjectives in the corpus
      + **adverbs.png** – a word cloud illustrating the most frequent adverbs in the corpus
