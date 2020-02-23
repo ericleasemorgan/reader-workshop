@@ -805,36 +805,86 @@ It is not uncommon for mathematical graphs to include too many nodes for effecti
 
 ### Topic modeling
 
+Topic Modeling Tool outputs both sets of HTML files as well as CSV files. By augmenting the CSV files the student, researcher, or scholar is able to extract more use out of the topic modeling process. These recipes outline some.
 
-#### Create Modeling Tool metadata file (./bin/db2malletcsv.sh)
 
+#### Visualize a comparison of topics and metadata
 
-#### Visualize comparison of topics to metadata
+Because of a great feature in Topic Modeling Tool it is relatively easy to compare topics against metadata values such as authors, dates, formats, genres, etc. To accomplish this goal the raw numeric information output by the Tool (the actual model) needs to be supplemented with metadata, the data then needs to be pivoted, and subsequently visualized. The ingredients for this recipe include Python and two libraries: 1) pandas, which is probably already installed, and 2) matplotlib.pyplot, which does the actual visualization. Here's a recipe to compare & contrast the two books of Homer:
 
-Because of a great feature in Topic Modeling Tool it is relatively easy to compare topics against metadata values such as authors, dates, formats, genres, etc. To accomplish this goal the raw numeric information output by the Tool (the actual model) needs to be supplemented with metadata, the data then needs to be pivoted, and subsequently visualized. This is a power-user's recipe because it requires: 1) a specifically shaped comma-separated values (CSV) file, 2) Python and a few accompanying modules, and 3) the ability to work from the command line. That said, here's a recipe to compare & contrast the two books of Homer:
-
-   1. Copy the file named homer-books.csv to your computer's desktop
-   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
-   3. Click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
-   4. Copy the file named pivot.py to your computer's desktop
-   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-   6. Run the pivot program (python pivot.py); the result ought to an error message outlining the input pivot.py expects
-   7. Run the pivot program again, but this time give it input; more specifically, specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "barh" for the second argument, and "title" as the third argument; the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and ask yourself, "To what degree are the books similar?"
-  
-The following recipe is very similar to the previous recipe, but it illustrates the ebb & flow of topics throughout the whole of the two books:
-
-   1. Copy the file named homer-chapters.csv to your computer's desktop
-   2. Click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.csv; click "Ok" 
-   3. Click "Learn Topics"
-   5. When the modeling is complete, open up a terminal application and navigate to your computer's desktop
-   7. Run the pivot program and specify "./model/output_csv/topics-metadata.csv" as the first argument (Windows users will specify .\model\output_csv\topics-metadata.csv), specify "line" for the second argument, and "title" as the third argument; the result ought to be a line chart illustrating the increase & decrease of topics from the beginning of the saga to the end, and ask yourself "What topics are discussed concurrently, and what topics are discussed when others are not?"
+   1. download and install Topic Modeling Tool
+   2. copy (not move) the whole of the ./library/homer/txt directory to your computer's desktop
+   3. create a folder/directory named "model" on your computer's desktop
+   4. copy ./etc/homer-books.csv to your computer's desktop
+   5. launch Topic Modeling Tool
+   6. specify the "Input Dir..." to be the txt folder/directory on your desktop
+   7. specify the "Output Dir..." to be the folder/directory named "model" on your desktop
+   8. click "Optional Settings..."; specify "Metadata File..." to be homer-books.csv; click "Ok" 
+   9. click "Learn Topics"; the result ought to pretty much like your previous results, but the underlying model has been enhanced
+   10. copy the file named ./bin/pivot.py to your computer's desktop
+   11. open your terminal application and navigate to your computer's desktop
+   12. run `pivot.py`; the result ought to an error message outlining what the script expects
+   13. run `pivot.py ./model/output_csv/topics-metadata.csv barh title` (Windows users will specify the CSV file differently, `.\model\output_csv\topics-metadata.csv`); the result ought to be a horizontal bar chart illustrating the differences in topics across the Iliad and the Odyssey, and now ask yourself, "To what degree are the books similar?"
 
 ![modeling](./images/model-books-small.png "topic modeling")
+
+  
+#### Create Modeling Tool metadata file
+
+The most difficult part of the previous recipe is the creation of the metadata file, but if your study carrel's items have been adequately supplemented with authors, titles, or dates, then the creation of a metadata file is easy. This recipe requires Bash and sqlite. This is a simple recipe:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/db2malletcsv.sh` sans any input to get an idea of what input is expected
+   3. run `./bin/db2malletcsv.sh homer title`; the result ought to be a tiny CSV file with two columns
+   4. run `./bin/db2malletcsv.sh homer title > homer-chapters.csv`; the result ought to be the same as Step #3 but saved to a file named homer-chapters.tsv
+   
+You are now primed to run the next recipe.
+
+#### Comparing topics over time
+
+If the documents in your study carrel have been assigned date values, or if the titles of your documents in your study carrel have some sort of sequential naming system, then you can illustrate ebb & flow of topics across time in your carrel. The process is very similar recipe #1 in this section. The ingredients are the same: 
+
+   1. download and install Topic Modeling Tool
+   2. copy (not move) the whole of the ./library/homer/txt directory to your computer's desktop
+   3. create a folder/directory named "model" on your computer's desktop
+   4. from the previous recipe, copy homer-chapters.tsv to your computer's desktop
+   5. launch Topic Modeling Tool
+   6. specify the "Input Dir..." to be the txt folder/directory on your desktop
+   7. specify the "Output Dir..." to be the folder/directory named "model" on your desktop
+   8. click "Optional Settings..."; specify "Metadata File..." to be homer-chapters.tsv; click "Ok" 
+   9. click "Learn Topics"
+   10. copy the file named ./bin/pivot.py to your computer's desktop
+   11. open your terminal application and navigate to your computer's desktop
+   12. run `pivot.py`; the result ought to an error message outlining what the script expects
+   13. run `pivot.py ./model/output_csv/topics-metadata.csv line title` (Windows users will specify the CSV file differently, `.\model\output_csv\topics-metadata.csv`); the result ought to be a line chart illustrating the ebb & flow of topics in the books across time, and then ask yourself, "What topics are discussed when others are not?"
 
 ![modeling](./images/model-chapters-small.png "topic modeling")
 
 
-### Measuring big ideas, name dropping, and colorfulness (./bin/measure-ideas.pl)
+### Measuring big ideas, name dropping, and colorfulness
+
+This recipe exploits the concept of lexicons to measure the weight of a document against a given theme.
+
+Stop words are often called "function" words, and they usually carry no meaning in a text but rather... function to bring a text together. Conversely, a list of very meaningful words might be articulated and enumerated for the purpose of denoting desired meaning. Such a list might be called a lexicon. Personally, the author has always been interested colors, big ideas, and the people who have written on them. Thus, the author is able to articulate a list of colors, big thinkers, and big ideas. The colors are easy: black, white, gray (grey), yellow, red, blue, green, purple, orange, brown, etc. The big ideas include love, honor, truth, justice, religion, art, philosophy, virtue, etc. There are about 100 of these words, and they are based on the Great Ideas. The big thinkers include Plato, Aristotle, Milton, Shakespeare, Copernicus, Newton, Kant, Hegel, etc. This list is rooted in the Great Books. These three lexicons have been saved in the etc directory of every study carrel with the names colors.txt, names.txt, and ideas.txt.
+
+By calculating a TF/IDF score for each word in a lexicon and each document in a corpus, is possible to determine which document is most about a given idea. Remember, ideas are not manifested in individual words but rather groups of words (phrases, sentences, lexicons, etc.). This recipe's ingredients include Perl and an already supplied library called "tfidf-toolbox.pl". Here's how to measure colorfullness, big ideas, and look for name droppers:
+
+   1. open your terminal application and navigate to the root of the workshop directory
+   2. run `./bin/measure-ideas.pl` sans any input to get an idea of what input is expected
+   3. run `./bin/measure-ideas.pl ./library/homer/txt ./etc/ideas.txt`; the result will be a matrix of lexicon words, documents, and their calculated TF/IDF scores
+   4. run `./bin/measure-ideas.pl ./library/homer/txt ./etc/ideas.txt > ./ideas.tsv`; the result ought to be identical to Step #3 but the output is saved to a file named ideas.tsv
+   5. open ideas.tsv in your favorite spreadsheet application
+   6. create a new column at the end of the sheet
+   7. sum all the numeric values in the first row
+   8. use your spreadsheet's "fill down" function to sum all the rows in the sheet
+   9. move the newly created column to be the second one in the sheet
+   10. sort, in descending order, the values in the second column
+   11. create a bar chart based on columns A and B; the result will illustrate which documents are most "about" the given lexicon
+   12. go to Step #3, but this time use ./etc/names.txt or ./etc/colors.txt as the lexicons
+   13. create a lexicon of your own, and save it in a location where you can find it again
+   14. go to Step #3 but this time use your own lexicon
+
+![measuring](./images/measuring-ideas-small.png "measuring")
 
 
 ### Searching
