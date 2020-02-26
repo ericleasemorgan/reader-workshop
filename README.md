@@ -401,7 +401,7 @@ Here is a generic Wordle recipe where World will calculate frequencies:
 
    1. Download and install Wordle. It is a Java application, so you may need to download and install Java along the way, but Java is probably already installed on your computer.
    2. Use your text editor to open reader.txt which is located in the etc directory/folder. Once opened, copy all of the text.
-   3. Open Wordle, select the "Your Text" tab, and paste the whole of the text file into the window.
+   3. open Wordle, select the "Your Text" tab, and paste the whole of the text file into the window.
    4. Click the "Wordle" tab and your word cloud will be generated. Use the Wordle's menu options to customize the output.
 
 Congratulations, you have just visualized the whole of your study carrel.
@@ -412,12 +412,12 @@ Here is another recipe, a recipe where you supply the frequencies (or any other 
    2. Use the "Open Files(s)..." menu option to open any file in the txt directory.
    3. Click the "Word list" tab, and then click the "Start" button. The result will be a list of words and their frequencies.
    4. Use the "Save Output to Text File..." menu option, and save the frequencies accordingly.
-   5. Open the resulting file in your spreadsheet.
+   5. open the resulting file in your spreadsheet.
    6. Remove any blank rows, and remove the columns that are not the words and their frequencies
    7. Invert the order of the remaining two columns; make the words the first column and the frequencies the second column. 
    8. Copy the whole of the spreadsheet and paste it into your text editor. 
    9. Use the text editor's find/replace function to find all occurrences of the tab character and replace them with the colon (:) character. Copy the whole of the text editor's contents.
-   10. Open Wordle, click the "Your text" tab, paste the frequencies into the resulting window.
+   10. open Wordle, click the "Your text" tab, paste the frequencies into the resulting window.
    11. Finally, click the "Wordle" tab to generate the word cloud.
 
 Notice how you used a variety of generic applications to achieve the desired result. The word/value pairs given to Wordle do not have be frequencies. Instead they can be any number of different scores or weights. Keep your eyes open for word/value combinations. They are everywhere. Word clouds have been given a bad rap. Wordle is a very useful tool.
@@ -497,6 +497,8 @@ There is much more to AntConc than outlined in the recipes outlined above. Learn
 
 ### Excel - charting tabular data
 
+[Outline here how Excel, nor any other spreadsheet application, is not really apropos for doing analysis with the given study carrel data. The study carrel data is less quantitative and more categorical in nature. Excel, and any other spreadsheet application, will open many (most) of the files in a study carrel, thus enabling the student, researcher, or scholar to view the data, but doing mathematics against the data is more or less meaningless. On the other hand, do meaningful analysis can be done if the data is pivoted, but OpenRefine does that so much better than any spreadsheet. Excel is good for viewing study carrel data. Put another way, Excel is not a list manager or a database; Excel is a spreadsheet application designed to perform mathematical functions against a matrix of numbers.]
+
 
 ### OpenRefine - fielded searching and grouping
 
@@ -556,7 +558,7 @@ This final recipe is a visualization:
    3. Select the "choices" link; the result ought to be a text area containing the counts & tabulation
    4. Copy the whole of the resulting text area
    5. Paste the result into your text editor, find all tab characters and change them to colons (:), copy the whole of the resulting text
-   6. Open Wordle and create a word cloud with the contents of your clipboard; word counts may only illustrate frequencies, but sometimes the frequencies are preponderance. 
+   6. open Wordle and create a word cloud with the contents of your clipboard; word counts may only illustrate frequencies, but sometimes the frequencies are preponderance. 
   
 A study carrel's parts-of-speech (pos) and named-entities (ent) files enumerate each and every word or named-entity in each and every sentence of each and every item in the study carrel. Given a question relatively quantitative in nature and pertaining to parts-of-speech or named-entities, the pos and ent files are likely to be able to address the question. The pos and ent files are tab-delimited files, and OpenRefine is a very good tool for reading and analyzing such files. It does much more than was outlined here, but enumerating them here is beyond scope. Such is left up to the... reader.
   
@@ -574,37 +576,43 @@ Topic Modeling Tool is a GUI/desktop topic modeler based on the venerable MALLET
 
 These few recipes are intended to get you up and running when it comes to Topic Modeling Tool. They are not intended to be a full-blown tutorial. This first recipe merely divides a corpus into the default number of topics and dimensions:
 
-   1. Download and install Topic Modeling Tool
-   2. Copy (not move) the whole of the txt directory to your computer's desktop
-   3. Create a folder/directory named "model" on your computer's desktop
-   4. Open Topic Modeling Tool
-   5. Specify the "Input Dir..." to be the txt folder/directory on your desktop
-   6. Specify the "Output Dir..." to be the folder/directory named "model" on your desktop
-   7. Click "Learn Topics"; the result ought to be a a list of ten topics (numbered 0 to 9), and each topic is denoted with a set of scores and twenty words ("dimensions"), and while functional, such a result is often confusing
+   1. download and install Topic Modeling Tool
+   2. copy (not move) the whole of the txt directory to your computer's desktop
+   3. create a folder/directory named "model" on your computer's desktop
+   4. open Topic Modeling Tool
+   5. specify the "Input Dir..." to be the txt folder/directory on your desktop
+   6. specify the "Output Dir..." to be the folder/directory named "model" on your desktop
+   7. click "Learn Topics"; the result ought to be a a list of ten topics (numbered 0 to 9), and each topic is denoted with a set of scores and twenty words ("dimensions"), and while functional, such a result is often confusing
 
-This recipe will make things less confusing:
+Output from the recipe above is also saved in the directory named "model". Use your Web browser to open the HTML file named "all_topics.html" which is found in the "output_html" directory of the model directory. This HTML file lists the topics created by the Tool, and it enables the student, researcher, or scholar to learn how the topics pan out and how each document is associated with them. For example, the following screenshot illustrates how a particular document's aboutness is distributed across the calculated topics:
 
-   1. Change the number of topics from the default (10) to five (5)
-   2. Click the "Optional Settings..." button
-   3. Change the "The number of topic words to print" to something smaller, say five (5)
-   4. Click the "Ok" button
-   5. Click "Learn Topics"; the result will include fewer topics and fewer dimensions, and the result will probably be more meaningful, if not less confusing
+![modeling](./images/model-topics-00-small.png "topic modeling")
+
+This recipe reduces the number of topics calculated as well as the number of words associated with each topic. Thus, this recipe makes things less confusing:
+
+   1. change the number of topics from the default (10) to five (5)
+   2. click the "Optional Settings..." button
+   3. change the "The number of topic words to print" to something smaller, say five (5)
+   4. click the "Ok" button
+   5. click "Learn Topics"; the result will include fewer topics and fewer dimensions, and the result will probably be more meaningful, if not less confusing
+
+Again, output was saved to the model directory. Open all_topics.html to see how things changed.
 
 There is no correct number of topics to extract with the process of topic modeling. "When considering the whole of Shakespeare's writings, what is the number of topics it is about?" This being the case, repeat and re-repeat the previous recipe until you: 1) get tired, or 2) feel like the results are at least somewhat meaningful.
 
 This recipe will help you make the results even cleaner by removing nonsense from the output:
 
-   1. Copy the file named "stopwords.txt" from the etc directory to your desktop
-   2. Click "Optional Settings..."; specify "Stopword File..." to be stopwords.txt; click "Ok"
-   3. Click "Learn Topics"
-   4. If the results contain nonsense words of any kind (or words that you just don't care about), edit stopwords.txt to specify additional words to remove from the analysis
-   5. Go to Step #3 until you get tired; the result ought to be topics with more meaningful words
+   1. copy the file named "stopwords.txt" from the etc directory to your desktop
+   2. click "Optional Settings..."; specify "Stopword File..." to be stopwords.txt; click "Ok"
+   3. click "Learn Topics"
+   4. if the results contain nonsense words of any kind (or words that you just don't care about), edit stopwords.txt to specify additional words to remove from the analysis
+   5. go to Step #3 until you get tired; the result ought to be topics with more meaningful words
 
 Adding individual words to the stopword list can be tedious, and consequently, here is a power-user's recipe to accomplish the same goal:
 
    1. Identify words or regular expressions to be excluded from analysis, and good examples include all numbers (\d+), all single-letter words (\b\w\b), or all two-letter words (\b\w\w\b)
    2. Use your text editor's find/replace function to remove all occurrences of the identified words/patterns from the files in the txt folder/directory; remember, you were asked to copy (not move) the whole of the txt directory, so editing the files in the txt directory will not effect your study carrel
-   3. Run the topic modeling process
+   3. run the topic modeling process
    4. Go to Step #1 until you: 1) get tired, or 2) are satisfied with the results
 
 
@@ -612,19 +620,48 @@ Adding individual words to the stopword list can be tedious, and consequently, h
 
 Now that you have somewhat meaningful topics, you will probably want to visualize the results, and one way to do that is to illustrate how the topics are dispersed over the whole of the corpus. Luckily, the list of topics displayed in the Tool's console is tab-delimited, making it easy to visualize. Here's how:
 
-   1. Topic model until you get a set of topics which you think is meaningful
-   2. Copy the resulting topics, and this will include the labels (numbers 0 through n), the scores, and the topic words
-   3. Open your spreadsheet application, and paste the topics into a new sheet; the result ought to be three columns of information (labels, scores, and words)
-   4. Sort the whole sheet by the second column (scores) in descending numeric order
-   5. Optionally replace the generic labels (numbers 0 through n) with a single meaningful word, thus denoting a topic
-   6. Create a pie chart based on the contents of the first two columns (labels and scores); the result will appear similar to an illustration above and it will give you an idea of how large each topic is in relation to the others
+   1. topic model until you get a set of topics which you think is meaningful
+   2. copy the resulting topics, and this will include the labels (numbers 0 through n), the scores, and the topic words
+   3. open your spreadsheet application, and paste the topics into a new sheet; the result ought to be three columns of information (labels, scores, and words)
+   4. sort the whole sheet by the second column (scores) in descending numeric order
+   5. optionally replace the generic labels (numbers 0 through n) with a single meaningful word, thus denoting a topic
+   6. create a pie chart based on the contents of the first two columns (labels and scores); the result will appear similar to an illustration above and it will give you an idea of how large each topic is in relation to the others
 
-Topic modeling is an effective process for "reading" a corpus "from a distance". Topic Modeling Tool makes the process easier, but the process requires practice. Next steps are for the student to play with the additional options behind the "Optional Settings..." dialog box, read the Tool's documentation, take a look at the structure of the CSV/metadata file, and take a look under the hood at pivot.py. 
-  
 ![modeling](./images/model-topics-02-small.png "topic modeling")
+
+Topic modeling is an effective process for reading a corpus "from a distance". Topic Modeling Tool makes the process easier, but the process requires practice. Next steps are for the student to play with the additional options behind the "Optional Settings..." dialog box, read the Tool's documentation, take a look at the structure of the CSV/metadata file, and take a look under the hood at pivot.py. 
 
 
 ## Using command-line tools to read a study carrel
+
+No set of desktop applications is going to really and truly support thorough textual analysis. There are simply too many different ways to combine data and information to create knowledge for any set of applications to address. Specific desktop applications will address specific research questions and problems, but research is about creating new incites and answering new questions. Almost by defintion, existing desktop applications can not address these needs. New tools will have to be created, and their foundation rests on one's ability to exploit the data & information at its most basic level. Reading study carrels from the command-line is really and truly necessary if one desires to go to deeper level of investigation. Put another way, using command-line tools is a modern way of doing "close reading". 
+
+To do the recipes in this section, the student, researcher, or scholar will need to bring to they party a few additional resources and skills. First and foremost, the student, researcher, or scholar needs to be able to open a terminal application. Windows users will use a program called "cmd", and it is usually located by searching for it from the Start menu. Macintosh users will find a program called Terminal in the Utilities folder of the Applications folder. For the purposes of this workbook, a minimum number of command-line programs are needed, including:
+
+   * dir - the Windows way to list the files in a directory
+   * ls - the Macintosh/Linux (Bash) way to list the files in a directory
+   * cd - the way on either platform to change directories
+
+The student, researcher, or scholar will also need/want to exploit the concept of "redirection". This means the output of one program is sent as input to another program or saved to a file. The two most frequently used direction techniques include:
+
+   * piping - sending the output of a command to the input of another, for example `dir | more` will list the files in a directory one screenful at a time
+   * redirecting to a file - sending the output of a program to a a file, for example `dir > dir.txt` will save a directory listing to a file named dir.txt
+   
+To make things a bit easier, the student, researcher, or scholar is asked to save thing "on their desktop". By doing so it will be easier to find things. Throughout the workbook, the student, researcher, or scholar is asked to "open your command-line interface, and navigate to the workbook's root directory". This means they will:
+
+   1. find and open their terminal application: cmd for Windows, and Terminal for Macintosh
+   2. enter `cd Desktop` to navigate to the Desktop directory
+   3. enter `dir` (for Windows) or `ls` (for Macintosh) to confirm what is there
+   4. enter `cd reader-workshop` to navigate to the workbook's root directory
+   5. enter `dir` (for Windows) or `ls` (for Macintosh) to confirm what is there
+
+Like the making of a rue for a French white sauce, the ability to accomplish the tasks outlined above fundamental to the next steps. Please practice. Do the task more than once. It is only a computer, and you will not break it. 
+
+The student, researcher, or scholar will then need some additional resources on their computer. Most importantly, they include Bash, Perl, Python, and any number of "libraries" associated with each. Bash is a type of operating system "shell". It comes for free with Macintosh computers, and now-a-days it is reasonably easy to install on Windows 10 computers. Perl is a programming language. It too comes for free on Macintosh. It can be installed in any number of ways for Windows. Python is one of the most popular computer languages now-a-days, and the author strongly suggests installing a distribution of Python called "Anaconda". This works for both Windows and Macintosh computers. Many of the recipes below require additional modules (libraries) to operate. When a Perl module goes unfound, the use of a package manager called "cpan" is indispensable. When the same thing happens with Python modules, the use of a package manager called "pip" is pretty much the standard. 
+
+The use of a computer is akin to using transportation devices. One can take a bus, which requires little technical knowledge and is financially inexpensive. One can drive a care, which requires a licence and comes with a great deal of financial expense. One can ride a bike, which is a different set of advantages and disadvantages. A riding lawn mower can do things the others can't and vice versa. In every case, the proper tool needs to be applies to proper problem. Command-line tools enable the student, researcher, or scholar to do different type of work. 
+
+The following sections outline how to use command-line tools to read a study carrel more thoroughly. 
 
 
 ### Building a library
@@ -639,11 +676,11 @@ Congratulations, your Distant Reader library now contains two items: homer and y
 
 This next recipe, which only requires vanilla Perl, gives a study carrel a more meaningful name and scope:
 
-   1. Open your command-line interface, and navigate to the workbook's root directory
-   2. Run `./bin/add-metadata.pl` sans any input to get an idea of the input required
-   3. Run `./bin/add-metadata.pl homer`; the result ought to be a stream of HTML
+   1. open your command-line interface, and navigate to the workbook's root directory
+   2. run `./bin/add-metadata.pl` sans any input to get an idea of the input required
+   3. run `./bin/add-metadata.pl homer`; the result ought to be a stream of HTML
    4. Scroll backwards in your terminal, and you may notice how the HTML is a study carrel's home page
-   5. Run `./bin/add-metadata.pl homer > ./library/homer/index.html`; the result will be the creation of a new file -- index.html
+   5. run `./bin/add-metadata.pl homer > ./library/homer/index.html`; the result will be the creation of a new file -- index.html
    6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in the study carrel named homer
    7. Use your text editor to open ./etc/homer.txt
    8. Change the existing email address to your email address, and save the file
@@ -653,9 +690,9 @@ By editing ./etc/homer.txt, you were able to give the study carrel a title, scop
 
    1. Duplicate ./etc/homer.txt, and rename it to the one-word name of your study carrel
    2. open the file from Step #1, and edit as per the previous recipe
-   3. Run `./bin/add-metadata.pl NAME` where NAME is the name of your carrel
+   3. run `./bin/add-metadata.pl NAME` where NAME is the name of your carrel
    4. Scroll backwards in your terminal, and you ought to see your edits
-   5. Run `./bin/add-metadata.pl NAME > ./library/NAME/index.html` where NAME is the name of your carrel
+   5. run `./bin/add-metadata.pl NAME > ./library/NAME/index.html` where NAME is the name of your carrel
    6. Use your Web browser to open index.html; remember, as per Step #5, it ought to have been saved in your study carrel
    7. Go to Step #2 until satisfied
 
