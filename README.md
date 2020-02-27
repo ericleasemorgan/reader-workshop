@@ -261,6 +261,44 @@ A particular and unofficial mirror of Project Gutenberg is very amenable as fodd
 
 ## Submitting "experiments" and downloading "study carrels"
 
+The Distant Reader is implemented as a high performance computing (HPC) system. Like many such systems, jobs are submitted to a queue, processing is done in turn, and output is produced. More specifically, the hardware for the Distant Reader is located on the Indiana University - Bloomington campus. The Reader is literally a part of super computer, and much of its technical support is provided by XSEDE, a project whose purpose is to support things exactly like the Distant Reader. As a part of this support, the front-end to the Distant Reader is an application called Airivata. Airivata manages Distant Reader accounts, submitted jobs, and the configuration of "experiments" provided by the Reader software. This section outlines how to use the Airivata interface and thus create study carrels.
+
+The Distant Reader is located at https://distantreader.org, and it is freely available for anybody to use, but anybody who does use the Reader must create an account and have their email address verified. From the Distant Reader home page the student, researcher, or scholar can create an account, log in, and after logging in visit their "dashboard":
+
+![creating](./images/creating-home-small.png "distant reader")
+
+![creating](./images/creating-dashboard-small.png "distant reader")
+
+
+In the parlance of Airivata, there are four different types of experiments the Reader can run, and each corresponds to the different types of Distant Reader input:
+
+   1. File of URLs to study carrel
+   2. File to study carrel
+   3. URL to study carrel
+   4. Zip file to study carrel
+
+![creating](./images/creating-experiment-small.png "distant reader")
+
+Upon selecting any of the experiments the student, researcher, or scholar will be prompted for the name of their experiment and its input. Everything else is superfluous. 
+
+After clicking the "Save and Launch" button, your experiment will be submitted to the queue. If there are fewer than ten jobs currently running, the submitted job will be run immediately. It takes almost two minutes for the Reader to instantiate a new virtual machine, and then, depending on the number and sizes of items to read, processing can take as short as four minutes or as long as twelve hours. Based on the author's experience, most people's study carrels are created in less than ten minutes. 
+
+![creating](./images/creating-running-small.png "distant reader")
+
+It is not necessary to keep your Web browser open to the Reader's interface; the Distant Reader will do its good work and wait for you to return. Alas, the Reader will not send you an email message notifying you of completion.  
+
+When the Reader has finished, your dashboard will have been updated and you can navigate to the results page. From there you have three options:
+
+   1. read the standard error report; send this to the author if something goes amiss
+   2. read the standard output report, which is a simple summary of what the Reader found; look at this report first
+   3. download the study carrel
+
+![creating](./images/creating-completed-small.png "distant reader")
+
+Once you have downloaded the study carrel, you may have to uncompress it, and it will have a long and ugly name. You are recommended to rename it using something very simple, like a single word. It is also recommended you save it on your computer's desktop until you no longer need it. When you no longer need it, then delete it. 
+
+Creating study carrels requires practice. The process itself is not difficult, but practice fosters familiarity, and with familiarity will come confidence. Moreover, it doesn't cost anything. What do you have to loose, not even very much time. 
+
 
 ## An introduction to study carrels
 
