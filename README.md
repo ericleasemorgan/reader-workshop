@@ -14,7 +14,7 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 23, 2020
+February 27, 2020
 
 
 ## Table of contents
@@ -302,14 +302,45 @@ Creating study carrels requires practice. The process itself is not difficult, b
 
 ## An introduction to study carrels
 
+It can not be stated strongly enough. The result of the Distant Reader process is the creation of a set of structured data enabling the student, researcher, or scholar to read their corpus at a distance. The result of the Distant Reader process is affectionately called a "study carrel", and the whole thing can be downloaded as a zip file. Put another way:
+
+> **Result of Distant Reader process = Study carrel = Zip file = Set of structured data**
+  
+This section outlines the narrative aspects of each study carrel.
+
+Once the student, researcher, or scholar has downloaded the results of the Distant reader -- a study carrel -- the file will have an ugly name and it will need to be unzipped. Your operating system ought to know how to do this. Next, it is advised you: 1) give the study carrel a one-word name and move it to your computer's desktop. When you are done with it, delete it because you can almost always retrievable again. Alternatively, consider saving the whole study carrel on a website. Since the carrel is 100% self-contained, putting it on a website will make it available to others.
+
+Whether or not you do the aforementioned tasks, you will want to use your Web browser to open the file named index.htm. This is the root of narrative interface. The narrative interface can be divided into two types: 1) a sort of essay describing your carrel, and 2) a set of interactive HTML tables containing different views of your corpus. Down the left hand side of the page ought to be a number of sections such as frequencies, keywords, and topic modeling. Along the top are links to parts-of-speech, grammers, and "other" functions:
+
+![carrel](./images/carrel-home-small.png "study carrel")
+
+The links at the top of the page point to interactive HTML pages. Each page is really an table listing bi-grams, noun-verb combinations, adjective-noun combinations, questions, etc.
+
+The student, researcher, or scholar is expected to peruse the contents of these tables, look for patterns or anomalies, ask themselves questions, and then enter text into any of the available text areas in order to answer (or at least address) their question:
+
+![carrel](./images/carrel-interactive-small.png "study carrel")
+
+For example, enter the words "who", "what", "when", "where", "why", "how", or "how many" into the text area of the question page. To compare and contrast the use of the words "man", "men", "woman", or "women", enter them into just about any text area of interactive page. Peruse the ngram pages. Identify ngrams of personal interest. They do not need to one of the most frequent words. In fact, you are probably beter off identifying a less frequent word. Use the word (ngram) as input for the grammer pages. 
+
+The named entity pages list names of people (PERSON), organizations (ORG), places (GRE), and locations (LOC). To learn who is mentioned in your study carrel, enter "PERSON" into the text area. To learn what organizations, places, or locations are mentioned in your study carrel, enter the labels "ORG", "GRE", or "LOC" into the text area. 
+
+All of the other pages linke from the top of the index.htm page operate very similarly. 
+
+The left-hand sections and the interactive HTML pages mirror and echo the content of the "standard output" report described in the previous section. The differences between the two reports is two-fold: 1) the standard output page contains little context, and 2) the narrative reports are a bit easier on the eye.
+
+The body of the study carrel's narrative interface provides a very broad overview of your study carrel. The interactive HTML pages are akin to a back-of-the-book index. Peruse the "index", identify items of interest, and observe what is emphasized and what is not emphasized. Take what you observe and follow-up in greater detail and use the tools outline in the next sections to follow-up on the questions; the tools and techniques outlined in the next section empower the student, researcher, or scholar to answer questions raised by reading the contents of the narrative interface.
+
 
 ## The structured data of study carrels; taking inventory through the manifest
 
-The results of the Distant Reader process is the creation of a “study carrel” — a set of structured data files intended to help you to further “read” your corpus. Using a previously created study carrel as an example, this blog posting enumerates & outlines the contents of a typical carrel. A future blog posting will describe ways to use & understand the files outlined here. Therefore, the text below is merely a kind of manifest.
+The results of the Distant Reader process is the creation of a “study carrel” — a set of structured data files intended to help you to further “read” your corpus. Using a previously created study carrel as an example, this section enumerates & outlines the contents of a typical carrel. The text below is merely a kind of manifest.
 
 The Distant Reader takes an arbitrary amount of unstructured data (text) as input, and it outputs sets of structured data files for analysis — reading. Given a corpus of any size, the Distant Reader will analyze the corpus, and it will output a myriad of reports enabling you to use & understand the corpus. The Distant Reader is intended to supplement the traditional reading process. Given a question of a rather quantitative nature, a Distant Reader study carrel may very well contain a plausible answer.
 
 The results of downloading and uncompressing the Distant Reader study carrel is a directory/folder containing a standard set of files and subdirectories. Each of these files and subdirectories are listed & described below:
+
+![filesystem](./images/filesystem-small.png "file system")
+
 
    * **A1426341535** – This, or a very similarly named file, is an administrative file, a unique identifier created by the system [Airivata](https://airavata.apache.org] which managed the creation of the study carrel. In the future, this file may not be included. On the other hand, since the file’s name is a unique identifier, then it could be exploited by a developer.
    * [adr](./library/homer/adr) – This subdirectory contains a set of tab-delimited files. Each file contains a set of email addresses extracted from the documents in your corpus. While the files’ names end in .adr, they are plain text files that can be imported into for favorite spreadsheet, database, or analysis application. The files have two columns: 1) id, and 2) address. The definitions of these columns and possible uses of these files are described elsewhere, but in short, these files can humorously answer the question “Who are you gonna call?”
