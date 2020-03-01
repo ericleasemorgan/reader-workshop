@@ -14,7 +14,8 @@ I hope you enjoy using the Distant Reader. It helps me use and understand large 
 Eric Lease Morgan <emorgan@nd.edu>  
 Notre Dame (Indiana)  
 
-February 27, 2020
+March 1, 2020  
+"The Code4Lib Pre-Conference Edition"
 
 
 ## Table of contents
@@ -1071,6 +1072,8 @@ Everybody likes to search, but even more, everybody loves to get. Remember, the 
 
 
 ## Summary/conclusion
+
+The Distant Reader is a tool for reading. It takes an almost arbitrary amount of unstructured data (text) as input, and it outputs sets of structured data for analysis -- reading. As such, the Distant Reader is akin to books' page numbers, tables-of-contents, back-of-the-book indexes, and other apparatuses used to make them easier to use and understand. The difference is the Distant Reader does these things at scale. The Distant Reader is not a replacement for the traditional reading process, but instead it supplements the process. If you were asked to articulate a few main themes or just about anything else about any given corpus, then you would probably be able do so, but with the Distant Reader you would be able to so more thoroughly. Moreover, you would be able to literally point where those themes were manifested themselves. The Distant Reader does not output truth nor meaning. It merely outputs observations. Just like the traditional reading processes, it is up to the student, researcher, or scholar to interpret the observations and discuss the possible truth or meaning. It his way, the Distant Reader is simply a tool in the ongoing dialog on what it means to be human. Given the amount of narrative data/information at our finger tips, discovery is not the problem to solve. I don't know about you, but I can find plenty. No, the problem goes beyond that; the problem is about getting the data/information, and reading it. The Distant Reader is a tool intended to address just these sorts of issues. 
 
 
 ## About the author
