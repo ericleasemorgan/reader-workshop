@@ -22,6 +22,7 @@ CARREL=$1
 POS=$2
 
 # do the work and done
-$CARREL2JSON   $CARREL $POS > "$CARRELS/$CARREL/etc/$CARREL.json"
+$CARREL2JSON --path="$CARRELS/$CARREL/pos/" --pos="$POS" --cooccur --weight=3 > "$CARRELS/$CARREL/etc/$CARREL.json"
 $TEMPLATE2HTML $CARREL > "$CARRELS/$CARREL/htm/network-diagram.htm"
+open "$CARRELS/$CARREL/htm/network-diagram.htm"
 exit

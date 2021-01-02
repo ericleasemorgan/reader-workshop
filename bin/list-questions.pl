@@ -2,6 +2,11 @@
 
 # list-questions.pl - given a document identifier, list all questions
 
+# Eric Lease Morgan <emorgan@nd.edu>
+# (c) University of Notre Dame; distributed under a GNU Public License
+
+# August 3, 2020 - first documentation
+
 
 # configure
 use constant DATABASE => '/etc/reader.db';

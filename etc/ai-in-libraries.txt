@@ -1,0 +1,6 @@
+LONGNAME	International Journal of Librarianship, Vol. 5 No. 1 (2020)
+SCOPENOTE	This is a Distant Reader "study carrel" containing the whole of the <a href="https://journal.calaijol.org/index.php/ijol">International Journal of Librarianship, volume 5, number 1 (2020)</a>. The issue is devoted to the topic of artificial intelligence and librarianship.
+CREATOR	Eric Lease Morgan
+EMAIL	emorgan@nd.edu
+CREATIONDATE	July 25, 2020
+

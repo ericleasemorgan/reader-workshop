@@ -1,1 +1,11 @@
 .DS_Store
+tmp
+etc/model.bin
+x-*
+library/ai-in-libraries/
+library/austen/
+library/biorxiv/
+library/homer/etc/homer.json
+library/homer/htm/network-diagram.htm
+library/quaker-schism/
+library/viruses/

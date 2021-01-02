@@ -11,7 +11,7 @@ LISTQUESTIONS='./bin/list-questions.pl'
 TXT='txt/*.txt'
 
 if [[ -z $1 ]]; then
-	echo "Usage: $0 <short-name>"  >&2
+	echo "Usage: $0 <carrel>"  >&2
 	exit
 fi
 
